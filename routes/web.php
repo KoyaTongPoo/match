@@ -6,6 +6,17 @@ Route::get("/", function () {
     return view("welcome");
 });
 
+
+
+
+
+Route::get('/users',function(){
+	return App\User::all();
+});
+
+
+
+
 //=======================================================================
 //index
 Route::get("Users/", "UsersController@index");
