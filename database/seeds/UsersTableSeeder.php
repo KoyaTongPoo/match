@@ -17,7 +17,8 @@ use Illuminate\Database\Seeder;
             for( $i=0; $i<10; $i++ ){
 
                 App\User::create([
-					"name" => $faker->name(),
+                    "name" => $faker->name(),
+                    "email" => $faker->safeEmail(),
 					"password" => $faker->password(),
 					"year" => $faker->randomDigit(),
 					"mouth" => $faker->randomDigit(),

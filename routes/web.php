@@ -6,10 +6,6 @@ Route::get("/", function () {
     return view("welcome");
 });
 
-
-
-
-
 Route::get('/users',function(){
 	return App\User::all();
 });
@@ -356,3 +352,11 @@ Route::put("MHobbies/{id}", "MHobbiesController@update");
 //destroy
 Route::delete("MHobbies/{id}", "MHobbiesController@destroy");
 //=======================================================================
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

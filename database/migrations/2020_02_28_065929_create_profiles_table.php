@@ -20,7 +20,7 @@
 						$table->integer('hobby')->nullable();
 						$table->string('address')->nullable();
 						$table->string('academic_history')->nullable();
-						$table->string('job',10)->nullable();
+						$table->string('job')->nullable();
 						$table->string('job_address')->nullable();
 						$table->string('image_1',50)->nullable();
 						$table->string('image_2',50)->nullable();
