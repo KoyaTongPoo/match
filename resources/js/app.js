@@ -10,8 +10,9 @@ window.Vue = require('vue');
 import vuetify from"./vuetify";
 import router from"./router";
 import Example from"./components/ExampleComponent";
+import Appbar from"./components/Appbar";
 
-
+Vue.component("Appbar",Appbar);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -38,6 +39,7 @@ const app = new Vue({
     router,
     vuetify,
     components: {
-    "example-component":Example
+    "example-component":Example,
+    "Appbar":Appbar
         }
     });

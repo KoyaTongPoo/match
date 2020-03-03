@@ -12,23 +12,21 @@
     </head>
     <body>
             <v-app id="app">
-                    <div id="top">
-                    <v-btn >
-                        <a href="{{ route('register') }}" class="btn-gradient-3d-simple">会員登録</a>
-                    </v-btn>
-                    <v-btn>
-                        <a href="{{ route('login') }}" class="btn-gradient-3d-simple2">ログイン</a>
-                    </v-btn>
-                </div>
-                <div id="nav">
+            <router-view name= "header"></router-view>
+            <v-content>
+                
                 <router-link to="/">Home</router-link>
                 <router-link to="/about">About</router-link>
                 <router-link to="/user">ユーザ一覧</router-link>
-                </div>
-                <router-view/>
+                
+                
+                
+                <router-view />
+                </v-content>
                 <!-- <example-component/> -->
-          
+                
             </v-app> 
         <script src="{{asset('js/app.js')}}"></script>
+        
     </body>
 </html>

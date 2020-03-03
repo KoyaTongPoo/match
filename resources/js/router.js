@@ -7,6 +7,8 @@ import User from './views/User.vue'
 import UserDetail from './views/UserDetail.vue'
 import UserEdit from './views/UserEdit.vue'
 import UserCreate from './views/UserCreate.vue'
+import Appbar from './components/Appbar.vue'
+
 
 Vue.use(VueRouter);
 
@@ -17,32 +19,45 @@ const routes = [
       },  
     {
         path: "/",
-        component: Home
+        components: {
+         default : Home,
+         header : Appbar
+        }
     },
     {
         path: '/about',
-        name: 'about',
-        component: About
+        components: {
+          default : About,
+          header : Appbar
+         }
       },
       {
         path: '/user',
-        name: 'user',
-        component: User
+        components: {
+          default : User,
+          header : Appbar
+         }
       },
       {
         path: '/user/create',
-        name: 'user_create',
-        component: UserCreate
+        components: {
+          default : UserCreate,
+          header : Appbar
+         }
       },
       {
         path: '/user/:id',
-        name: 'user_detail',
-        component: UserDetail
+        components: {
+          default : UserDetail,
+          header : Appbar
+         }
       },
       {
         path: '/user/:id/edit',
-        name: 'user_edit',
-        component: UserEdit
+        components: {
+          default : UserEdit,
+          header : Appbar
+         }
       },
       
  
