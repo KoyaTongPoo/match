@@ -8,7 +8,14 @@ import UserDetail from './views/UserDetail.vue'
 import UserEdit from './views/UserEdit.vue'
 import UserCreate from './views/UserCreate.vue'
 import Appbar from './components/Appbar.vue'
-
+import LikeButton from './components/LikeButton.vue'
+import RButton from './components/RButton.vue'
+import UserId from './views/Users/_id.vue'
+import UserList from './views/Users/List.vue'
+import Women from './views/Users/Women.vue'
+import Thanks from './views/Users/Thanks.vue'
+import Mail from './views/Mail.vue'
+import SheldonCooper from './views/Users/SheldonCooper.vue'
 
 Vue.use(VueRouter);
 
@@ -56,6 +63,50 @@ const routes = [
         path: '/user/:id/edit',
         components: {
           default : UserEdit,
+          header : Appbar
+         }
+      },
+      {
+        path: '/users/SheldonCooper',
+        components: {
+          default : SheldonCooper,
+          header : Appbar,
+          button : RButton
+         }
+      },
+      {
+        path: '/users/women/:title',
+        components: {
+          default : Women,
+          header : Appbar
+         }
+      },
+      {
+        path: '/users/thanks/:title',
+        components: {
+          default : Thanks,
+          header : Appbar
+         }
+      },
+      {
+        path: '/users/list',
+        components: {
+          default : UserList,
+          header : Appbar
+         }
+      },
+      {
+        path: '/users/:id',
+        components: {
+          default : UserId,
+          header : Appbar,
+          button : LikeButton
+         }
+      },
+      {
+        path: '/mail/:title',
+        components: {
+          default : Mail,
           header : Appbar
          }
       },

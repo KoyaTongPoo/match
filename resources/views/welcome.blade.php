@@ -12,16 +12,18 @@
     </head>
     <body>
             <v-app id="app">
+            <router-view name= "button"></router-view>
             <router-view name= "header"></router-view>
-            <v-content>
+            <v-content fluid>
                 
-                <router-link to="/">Home</router-link>
+                <!-- <router-link to="/">Home</router-link>
                 <router-link to="/about">About</router-link>
-                <router-link to="/user">ユーザ一覧</router-link>
-                
-                
+                <router-link to="/user">ユーザ一覧</router-link> -->
                 
                 <router-view />
+
+                
+
                 </v-content>
                 <!-- <example-component/> -->
                 

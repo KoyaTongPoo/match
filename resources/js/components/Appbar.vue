@@ -35,13 +35,30 @@
   </v-container>
 </v-navigation-drawer>
 
-    <v-app-bar color="primary" dark app clipped-left>
+    <v-app-bar color="primary" 
+    dark
+    app
+    clipped-left
+    fixed>
       <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Vuetify</v-toolbar-title>
+      <v-toolbar-title>{{$route.params.title}}</v-toolbar-title>
       <v-spacer></v-spacer>
 
       <v-toolbar-items>
-<v-btn text>For Enterprise</v-btn>
+
+<v-btn text to="/mail/メール">
+  
+   <v-badge
+          color="warning"
+          content="5"
+        >
+    <v-icon>
+    mdi-email
+    </v-icon>
+  </v-badge>
+  
+</v-btn>
+
 <v-menu offset-y>
   <template v-slot:activator="{on}">
   <v-btn v-on="on" text>Support<v-icon>mdi-menu-down</v-icon></v-btn>
@@ -56,11 +73,39 @@
 </v-list-item>
 </v-menu>
 </v-toolbar-items>
-
     </v-app-bar>
-    <v-footer color="primary" dark app>
-      Vuetify
-    </v-footer>
+           
+    <v-footer>
+       
+      <v-bottom-navigation
+    shift
+    app
+    dark
+    background-color="primary"
+  >
+    <v-btn to="/">
+      <span>Home</span>
+      <v-icon>mdi-home</v-icon>
+    </v-btn>
+
+    <v-btn to="/users/list">
+      <span>紹介</span>
+      <v-icon>mdi-human-handsup</v-icon>
+    </v-btn>
+
+    <v-btn to="/users/1">
+      <span>BBS</span>
+      <v-icon>mdi-bulletin-board</v-icon>
+    </v-btn>
+
+    <v-btn to="/user">
+      <span>Account</span>
+      <v-icon>mdi-account</v-icon>
+    </v-btn>
+  </v-bottom-navigation>
+  
+      </v-footer>
+
   </v-app>
 </template>
 
@@ -76,9 +121,9 @@ export default {
     link:'/user'
   },
   {
-    name: 'Discord community',
+    name: '友達',
     icon: 'mdi-discord',
-    link:'/discord-community'},
+    link:'/users/1'},
   {
     name: 'Report a bug',
     icon: 'mdi-bug',
@@ -131,6 +176,23 @@ nav_lists:[
   },
 ]
     }
-  }
+  },
+  computed: {
+      color () {
+        switch (this.bottomNav) {
+          case 0: return 'blue-grey'
+          case 1: return 'teal'
+          case 2: return 'brown'
+          case 3: return 'indigo'
+        }
+      },
+    },
 }
 </script>
+<style scoped>
+.v-application {
+  /* width: 100px; */
+  height: 0px;
+  background: orange;
+}
+</style>
