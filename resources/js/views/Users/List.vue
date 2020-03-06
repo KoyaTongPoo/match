@@ -1,5 +1,12 @@
 <template>
 <v-container>
+  <v-row
+    v-touch="{
+      left: () => swipe('Left'),
+      right: () => swipe('Right'),
+      up: () => swipe('Up'),
+      down: () => swipe('Down')
+    }">
     <v-container py-1 px-0>
   <v-card
     class="mx-auto"
@@ -26,7 +33,7 @@
             size="164"
             tile
           >
-            <v-img src="https://lh3.googleusercontent.com/proxy/uefYmslmhwGfBF4kVrJRIuwvNKPo0iGHgCUK_p3xEuM_Baui6ee8ZWlsYRK5-cvpBqsEWkx7GlPqSG3PQFgCVz0Q1YkWxtgQvZuTRfiO5EQXa2_zycN_uZvTbVvjcmY8C8ip77EL7ilrs7yvjw"></v-img>
+            <v-img src="https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"></v-img>
           </v-avatar>
         </v-col>
         <v-col
@@ -252,13 +259,14 @@
     </v-img>
   </v-card>
   </v-container>
-
+  </v-row>
 </v-container>
 </template>
 
 <script>
   export default {
     data: () => ({
+      swipeDirection: 'None',
       tags: [
         'アメコミ好き',
         'タバコ吸わない',
@@ -267,5 +275,19 @@
         'バジンガ',
       ],
     }),
+    methods: {
+      swipe (direction) {
+		  if (direction == 'Left') {
+			//   console.log(direction)
+			  this.$router.push('/BBS/topic/BBS')
+		  }
+      else if (direction == 'Right') {
+			  this.$router.push('/')
+          }      
+        this.swipeDirection = direction
+      },
+    },
   }
+  
+    
 </script>

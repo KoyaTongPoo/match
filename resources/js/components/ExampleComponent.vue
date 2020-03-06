@@ -1,29 +1,20 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-                    <div class="card-body">
-                        <ul>
-                            <li v-for="user in users">{{ user.name }}</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<v-app id="app">
+    <router-view name= "button"></router-view>
+            <router-view name= "header"></router-view>
+            <v-content fluid>
+        
+                
+            <transition name="fade">
+            <router-view />
+            </transition>
+
+                
+
+                </v-content>
+                </v-app> 
 </template>
 
-<script>
-    export default {
-        data(){
-            return {
-                users: []
-            }
-        },
-        mounted() {
-            axios.get('/users').then(response => this.users = response.data)
-        }
-    }
-</script>
+<style scoped>
+
+</style>

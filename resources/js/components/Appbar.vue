@@ -5,7 +5,7 @@
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="title">
-          Navigation lists
+          アプリタイトル
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
@@ -61,7 +61,8 @@
 
 <v-menu offset-y>
   <template v-slot:activator="{on}">
-  <v-btn v-on="on" text>Support<v-icon>mdi-menu-down</v-icon></v-btn>
+  <v-btn v-on="on" text><v-icon>mdi-settings</v-icon>
+    <v-icon>mdi-menu-down</v-icon></v-btn>
   </template>
   <v-list-item v-for="support in supports" :key="support.name" :to="support.link">
   <v-list-item-icon>
@@ -93,12 +94,12 @@
       <v-icon>mdi-human-handsup</v-icon>
     </v-btn>
 
-    <v-btn to="/users/1">
+    <v-btn to="/BBS/topic/BBS">
       <span>BBS</span>
       <v-icon>mdi-bulletin-board</v-icon>
     </v-btn>
 
-    <v-btn to="/user">
+    <v-btn to="/users/MyProfile/MyProfile">
       <span>Account</span>
       <v-icon>mdi-account</v-icon>
     </v-btn>

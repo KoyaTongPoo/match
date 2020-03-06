@@ -2019,6 +2019,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2095,49 +2096,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      users: []
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    axios.get('/users').then(function (response) {
-      return _this.users = response.data;
-    });
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LikeButton.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/LikeButton.vue?vue&type=script&lang=js& ***!
@@ -2206,6 +2164,402 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/ARecommend.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/ARecommend.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      swipeDirection: 'None',
+      tags: ['アメコミ好き', 'タバコ吸わない', 'SF好き', 'ルールは大事', 'バジンガ']
+    };
+  },
+  methods: {
+    swipe: function swipe(direction) {
+      if (direction == 'Left') {
+        //   console.log(direction)
+        this.$router.push('/BBS/topic/BBS');
+      } else if (direction == 'Right') {
+        this.$router.push('/');
+      }
+
+      this.swipeDirection = direction;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/BBS.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/BBS.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      swipeDirection: 'None',
+      items: [{
+        header: 'Today'
+      }, {
+        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        title: '東京五輪「年内延期」の可能性も　新型ウイルス流行で橋本五輪相',
+        subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?",
+        action: '15 min',
+        comment: '321 comment'
+      }, {
+        divider: true,
+        inset: true
+      }, {
+        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        title: 'Summer BBQ <span class="end grey--text text--lighten-1">15 min</span>',
+        subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend."
+      }, {
+        divider: true,
+        inset: true
+      }, {
+        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        title: 'Oui oui',
+        subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?"
+      }, {
+        divider: true,
+        inset: true
+      }, {
+        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        title: 'Birthday gift',
+        subtitle: "<span class='text--primary'>Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?"
+      }, {
+        divider: true,
+        inset: true
+      }, {
+        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        title: 'Recipe to try',
+        subtitle: "<span class='text--primary'>Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos."
+      }]
+    };
+  },
+  methods: {
+    swipe: function swipe(direction) {
+      if (direction == 'Left') {
+        //   console.log(direction)
+        this.$router.push('/users/MyProfile/MyProfile');
+      } else if (direction == 'Right') {
+        this.$router.push('/users/list');
+      }
+
+      this.swipeDirection = direction;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Home.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Home.vue?vue&type=script&lang=js& ***!
@@ -2235,6 +2589,75 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2244,8 +2667,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     swipe: function swipe(direction) {
       if (direction == 'Left') {
-        //   console.log(direction)
         this.$router.push('/users/list');
+      } else if (direction == 'Right') {
+        this.$router.push('/users/MyProfile/MyProfile');
       }
 
       this.swipeDirection = direction;
@@ -2849,11 +3273,153 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      swipeDirection: 'None',
       tags: ['アメコミ好き', 'タバコ吸わない', 'SF好き', 'ルールは大事', 'バジンガ']
     };
+  },
+  methods: {
+    swipe: function swipe(direction) {
+      if (direction == 'Left') {
+        //   console.log(direction)
+        this.$router.push('/BBS/topic/BBS');
+      } else if (direction == 'Right') {
+        this.$router.push('/');
+      }
+
+      this.swipeDirection = direction;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Users/MyProfile.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Users/MyProfile.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      swipeDirection: 'None',
+      items: [{
+        src: 'https://nigiwasu.com/wp-content/uploads/2019/06/johnny-CBS.com_-240x300.jpg'
+      }, {
+        src: 'https://www.superdramatv.com/line/bigbang/cast/img/photo_01.jpg'
+      }, {
+        src: 'https://blogimg.goo.ne.jp/user_image/33/b8/d4c259279fc199836feef09fe0ef4e6b.jpg'
+      }, {
+        src: 'https://www.monstersandcritics.com/wp-content/uploads/2019/02/ef91379a-6e98-4ae2-8182-649336439665-tbbt_michael-yarishwarner-bros-entertainment-inc.jpg'
+      }]
+    };
+  },
+  methods: {
+    swipe: function swipe(direction) {
+      if (direction == 'Left') {
+        //   console.log(direction)
+        this.$router.push('/');
+      } else if (direction == 'Right') {
+        //   console.log(direction)
+        this.$router.push('/BBS/topic/BBS');
+      }
+
+      this.swipeDirection = direction;
+    }
   }
 });
 
@@ -2960,7 +3526,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       items: [{
-        src: 'https://lh3.googleusercontent.com/proxy/uefYmslmhwGfBF4kVrJRIuwvNKPo0iGHgCUK_p3xEuM_Baui6ee8ZWlsYRK5-cvpBqsEWkx7GlPqSG3PQFgCVz0Q1YkWxtgQvZuTRfiO5EQXa2_zycN_uZvTbVvjcmY8C8ip77EL7ilrs7yvjw'
+        src: 'https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op='
       }, {
         src: 'https://pbs.twimg.com/profile_images/1128570662740578304/fi-DGX_b_400x400.jpg'
       }, {
@@ -2983,6 +3549,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -21708,7 +22281,7 @@ var render = function() {
                     "v-list-item-content",
                     [
                       _c("v-list-item-title", { staticClass: "title" }, [
-                        _vm._v("\n          Navigation lists\n        ")
+                        _vm._v("\n          アプリタイトル\n        ")
                       ])
                     ],
                     1
@@ -21840,7 +22413,8 @@ var render = function() {
                             "v-btn",
                             _vm._g({ attrs: { text: "" } }, on),
                             [
-                              _vm._v("Support"),
+                              _c("v-icon", [_vm._v("mdi-settings")]),
+                              _vm._v(" "),
                               _c("v-icon", [_vm._v("mdi-menu-down")])
                             ],
                             1
@@ -21924,7 +22498,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "v-btn",
-                { attrs: { to: "/users/1" } },
+                { attrs: { to: "/BBS/topic/BBS" } },
                 [
                   _c("span", [_vm._v("BBS")]),
                   _vm._v(" "),
@@ -21935,7 +22509,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "v-btn",
-                { attrs: { to: "/user" } },
+                { attrs: { to: "/users/MyProfile/MyProfile" } },
                 [
                   _c("span", [_vm._v("Account")]),
                   _vm._v(" "),
@@ -21960,10 +22534,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
-  \*******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -21975,27 +22549,23 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _vm._v("Example Component")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c(
-              "ul",
-              _vm._l(_vm.users, function(user) {
-                return _c("li", [_vm._v(_vm._s(user.name))])
-              }),
-              0
-            )
-          ])
-        ])
-      ])
-    ])
-  ])
+  return _c(
+    "v-app",
+    { attrs: { id: "app" } },
+    [
+      _c("router-view", { attrs: { name: "button" } }),
+      _vm._v(" "),
+      _c("router-view", { attrs: { name: "header" } }),
+      _vm._v(" "),
+      _c(
+        "v-content",
+        { attrs: { fluid: "" } },
+        [_c("transition", { attrs: { name: "fade" } }, [_c("router-view")], 1)],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -22106,6 +22676,559 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/ARecommend.vue?vue&type=template&id=b2bcb38c&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/ARecommend.vue?vue&type=template&id=b2bcb38c& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-container",
+    [
+      _c(
+        "v-row",
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ],
+          attrs: { align: "center", justify: "center" }
+        },
+        [
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: {
+                    "max-width": "434",
+                    shaped: "",
+                    to: "/users/SheldonCooper",
+                    "text-center": ""
+                  }
+                },
+                [
+                  _c(
+                    "v-img",
+                    { attrs: { height: "250px", src: "/img/ball.jpg" } },
+                    [
+                      _c(
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        [
+                          _c(
+                            "v-col",
+                            { staticClass: "py-0" },
+                            [
+                              _c(
+                                "v-list-item",
+                                {
+                                  attrs: {
+                                    color: "rgba(0, 0, 0, .4)",
+                                    dark: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-list-item-content",
+                                    [
+                                      _c(
+                                        "v-list-item-title",
+                                        { staticClass: "title" },
+                                        [_vm._v("27歳　カルフォルニア在住")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-list-item-subtitle", [
+                                        _vm._v(
+                                          "カリフォルニア工科大学 理論物理学者"
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("v-btn")
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
+                },
+                [
+                  _c(
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "250px",
+                        src:
+                          "https://amd.c.yimg.jp/amd/20191121-00011897-weather-002-1-view.jpg"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        [
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
+                                  }
+                                },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://vignette.wikia.nocookie.net/the-big-bang-theory/images/6/6a/Howardwolowitz.jpg/revision/latest/top-crop/width/360/height/450?cb=20180621133808&path-prefix=ja"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "start",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-chip-group",
+                                {
+                                  attrs: {
+                                    column: "",
+                                    "active-class": "primary--text"
+                                  }
+                                },
+                                [
+                                  _c("v-chip", [_vm._v("宇宙飛行士")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [
+                                    _vm._v("ダンジョンズ&ドラゴンズ")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("ゲームが好き")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("マザコン")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("ユダヤ人")])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { staticClass: "py-0" },
+                            [
+                              _c(
+                                "v-list-item",
+                                {
+                                  attrs: {
+                                    color: "rgba(0, 0, 0, .4)",
+                                    dark: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-list-item-content",
+                                    [
+                                      _c(
+                                        "v-list-item-title",
+                                        { staticClass: "title" },
+                                        [_vm._v("26歳　カルフォルニア在住")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-list-item-subtitle", [
+                                        _vm._v("応用物理学のエンジニア")
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
+                },
+                [
+                  _c(
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "250px",
+                        src:
+                          "https://up.gc-img.net/post_img/2017/04/LRd6QlYT42KfNBP_pPXKw_16.jpeg"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        [
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
+                                  }
+                                },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://www.superdramatv.com/lineup/SN0000000042/img/cast_05.jpg"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "start",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-chip-group",
+                                {
+                                  attrs: {
+                                    column: "",
+                                    "active-class": "primary--text"
+                                  }
+                                },
+                                [
+                                  _c("v-chip", [_vm._v("6人兄弟")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("親が医者")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("企画・主催が好き")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("お酒が飲めない")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("インド料理は苦手")])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { staticClass: "py-0" },
+                            [
+                              _c(
+                                "v-list-item",
+                                {
+                                  attrs: {
+                                    color: "rgba(0, 0, 0, .4)",
+                                    dark: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-list-item-content",
+                                    [
+                                      _c(
+                                        "v-list-item-title",
+                                        { staticClass: "title" },
+                                        [_vm._v("25歳　ニューデリー出身")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-list-item-subtitle", [
+                                        _vm._v("宇宙物理学者")
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
+                },
+                [
+                  _c(
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "250px",
+                        src:
+                          "https://www.superdramatv.com/line/bigbang/episode/img/epi_photo_97.jpg"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        [
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
+                                  }
+                                },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://i.pinimg.com/originals/0f/14/e4/0f14e4c9177e3c1def125814de1d8d3a.jpg"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "start",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-chip-group",
+                                {
+                                  attrs: {
+                                    column: "",
+                                    "active-class": "primary--text"
+                                  }
+                                },
+                                [
+                                  _c("v-chip", [_vm._v("経営者")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("イラストレーター")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("孤独")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("生活困窮")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("全焼")])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { staticClass: "py-0" },
+                            [
+                              _c(
+                                "v-list-item",
+                                {
+                                  attrs: {
+                                    color: "rgba(0, 0, 0, .4)",
+                                    dark: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-list-item-content",
+                                    [
+                                      _c(
+                                        "v-list-item-title",
+                                        { staticClass: "title" },
+                                        [_vm._v("カルフォルニア在住")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-list-item-subtitle", [
+                                        _vm._v("コミックブックストアを経営")
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/About.vue?vue&type=template&id=2995bb7e&":
 /*!***************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/About.vue?vue&type=template&id=2995bb7e& ***!
@@ -22122,6 +23245,144 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("h1", [_vm._v("About Page")])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/BBS.vue?vue&type=template&id=c80f2138&":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/BBS.vue?vue&type=template&id=c80f2138& ***!
+  \*************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-container",
+    [
+      _c(
+        "v-row",
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ]
+        },
+        [
+          _c(
+            "v-card",
+            { staticClass: "mx-auto my-1", attrs: { "max-width": "374" } },
+            [
+              _c(
+                "v-list",
+                { attrs: { "three-line": "" } },
+                [
+                  _vm._l(_vm.items, function(item, index) {
+                    return [
+                      item.header
+                        ? _c("v-subheader", {
+                            key: item.header,
+                            domProps: { textContent: _vm._s(item.header) }
+                          })
+                        : item.divider
+                        ? _c("v-divider", {
+                            key: index,
+                            attrs: { inset: item.inset }
+                          })
+                        : _c(
+                            "v-list-item",
+                            {
+                              key: item.title,
+                              attrs: { to: "/making" },
+                              on: { click: function($event) {} }
+                            },
+                            [
+                              _c(
+                                "v-list-item-avatar",
+                                { attrs: { tile: "" } },
+                                [_c("v-img", { attrs: { src: item.avatar } })],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-list-item-content",
+                                [
+                                  _c("v-list-item-title", {
+                                    domProps: { innerHTML: _vm._s(item.title) }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-list-item-subtitle", {
+                                    domProps: {
+                                      innerHTML: _vm._s(item.subtitle)
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-list-item-action",
+                                [
+                                  _c("v-list-item-action-text", {
+                                    domProps: {
+                                      textContent: _vm._s(item.action)
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-list-item-action-text", {
+                                    domProps: {
+                                      textContent: _vm._s(item.comment)
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                    ]
+                  })
+                ],
+                2
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -22172,14 +23433,164 @@ var render = function() {
               expression:
                 "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
             }
-          ],
-          staticClass: "grey lighten-2",
-          staticStyle: { height: "1000px" },
-          attrs: { align: "center", justify: "center" }
+          ]
         },
         [
-          _c("v-subheader", [_vm._v("Swipe Direction")]),
-          _vm._v("\n    " + _vm._s(_vm.swipeDirection) + "\n  ")
+          _c(
+            "v-col",
+            { attrs: { cols: "12" } },
+            [
+              _c(
+                "v-card",
+                { staticClass: "mx-auto my-1", attrs: { "max-width": "374" } },
+                [
+                  _c("h3", [_vm._v("今日のトピックス")]),
+                  _vm._v(" "),
+                  _c(
+                    "v-list-item",
+                    { attrs: { "two-line": "", to: "/making" } },
+                    [
+                      _c(
+                        "v-avatar",
+                        [
+                          _c("v-img", {
+                            attrs: {
+                              src:
+                                "https://rpr.c.yimg.jp/im_sigg688HsuuPIAaGOEwDatEKFA---x800-n1/amd/20170221-00067927-roupeiro-000-15-view.jpg"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item-content",
+                        [
+                          _c("v-list-item-title", [_vm._v("Two-line item")]),
+                          _vm._v(" "),
+                          _c("v-list-item-subtitle", [_vm._v("Secondary text")])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c(
+                    "v-list-item",
+                    { attrs: { "two-line": "", to: "/making" } },
+                    [
+                      _c(
+                        "v-avatar",
+                        [
+                          _c("v-img", {
+                            attrs: {
+                              src:
+                                "https://rpr.c.yimg.jp/im_sigg688HsuuPIAaGOEwDatEKFA---x800-n1/amd/20170221-00067927-roupeiro-000-15-view.jpg"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item-content",
+                        [
+                          _c("v-list-item-title", [_vm._v("Two-line item")]),
+                          _vm._v(" "),
+                          _c("v-list-item-subtitle", [_vm._v("Secondary text")])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto my-1",
+                  attrs: { "max-width": "374", align: "center" }
+                },
+                [
+                  _c("h3", [_vm._v("あなたのランク")]),
+                  _vm._v(" "),
+                  _c("h4", [_vm._v("シルバー")]),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("あなたのポイント")]),
+                  _vm._v(" "),
+                  _c("h4", [_vm._v("94P")]),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("あなたへの紹介")]),
+                  _vm._v(" "),
+                  _c("h4", [_vm._v("5件")]),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("掲示板への返信")]),
+                  _vm._v(" "),
+                  _c("h4", [_vm._v("20件")]),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("今週のいいね！")]),
+                  _vm._v(" "),
+                  _c("h4", [_vm._v("33件")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto my-1",
+                  attrs: { "max-width": "374", align: "center" }
+                },
+                [
+                  _c("h3", [_vm._v("あなたにぴったりの相手を探す")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("占いをAIが理想の相手を探します♪")]),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { to: "/recommend/占い？AI？", color: "primary" }
+                    },
+                    [_vm._v("\n      SERCH!!\n\n    ")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto my-1",
+                  attrs: { "max-width": "374", align: "center" }
+                },
+                [
+                  _c("h3", [_vm._v("開発者への寄付")]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("サービス維持の為寄付をお願いします")]),
+                  _vm._v(" "),
+                  _c("v-btn", { attrs: { to: "/making", color: "primary" } }, [
+                    _vm._v("\n      ￥300 寄付する\n\n    ")
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       )
@@ -22322,6 +23733,47 @@ var render = function() {
             ],
             1
           )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Making.vue?vue&type=template&id=7276e8ec&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Making.vue?vue&type=template&id=7276e8ec& ***!
+  \****************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-container",
+    [
+      _c(
+        "v-card",
+        { attrs: { "max-width": "374px" } },
+        [
+          _c("h1", [_vm._v("このページは制作中です")]),
+          _vm._v(" "),
+          _c("v-img", {
+            attrs: { src: "/img/kouji_rammer.png", "max-width": "374px" }
+          })
         ],
         1
       )
@@ -22697,117 +24149,575 @@ var render = function() {
     "v-container",
     [
       _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
+        "v-row",
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ]
+        },
         [
           _c(
-            "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: {
-                "max-width": "434",
-                shaped: "",
-                to: "/users/SheldonCooper"
-              }
-            },
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
             [
               _c(
-                "v-img",
+                "v-card",
                 {
+                  staticClass: "mx-auto",
                   attrs: {
-                    height: "250px",
-                    src:
-                      "https://livedoor.sp.blogimg.jp/toei23/imgs/9/9/992392ef.jpg"
+                    "max-width": "434",
+                    shaped: "",
+                    to: "/users/SheldonCooper"
                   }
                 },
                 [
                   _c(
-                    "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "250px",
+                        src:
+                          "https://livedoor.sp.blogimg.jp/toei23/imgs/9/9/992392ef.jpg"
+                      }
+                    },
                     [
                       _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
                         [
                           _c(
-                            "v-avatar",
+                            "v-col",
                             {
-                              staticClass: "profile",
-                              attrs: { color: "grey", size: "164", tile: "" }
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
                             },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://lh3.googleusercontent.com/proxy/uefYmslmhwGfBF4kVrJRIuwvNKPo0iGHgCUK_p3xEuM_Baui6ee8ZWlsYRK5-cvpBqsEWkx7GlPqSG3PQFgCVz0Q1YkWxtgQvZuTRfiO5EQXa2_zycN_uZvTbVvjcmY8C8ip77EL7ilrs7yvjw"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "start",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
-                        [
-                          _c(
-                            "v-chip-group",
-                            {
-                              attrs: {
-                                column: "",
-                                "active-class": "primary--text"
-                              }
-                            },
-                            _vm._l(_vm.tags, function(tag) {
-                              return _c("v-chip", { key: tag }, [
-                                _vm._v(
-                                  "\n            " +
-                                    _vm._s(tag) +
-                                    "\n          "
-                                )
-                              ])
-                            }),
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        { staticClass: "py-0" },
-                        [
-                          _c(
-                            "v-list-item",
-                            { attrs: { color: "rgba(0, 0, 0, .4)", dark: "" } },
                             [
                               _c(
-                                "v-list-item-content",
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
+                                  }
+                                },
                                 [
-                                  _c(
-                                    "v-list-item-title",
-                                    { staticClass: "title" },
-                                    [_vm._v("27歳　カルフォルニア在住")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-list-item-subtitle", [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "start",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-chip-group",
+                                {
+                                  attrs: {
+                                    column: "",
+                                    "active-class": "primary--text"
+                                  }
+                                },
+                                _vm._l(_vm.tags, function(tag) {
+                                  return _c("v-chip", { key: tag }, [
                                     _vm._v(
-                                      "カリフォルニア工科大学 理論物理学者"
+                                      "\n            " +
+                                        _vm._s(tag) +
+                                        "\n          "
                                     )
                                   ])
+                                }),
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { staticClass: "py-0" },
+                            [
+                              _c(
+                                "v-list-item",
+                                {
+                                  attrs: {
+                                    color: "rgba(0, 0, 0, .4)",
+                                    dark: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-list-item-content",
+                                    [
+                                      _c(
+                                        "v-list-item-title",
+                                        { staticClass: "title" },
+                                        [_vm._v("27歳　カルフォルニア在住")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-list-item-subtitle", [
+                                        _vm._v(
+                                          "カリフォルニア工科大学 理論物理学者"
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
+                },
+                [
+                  _c(
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "250px",
+                        src:
+                          "https://amd.c.yimg.jp/amd/20191121-00011897-weather-002-1-view.jpg"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        [
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
+                                  }
+                                },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://vignette.wikia.nocookie.net/the-big-bang-theory/images/6/6a/Howardwolowitz.jpg/revision/latest/top-crop/width/360/height/450?cb=20180621133808&path-prefix=ja"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "start",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-chip-group",
+                                {
+                                  attrs: {
+                                    column: "",
+                                    "active-class": "primary--text"
+                                  }
+                                },
+                                [
+                                  _c("v-chip", [_vm._v("宇宙飛行士")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [
+                                    _vm._v("ダンジョンズ&ドラゴンズ")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("ゲームが好き")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("マザコン")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("ユダヤ人")])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { staticClass: "py-0" },
+                            [
+                              _c(
+                                "v-list-item",
+                                {
+                                  attrs: {
+                                    color: "rgba(0, 0, 0, .4)",
+                                    dark: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-list-item-content",
+                                    [
+                                      _c(
+                                        "v-list-item-title",
+                                        { staticClass: "title" },
+                                        [_vm._v("26歳　カルフォルニア在住")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-list-item-subtitle", [
+                                        _vm._v("応用物理学のエンジニア")
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
+                },
+                [
+                  _c(
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "250px",
+                        src:
+                          "https://up.gc-img.net/post_img/2017/04/LRd6QlYT42KfNBP_pPXKw_16.jpeg"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        [
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
+                                  }
+                                },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://www.superdramatv.com/lineup/SN0000000042/img/cast_05.jpg"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "start",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-chip-group",
+                                {
+                                  attrs: {
+                                    column: "",
+                                    "active-class": "primary--text"
+                                  }
+                                },
+                                [
+                                  _c("v-chip", [_vm._v("6人兄弟")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("親が医者")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("企画・主催が好き")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("お酒が飲めない")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("インド料理は苦手")])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { staticClass: "py-0" },
+                            [
+                              _c(
+                                "v-list-item",
+                                {
+                                  attrs: {
+                                    color: "rgba(0, 0, 0, .4)",
+                                    dark: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-list-item-content",
+                                    [
+                                      _c(
+                                        "v-list-item-title",
+                                        { staticClass: "title" },
+                                        [_vm._v("25歳　ニューデリー出身")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-list-item-subtitle", [
+                                        _vm._v("宇宙物理学者")
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
+                },
+                [
+                  _c(
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "250px",
+                        src:
+                          "https://www.superdramatv.com/line/bigbang/episode/img/epi_photo_97.jpg"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        [
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
+                                  }
+                                },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://i.pinimg.com/originals/0f/14/e4/0f14e4c9177e3c1def125814de1d8d3a.jpg"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "start",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-chip-group",
+                                {
+                                  attrs: {
+                                    column: "",
+                                    "active-class": "primary--text"
+                                  }
+                                },
+                                [
+                                  _c("v-chip", [_vm._v("経営者")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("イラストレーター")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("孤独")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("生活困窮")]),
+                                  _vm._v(" "),
+                                  _c("v-chip", [_vm._v("全焼")])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { staticClass: "py-0" },
+                            [
+                              _c(
+                                "v-list-item",
+                                {
+                                  attrs: {
+                                    color: "rgba(0, 0, 0, .4)",
+                                    dark: ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-list-item-content",
+                                    [
+                                      _c(
+                                        "v-list-item-title",
+                                        { staticClass: "title" },
+                                        [_vm._v("カルフォルニア在住")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-list-item-subtitle", [
+                                        _vm._v("コミックブックストアを経営")
+                                      ])
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
@@ -22828,391 +24738,132 @@ var render = function() {
           )
         ],
         1
-      ),
-      _vm._v(" "),
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Users/MyProfile.vue?vue&type=template&id=7cbcb9b2&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Users/MyProfile.vue?vue&type=template&id=7cbcb9b2& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-container",
+    [
       _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
+        "v-row",
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ]
+        },
         [
+          _c("router-link", { attrs: { to: "/making" } }, [
+            _vm._v("＞プロフィールを編集する")
+          ]),
+          _vm._v(" "),
           _c(
             "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: { "max-width": "434", shaped: "" }
-            },
+            { staticClass: "mx-auto my-1", attrs: { "max-width": "374" } },
             [
               _c(
-                "v-img",
-                {
-                  attrs: {
-                    height: "250px",
-                    src:
-                      "https://amd.c.yimg.jp/amd/20191121-00011897-weather-002-1-view.jpg"
-                  }
-                },
+                "v-carousel",
+                { attrs: { height: "300", "show-arrows": false } },
+                _vm._l(_vm.items, function(item, i) {
+                  return _c("v-carousel-item", {
+                    key: i,
+                    attrs: {
+                      src: item.src,
+                      "reverse-transition": "fade-transition",
+                      transition: "fade-transition"
+                    }
+                  })
+                }),
+                1
+              ),
+              _vm._v(" "),
+              _c("v-card-title", [
+                _vm._v("レナード　27歳　カルフォルニア在住")
+              ]),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
                 [
                   _c(
                     "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
+                    { staticClass: "mx-0", attrs: { align: "center" } },
                     [
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            {
-                              staticClass: "profile",
-                              attrs: { color: "grey", size: "164", tile: "" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://vignette.wikia.nocookie.net/the-big-bang-theory/images/6/6a/Howardwolowitz.jpg/revision/latest/top-crop/width/360/height/450?cb=20180621133808&path-prefix=ja"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
+                      _c("v-rating", {
+                        attrs: {
+                          value: 4.5,
+                          color: "pink",
+                          dense: "",
+                          "half-increments": "",
+                          readonly: "",
+                          size: "14",
+                          "full-icon": "mdi-heart",
+                          "half-icon": "mdi-heart-half-full"
+                        }
+                      }),
                       _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "start",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
-                        [
-                          _c(
-                            "v-chip-group",
-                            {
-                              attrs: {
-                                column: "",
-                                "active-class": "primary--text"
-                              }
-                            },
-                            [
-                              _c("v-chip", [_vm._v("宇宙飛行士")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("ダンジョンズ&ドラゴンズ")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("ゲームが好き")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("マザコン")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("ユダヤ人")])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        { staticClass: "py-0" },
-                        [
-                          _c(
-                            "v-list-item",
-                            { attrs: { color: "rgba(0, 0, 0, .4)", dark: "" } },
-                            [
-                              _c(
-                                "v-list-item-content",
-                                [
-                                  _c(
-                                    "v-list-item-title",
-                                    { staticClass: "title" },
-                                    [_vm._v("26歳　カルフォルニア在住")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-list-item-subtitle", [
-                                    _vm._v("応用物理学のエンジニア")
-                                  ])
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
+                      _c("div", { staticClass: "grey--text ml-4" }, [
+                        _vm._v("4.5 (413)")
+                      ])
                     ],
                     1
-                  )
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "my-4 subtitle-1" }, [
+                    _vm._v("\n        自己紹介\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _vm._v(
+                      "物理学の研究者で、カリフォルニア工科大学において実験物理学者としてレーザー技術などを研究。24歳でプリンストン大学から博士号を取得。IQは173、他の科学や文学・歴史にも強い。\nシェルドンとルームシェアをしているが、わがままな彼に日々手を焼かされている。性格は内気でやや卑屈、そしてゲームやコミックブックが好きなオタクである。小型ロケットの実験の失敗によりシェルドンとルームシェアしているマンションのエレベーターを破壊した張本人である。\n両親も共に科学者であり、特に後述の母ビバリーからは極端に論理的或いは合理的な考え方に基づいたやり方で育てられる。その結果として、少年時代、学業面では極めて秀でていたものの、寂しさの余り自分を抱擁する機械を制作したりしていた。子供の頃の夢はラッパーだった。また、チェロを習っていた経験があり、その腕前もなかなかのもの。\n乳糖不耐症で、乳製品を食べるとオナラが止まらなくなる。\nペニーとはよく諍いを起こすが、ほとんどの場合仲直りをし、最終的にセックスに発展する。\nペニーが引っ越して来て以来ずっと片想いをしており、「僕らの子は賢くてきれいだろうな」と発言。シーズン1の最終話にて、やっとデートにこぎつけることに成功する。しかし、シーズン2の第1話にて（主に、シェルドンによる）誤解等からフラれてしまう。シーズン2の最終話でシェルドンたちとともに北極調査へ旅立つ。シーズン3では北極から帰国後にペニーと交際に発展するも、レナードが愛していると言ったことをペニーが性急に感じたため、関係にひびが入り破局。その後、ラージの妹であるプリヤと交際し、ペニーをやきもきさせる。プリヤとは彼女のインドへの帰国に伴い、破局。その後、お試し期間という名目で再びペニーと交際している。さらにその後、シーズン6にて初めてペニーから愛していると告げられ、お互いに強く惹かれる。\nシーズン6最終話で、ハワードの推薦によりホーキング博士が組織した調査団に選ばれ、ブラックホールの研究のため北海へ旅行に出た。\nシーズン7では、女優としてのキャリアに悲観的になり酔っていたペニーからプロポーズされた。その際は、ペニーの自暴自棄な態度とレナードの優柔不断な性格から返事が出来なかったが、シーズン7終盤ではレナードがペニーに改めてプロポーズし、婚約した。\nシーズン９の１話でラスベガスで結婚式を挙げた。式の様子はネット配信された。のちに結婚式に招待されなかったことを侮辱的に感じたビバリー（英語版）のために再度結婚式を行う。\nシーズン10ではシェルドン、エイミーの同棲を機にこれまで暮らしていた部屋でペニーと2人きりの結婚生活を開始する。"
+                    )
+                  ])
                 ],
                 1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
-        [
-          _c(
-            "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: { "max-width": "434", shaped: "" }
-            },
-            [
-              _c(
-                "v-img",
-                {
-                  attrs: {
-                    height: "250px",
-                    src:
-                      "https://up.gc-img.net/post_img/2017/04/LRd6QlYT42KfNBP_pPXKw_16.jpeg"
-                  }
-                },
-                [
-                  _c(
-                    "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
-                    [
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            {
-                              staticClass: "profile",
-                              attrs: { color: "grey", size: "164", tile: "" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://www.superdramatv.com/lineup/SN0000000042/img/cast_05.jpg"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "start",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
-                        [
-                          _c(
-                            "v-chip-group",
-                            {
-                              attrs: {
-                                column: "",
-                                "active-class": "primary--text"
-                              }
-                            },
-                            [
-                              _c("v-chip", [_vm._v("6人兄弟")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("親が医者")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("企画・主催が好き")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("お酒が飲めない")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("インド料理は苦手")])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        { staticClass: "py-0" },
-                        [
-                          _c(
-                            "v-list-item",
-                            { attrs: { color: "rgba(0, 0, 0, .4)", dark: "" } },
-                            [
-                              _c(
-                                "v-list-item-content",
-                                [
-                                  _c(
-                                    "v-list-item-title",
-                                    { staticClass: "title" },
-                                    [_vm._v("25歳　ニューデリー出身")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-list-item-subtitle", [
-                                    _vm._v("宇宙物理学者")
-                                  ])
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
-        [
-          _c(
-            "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: { "max-width": "434", shaped: "" }
-            },
-            [
-              _c(
-                "v-img",
-                {
-                  attrs: {
-                    height: "250px",
-                    src:
-                      "https://www.superdramatv.com/line/bigbang/episode/img/epi_photo_97.jpg"
-                  }
-                },
-                [
-                  _c(
-                    "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
-                    [
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            {
-                              staticClass: "profile",
-                              attrs: { color: "grey", size: "164", tile: "" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://i.pinimg.com/originals/0f/14/e4/0f14e4c9177e3c1def125814de1d8d3a.jpg"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "start",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
-                        [
-                          _c(
-                            "v-chip-group",
-                            {
-                              attrs: {
-                                column: "",
-                                "active-class": "primary--text"
-                              }
-                            },
-                            [
-                              _c("v-chip", [_vm._v("経営者")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("イラストレーター")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("孤独")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("生活困窮")]),
-                              _vm._v(" "),
-                              _c("v-chip", [_vm._v("全焼")])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        { staticClass: "py-0" },
-                        [
-                          _c(
-                            "v-list-item",
-                            { attrs: { color: "rgba(0, 0, 0, .4)", dark: "" } },
-                            [
-                              _c(
-                                "v-list-item-content",
-                                [
-                                  _c(
-                                    "v-list-item-title",
-                                    { staticClass: "title" },
-                                    [_vm._v("カルフォルニア在住")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-list-item-subtitle", [
-                                    _vm._v("コミックブックストアを経営")
-                                  ])
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
+              ),
+              _vm._v(" "),
+              _c("v-divider", { staticClass: "mx-4" })
             ],
             1
           )
@@ -23350,7 +25001,6 @@ var render = function() {
           _c(
             "v-btn",
             {
-              staticClass: "elevation-0",
               staticStyle: {
                 width: "240px",
                 left: "25%",
@@ -23360,7 +25010,6 @@ var render = function() {
                 "font-weight": "bold",
                 padding: "8px 16px",
                 "font-style": "italic",
-                "border-radius": "4px",
                 transition: ".4s",
                 bottom: "96px"
               },
@@ -23371,13 +25020,14 @@ var render = function() {
                 fab: "",
                 fixed: "",
                 bottom: "",
+                rounded: "",
                 color: "primary",
                 to: "/users/list",
-                elevation: "24"
+                elevation: "16"
               },
               slot: "activator"
             },
-            [_vm._v("\n      紹介ポイントGET!!\n    ")]
+            [_vm._v("\n      紹介文を送る!\n    ")]
           )
         ],
         1
@@ -23391,11 +25041,7 @@ var render = function() {
             "v-card",
             {
               staticClass: "mx-auto",
-              attrs: {
-                "max-width": "434",
-                shaped: "",
-                to: "/users/SheldonCooper"
-              }
+              attrs: { "max-width": "434", shaped: "" }
             },
             [
               _c(
@@ -23429,7 +25075,7 @@ var render = function() {
                               _c("v-img", {
                                 attrs: {
                                   src:
-                                    "https://lh3.googleusercontent.com/proxy/uefYmslmhwGfBF4kVrJRIuwvNKPo0iGHgCUK_p3xEuM_Baui6ee8ZWlsYRK5-cvpBqsEWkx7GlPqSG3PQFgCVz0Q1YkWxtgQvZuTRfiO5EQXa2_zycN_uZvTbVvjcmY8C8ip77EL7ilrs7yvjw"
+                                    "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op="
                                 }
                               })
                             ],
@@ -23454,22 +25100,30 @@ var render = function() {
                             "v-col",
                             { staticClass: "text-center" },
                             [
-                              _c(
-                                "v-btn",
-                                {
-                                  staticStyle: { "font-style": "italic" },
-                                  attrs: {
-                                    dark: "",
-                                    color: "pink",
-                                    rounded: ""
-                                  }
+                              _c("v-textarea", {
+                                attrs: {
+                                  solo: "",
+                                  rounded: "",
+                                  outlined: "",
+                                  clearable: "",
+                                  counter: "25",
+                                  color: "teal"
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                  Thanks!!!\n              "
-                                  )
-                                ]
-                              )
+                                scopedSlots: _vm._u([
+                                  {
+                                    key: "label",
+                                    fn: function() {
+                                      return [
+                                        _c("div", [
+                                          _vm._v("\n                  紹介文"),
+                                          _c("small", [_vm._v("(25文字以内))")])
+                                        ])
+                                      ]
+                                    },
+                                    proxy: true
+                                  }
+                                ])
+                              })
                             ],
                             1
                           )
@@ -23506,7 +25160,7 @@ var render = function() {
                   attrs: {
                     height: "200px",
                     src:
-                      "https://lh3.googleusercontent.com/proxy/J-TDGKMvMiqr3hTcJHesw80lJoaKFqDdgjtlxB2jCvhsf4Go5MINmVW-wn6i7uOH3zJ1LPIJIYQJzurbOEVc0k86WYdWzh_igIX0bMYn4vNiLJcIeP3OKNZx9x494CE9kkpnFd8QRM4kO4Ibhv5ExuMg6RN7gCNa1hjcwckbfjjE0wyPQ7Wc3y6wCg8"
+                      "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
                   }
                 },
                 [
@@ -23556,22 +25210,30 @@ var render = function() {
                             "v-col",
                             { staticClass: "text-center" },
                             [
-                              _c(
-                                "v-btn",
-                                {
-                                  staticStyle: { "font-style": "italic" },
-                                  attrs: {
-                                    dark: "",
-                                    color: "pink",
-                                    rounded: ""
-                                  }
+                              _c("v-textarea", {
+                                attrs: {
+                                  solo: "",
+                                  rounded: "",
+                                  outlined: "",
+                                  clearable: "",
+                                  counter: "25",
+                                  color: "teal"
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                  Thanks!!!\n              "
-                                  )
-                                ]
-                              )
+                                scopedSlots: _vm._u([
+                                  {
+                                    key: "label",
+                                    fn: function() {
+                                      return [
+                                        _c("div", [
+                                          _vm._v("\n                  紹介文"),
+                                          _c("small", [_vm._v("(25文字以内))")])
+                                        ])
+                                      ]
+                                    },
+                                    proxy: true
+                                  }
+                                ])
+                              })
                             ],
                             1
                           )
@@ -23636,7 +25298,7 @@ var render = function() {
                   attrs: {
                     height: "200px",
                     src:
-                      "https://lh3.googleusercontent.com/proxy/J-TDGKMvMiqr3hTcJHesw80lJoaKFqDdgjtlxB2jCvhsf4Go5MINmVW-wn6i7uOH3zJ1LPIJIYQJzurbOEVc0k86WYdWzh_igIX0bMYn4vNiLJcIeP3OKNZx9x494CE9kkpnFd8QRM4kO4Ibhv5ExuMg6RN7gCNa1hjcwckbfjjE0wyPQ7Wc3y6wCg8"
+                      "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
                   }
                 },
                 [
@@ -80592,23 +82254,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=template&id=299e239e& */ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&");
-/* harmony import */ var _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _ExampleComponent_vue_vue_type_template_id_299e239e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true& */ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-
-
+var script = {}
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _ExampleComponent_vue_vue_type_template_id_299e239e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ExampleComponent_vue_vue_type_template_id_299e239e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "299e239e",
   null
   
 )
@@ -80620,33 +82280,19 @@ component.options.__file = "resources/js/components/ExampleComponent.vue"
 
 /***/ }),
 
-/***/ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
-/*!*************************************************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
-  \*************************************************************************************/
+/***/ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true& ***!
+  \*************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=template&id=299e239e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -80811,19 +82457,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_Home_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/Home.vue */ "./resources/js/views/Home.vue");
 /* harmony import */ var _views_About_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/About.vue */ "./resources/js/views/About.vue");
 /* harmony import */ var _views_NotFound_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/NotFound.vue */ "./resources/js/views/NotFound.vue");
-/* harmony import */ var _views_User_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/User.vue */ "./resources/js/views/User.vue");
-/* harmony import */ var _views_UserDetail_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/UserDetail.vue */ "./resources/js/views/UserDetail.vue");
-/* harmony import */ var _views_UserEdit_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/UserEdit.vue */ "./resources/js/views/UserEdit.vue");
-/* harmony import */ var _views_UserCreate_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/UserCreate.vue */ "./resources/js/views/UserCreate.vue");
-/* harmony import */ var _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Appbar.vue */ "./resources/js/components/Appbar.vue");
-/* harmony import */ var _components_LikeButton_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/LikeButton.vue */ "./resources/js/components/LikeButton.vue");
-/* harmony import */ var _components_RButton_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/RButton.vue */ "./resources/js/components/RButton.vue");
-/* harmony import */ var _views_Users_id_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./views/Users/_id.vue */ "./resources/js/views/Users/_id.vue");
-/* harmony import */ var _views_Users_List_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./views/Users/List.vue */ "./resources/js/views/Users/List.vue");
-/* harmony import */ var _views_Users_Women_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./views/Users/Women.vue */ "./resources/js/views/Users/Women.vue");
-/* harmony import */ var _views_Users_Thanks_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./views/Users/Thanks.vue */ "./resources/js/views/Users/Thanks.vue");
-/* harmony import */ var _views_Mail_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/Mail.vue */ "./resources/js/views/Mail.vue");
-/* harmony import */ var _views_Users_SheldonCooper_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./views/Users/SheldonCooper.vue */ "./resources/js/views/Users/SheldonCooper.vue");
+/* harmony import */ var _views_Making_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/Making.vue */ "./resources/js/views/Making.vue");
+/* harmony import */ var _views_User_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/User.vue */ "./resources/js/views/User.vue");
+/* harmony import */ var _views_UserDetail_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/UserDetail.vue */ "./resources/js/views/UserDetail.vue");
+/* harmony import */ var _views_UserEdit_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/UserEdit.vue */ "./resources/js/views/UserEdit.vue");
+/* harmony import */ var _views_UserCreate_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views/UserCreate.vue */ "./resources/js/views/UserCreate.vue");
+/* harmony import */ var _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Appbar.vue */ "./resources/js/components/Appbar.vue");
+/* harmony import */ var _components_LikeButton_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/LikeButton.vue */ "./resources/js/components/LikeButton.vue");
+/* harmony import */ var _components_RButton_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/RButton.vue */ "./resources/js/components/RButton.vue");
+/* harmony import */ var _views_Users_id_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./views/Users/_id.vue */ "./resources/js/views/Users/_id.vue");
+/* harmony import */ var _views_Users_List_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./views/Users/List.vue */ "./resources/js/views/Users/List.vue");
+/* harmony import */ var _views_Users_Women_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./views/Users/Women.vue */ "./resources/js/views/Users/Women.vue");
+/* harmony import */ var _views_Users_Thanks_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/Users/Thanks.vue */ "./resources/js/views/Users/Thanks.vue");
+/* harmony import */ var _views_Users_MyProfile_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./views/Users/MyProfile.vue */ "./resources/js/views/Users/MyProfile.vue");
+/* harmony import */ var _views_Mail_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./views/Mail.vue */ "./resources/js/views/Mail.vue");
+/* harmony import */ var _views_BBS_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./views/BBS.vue */ "./resources/js/views/BBS.vue");
+/* harmony import */ var _views_ARecommend_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./views/ARecommend.vue */ "./resources/js/views/ARecommend.vue");
+/* harmony import */ var _views_Users_SheldonCooper_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./views/Users/SheldonCooper.vue */ "./resources/js/views/Users/SheldonCooper.vue");
+
+
+
+
 
 
 
@@ -80850,80 +82504,173 @@ var routes = [{
   path: "/",
   components: {
     "default": _views_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }
+}, {
+  path: '/making',
+  components: {
+    "default": _views_Making_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/about',
   components: {
     "default": _views_About_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/user',
   components: {
-    "default": _views_User_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    "default": _views_User_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/user/create',
   components: {
-    "default": _views_UserCreate_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    "default": _views_UserCreate_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/user/:id',
   components: {
-    "default": _views_UserDetail_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    "default": _views_UserDetail_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/user/:id/edit',
   components: {
-    "default": _views_UserEdit_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    "default": _views_UserEdit_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/users/SheldonCooper',
   components: {
-    "default": _views_Users_SheldonCooper_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
-    button: _components_RButton_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
+    "default": _views_Users_SheldonCooper_vue__WEBPACK_IMPORTED_MODULE_21__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
+    button: _components_RButton_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
+  }
+}, {
+  path: '/users/MyProfile/:title',
+  components: {
+    "default": _views_Users_MyProfile_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/users/women/:title',
   components: {
-    "default": _views_Users_Women_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    "default": _views_Users_Women_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/users/thanks/:title',
   components: {
-    "default": _views_Users_Thanks_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    "default": _views_Users_Thanks_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/users/list',
   components: {
-    "default": _views_Users_List_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    "default": _views_Users_List_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/users/:id',
   components: {
-    "default": _views_Users_id_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
-    button: _components_LikeButton_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+    "default": _views_Users_id_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
+    button: _components_LikeButton_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
   }
 }, {
   path: '/mail/:title',
   components: {
-    "default": _views_Mail_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
-    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    "default": _views_Mail_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }
+}, {
+  path: '/BBS/topic/:title',
+  components: {
+    "default": _views_BBS_vue__WEBPACK_IMPORTED_MODULE_19__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }
+}, {
+  path: '/recommend/:title',
+  components: {
+    "default": _views_ARecommend_vue__WEBPACK_IMPORTED_MODULE_20__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: routes
 }));
+
+/***/ }),
+
+/***/ "./resources/js/views/ARecommend.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/views/ARecommend.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ARecommend_vue_vue_type_template_id_b2bcb38c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ARecommend.vue?vue&type=template&id=b2bcb38c& */ "./resources/js/views/ARecommend.vue?vue&type=template&id=b2bcb38c&");
+/* harmony import */ var _ARecommend_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ARecommend.vue?vue&type=script&lang=js& */ "./resources/js/views/ARecommend.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ARecommend_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ARecommend_vue_vue_type_template_id_b2bcb38c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ARecommend_vue_vue_type_template_id_b2bcb38c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/ARecommend.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/ARecommend.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/views/ARecommend.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ARecommend_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ARecommend.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/ARecommend.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ARecommend_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/ARecommend.vue?vue&type=template&id=b2bcb38c&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/views/ARecommend.vue?vue&type=template&id=b2bcb38c& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ARecommend_vue_vue_type_template_id_b2bcb38c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ARecommend.vue?vue&type=template&id=b2bcb38c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/ARecommend.vue?vue&type=template&id=b2bcb38c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ARecommend_vue_vue_type_template_id_b2bcb38c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ARecommend_vue_vue_type_template_id_b2bcb38c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -80975,6 +82722,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_About_vue_vue_type_template_id_2995bb7e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_About_vue_vue_type_template_id_2995bb7e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/views/BBS.vue":
+/*!************************************!*\
+  !*** ./resources/js/views/BBS.vue ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _BBS_vue_vue_type_template_id_c80f2138___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BBS.vue?vue&type=template&id=c80f2138& */ "./resources/js/views/BBS.vue?vue&type=template&id=c80f2138&");
+/* harmony import */ var _BBS_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BBS.vue?vue&type=script&lang=js& */ "./resources/js/views/BBS.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BBS_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BBS_vue_vue_type_template_id_c80f2138___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BBS_vue_vue_type_template_id_c80f2138___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/BBS.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/BBS.vue?vue&type=script&lang=js&":
+/*!*************************************************************!*\
+  !*** ./resources/js/views/BBS.vue?vue&type=script&lang=js& ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BBS_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./BBS.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/BBS.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BBS_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/BBS.vue?vue&type=template&id=c80f2138&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/views/BBS.vue?vue&type=template&id=c80f2138& ***!
+  \*******************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BBS_vue_vue_type_template_id_c80f2138___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./BBS.vue?vue&type=template&id=c80f2138& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/BBS.vue?vue&type=template&id=c80f2138&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BBS_vue_vue_type_template_id_c80f2138___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BBS_vue_vue_type_template_id_c80f2138___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -81113,6 +82929,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Mail_vue_vue_type_template_id_2b119c54___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Mail_vue_vue_type_template_id_2b119c54___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Making.vue":
+/*!***************************************!*\
+  !*** ./resources/js/views/Making.vue ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Making_vue_vue_type_template_id_7276e8ec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Making.vue?vue&type=template&id=7276e8ec& */ "./resources/js/views/Making.vue?vue&type=template&id=7276e8ec&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _Making_vue_vue_type_template_id_7276e8ec___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Making_vue_vue_type_template_id_7276e8ec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/Making.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/Making.vue?vue&type=template&id=7276e8ec&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/views/Making.vue?vue&type=template&id=7276e8ec& ***!
+  \**********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Making_vue_vue_type_template_id_7276e8ec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Making.vue?vue&type=template&id=7276e8ec& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Making.vue?vue&type=template&id=7276e8ec&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Making_vue_vue_type_template_id_7276e8ec___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Making_vue_vue_type_template_id_7276e8ec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -81511,6 +83380,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_List_vue_vue_type_template_id_25ce7044___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_List_vue_vue_type_template_id_25ce7044___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Users/MyProfile.vue":
+/*!************************************************!*\
+  !*** ./resources/js/views/Users/MyProfile.vue ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MyProfile_vue_vue_type_template_id_7cbcb9b2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MyProfile.vue?vue&type=template&id=7cbcb9b2& */ "./resources/js/views/Users/MyProfile.vue?vue&type=template&id=7cbcb9b2&");
+/* harmony import */ var _MyProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyProfile.vue?vue&type=script&lang=js& */ "./resources/js/views/Users/MyProfile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MyProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MyProfile_vue_vue_type_template_id_7cbcb9b2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MyProfile_vue_vue_type_template_id_7cbcb9b2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/Users/MyProfile.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/Users/MyProfile.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/views/Users/MyProfile.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MyProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./MyProfile.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Users/MyProfile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MyProfile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/Users/MyProfile.vue?vue&type=template&id=7cbcb9b2&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/views/Users/MyProfile.vue?vue&type=template&id=7cbcb9b2& ***!
+  \*******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MyProfile_vue_vue_type_template_id_7cbcb9b2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./MyProfile.vue?vue&type=template&id=7cbcb9b2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Users/MyProfile.vue?vue&type=template&id=7cbcb9b2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MyProfile_vue_vue_type_template_id_7cbcb9b2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MyProfile_vue_vue_type_template_id_7cbcb9b2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

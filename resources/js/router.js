@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import NotFound from './views/NotFound.vue'
+import Making from './views/Making.vue'
 import User from './views/User.vue'
 import UserDetail from './views/UserDetail.vue'
 import UserEdit from './views/UserEdit.vue'
@@ -14,7 +15,10 @@ import UserId from './views/Users/_id.vue'
 import UserList from './views/Users/List.vue'
 import Women from './views/Users/Women.vue'
 import Thanks from './views/Users/Thanks.vue'
+import MyProfile from './views/Users/MyProfile.vue'
 import Mail from './views/Mail.vue'
+import BBS from './views/BBS.vue'
+import ARecommend from './views/ARecommend.vue'
 import SheldonCooper from './views/Users/SheldonCooper.vue'
 
 Vue.use(VueRouter);
@@ -30,6 +34,13 @@ const routes = [
          default : Home,
          header : Appbar
         }
+    },
+    {
+      path: '/making',
+      components: {
+        default : Making,
+        header : Appbar
+       }
     },
     {
         path: '/about',
@@ -75,6 +86,13 @@ const routes = [
          }
       },
       {
+        path: '/users/MyProfile/:title',
+        components: {
+          default : MyProfile,
+          header : Appbar
+         }
+      },
+      {
         path: '/users/women/:title',
         components: {
           default : Women,
@@ -110,7 +128,20 @@ const routes = [
           header : Appbar
          }
       },
-      
+      {
+        path: '/BBS/topic/:title',
+        components: {
+          default : BBS,
+          header : Appbar
+         }
+      },
+      {
+        path: '/recommend/:title',
+        components: {
+          default : ARecommend,
+          header : Appbar
+         }
+      },
  
 ];
 

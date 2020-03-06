@@ -5,7 +5,7 @@
 <div class="text-center">
     <v-btn
     slot="activator"
-      class="elevation-0"
+   
       :style="{left: '50%', transform:'translateX(-50%)'}"
       style="
   width: 240px;
@@ -16,18 +16,18 @@
   font-weight: bold;
   padding: 8px 16px;
   font-style: italic; 
-  border-radius: 4px;
   transition: .4s;
   bottom: 96px;"
       dark
       fab
       fixed
       bottom
+     rounded
       color="primary"
       to="/users/list"
-      elevation="24"
+      elevation="16"
     >
-      紹介ポイントGET!!
+      紹介文を送る!
     </v-btn>
 </div>
 
@@ -38,7 +38,6 @@
     class="mx-auto"
     max-width="434"
     shaped
-    to="/users/SheldonCooper"
   >
     <v-img
       height="200px"
@@ -59,7 +58,7 @@
             size="164"
             tile
           >
-            <v-img src="https://lh3.googleusercontent.com/proxy/uefYmslmhwGfBF4kVrJRIuwvNKPo0iGHgCUK_p3xEuM_Baui6ee8ZWlsYRK5-cvpBqsEWkx7GlPqSG3PQFgCVz0Q1YkWxtgQvZuTRfiO5EQXa2_zycN_uZvTbVvjcmY8C8ip77EL7ilrs7yvjw"></v-img>
+            <v-img src="https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op="></v-img>
           </v-avatar>
         </v-col>
  <v-col
@@ -70,17 +69,21 @@
           >
         
 <v-col class="text-center">
-         
-            <v-btn
-            dark
-            color="pink"
-            style="font-style: italic;"
+        
+            <v-textarea
+            solo
             rounded
-            
+            outlined
+            clearable
+            counter="25"
+              color="teal"
             >
-                  Thanks!!!
-              </v-btn>
-         
+              <template v-slot:label>
+                <div>
+                  紹介文<small>(25文字以内))</small>
+                </div>
+              </template>
+            </v-textarea>
     
         </v-col>
         
@@ -98,7 +101,7 @@
   >
     <v-img
       height="200px"
-      src="https://lh3.googleusercontent.com/proxy/J-TDGKMvMiqr3hTcJHesw80lJoaKFqDdgjtlxB2jCvhsf4Go5MINmVW-wn6i7uOH3zJ1LPIJIYQJzurbOEVc0k86WYdWzh_igIX0bMYn4vNiLJcIeP3OKNZx9x494CE9kkpnFd8QRM4kO4Ibhv5ExuMg6RN7gCNa1hjcwckbfjjE0wyPQ7Wc3y6wCg8"
+      src="https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
     >
       <v-row
         align="end"
@@ -126,17 +129,21 @@
           >
         
 <v-col class="text-center">
-         
-            <v-btn
-            dark
-            color="pink"
-            style="font-style: italic;"
+        
+            <v-textarea
+            solo
             rounded
-            
+            outlined
+            clearable
+            counter="25"
+              color="teal"
             >
-                  Thanks!!!
-              </v-btn>
-         
+              <template v-slot:label>
+                <div>
+                  紹介文<small>(25文字以内))</small>
+                </div>
+              </template>
+            </v-textarea>
     
         </v-col>
         
