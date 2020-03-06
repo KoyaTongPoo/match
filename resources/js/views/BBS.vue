@@ -61,7 +61,7 @@
       items: [
         { header: 'Today' },
         {
-          avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+          avatar: '/img/reporter-852096_640.jpg',
           title: '東京五輪「年内延期」の可能性も　新型ウイルス流行で橋本五輪相',
           subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?",
           action: '15 min',
@@ -69,25 +69,25 @@
         },
         { divider: true, inset: true },
         {
-          avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+          avatar: '/img/reporter-852096_640.jpg',
           title: 'Summer BBQ <span class="end grey--text text--lighten-1">15 min</span>',
           subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend.",
         },
         { divider: true, inset: true },
         {
-          avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+          avatar: '/img/reporter-852096_640.jpg',
           title: 'Oui oui',
           subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?",
         },
         { divider: true, inset: true },
         {
-          avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+          avatar: '/img/reporter-852096_640.jpg',
           title: 'Birthday gift',
           subtitle: "<span class='text--primary'>Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?",
         },
         { divider: true, inset: true },
         {
-          avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+          avatar: '/img/reporter-852096_640.jpg',
           title: 'Recipe to try',
           subtitle: "<span class='text--primary'>Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.",
         },

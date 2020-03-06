@@ -14,6 +14,7 @@ import RButton from './components/RButton.vue'
 import UserId from './views/Users/_id.vue'
 import UserList from './views/Users/List.vue'
 import Women from './views/Users/Women.vue'
+import Match from './views/Users/Match.vue'
 import Thanks from './views/Users/Thanks.vue'
 import MyProfile from './views/Users/MyProfile.vue'
 import Mail from './views/Mail.vue'
@@ -96,6 +97,13 @@ const routes = [
         path: '/users/women/:title',
         components: {
           default : Women,
+          header : Appbar
+         }
+      },
+      {
+        path: '/users/match/:title',
+        components: {
+          default : Match,
           header : Appbar
          }
       },

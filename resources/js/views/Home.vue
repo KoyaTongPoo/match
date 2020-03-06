@@ -11,7 +11,8 @@
   cols="12">
   <v-card
   class="mx-auto my-1"
-    max-width="374">
+    max-width="374"
+    color="lime">
     <h3>今日のトピックス</h3>
      <v-list-item two-line to="/making">
        <v-avatar>
@@ -38,6 +39,7 @@
 
   <v-card class="mx-auto my-1"
     max-width="374"
+    color="cyan"
     align="center">
     <h3>あなたのランク</h3>
     <h4>シルバー</h4>
@@ -57,6 +59,7 @@
 
    <v-card class="mx-auto my-1"
     max-width="374"
+    color="light-green"
     align="center">
     <h3>あなたにぴったりの相手を探す</h3>
     <p>占いをAIが理想の相手を探します♪</p>
@@ -70,6 +73,7 @@
 
  <v-card class="mx-auto my-1"
     max-width="374"
+    color="amber"
     align="center">
     <h3>開発者への寄付</h3>
     <p>サービス維持の為寄付をお願いします</p>

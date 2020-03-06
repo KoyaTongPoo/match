@@ -46,7 +46,7 @@
 
       <v-toolbar-items>
 
-<v-btn text to="/mail/メール">
+<v-btn text to="/mail/新着メッセージ">
   
    <v-badge
           color="warning"

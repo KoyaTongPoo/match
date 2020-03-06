@@ -2292,139 +2292,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       swipeDirection: 'None',
-      tags: ['アメコミ好き', 'タバコ吸わない', 'SF好き', 'ルールは大事', 'バジンガ']
+      dialog: false
     };
   },
   methods: {
     swipe: function swipe(direction) {
-      if (direction == 'Left') {
-        //   console.log(direction)
-        this.$router.push('/BBS/topic/BBS');
+      if (direction == 'Left') {// this.$router.push('/BBS/topic/BBS')
       } else if (direction == 'Right') {
         this.$router.push('/');
       }
@@ -2508,7 +2385,7 @@ __webpack_require__.r(__webpack_exports__);
       items: [{
         header: 'Today'
       }, {
-        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        avatar: '/img/reporter-852096_640.jpg',
         title: '東京五輪「年内延期」の可能性も　新型ウイルス流行で橋本五輪相',
         subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?",
         action: '15 min',
@@ -2517,28 +2394,28 @@ __webpack_require__.r(__webpack_exports__);
         divider: true,
         inset: true
       }, {
-        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        avatar: '/img/reporter-852096_640.jpg',
         title: 'Summer BBQ <span class="end grey--text text--lighten-1">15 min</span>',
         subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend."
       }, {
         divider: true,
         inset: true
       }, {
-        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        avatar: '/img/reporter-852096_640.jpg',
         title: 'Oui oui',
         subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?"
       }, {
         divider: true,
         inset: true
       }, {
-        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        avatar: '/img/reporter-852096_640.jpg',
         title: 'Birthday gift',
         subtitle: "<span class='text--primary'>Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?"
       }, {
         divider: true,
         inset: true
       }, {
-        avatar: 'https://lh3.googleusercontent.com/proxy/y2RrY0UsQVqifeN8ZCZ3FzLp5xUKhktHFBdnz2ep67-6V0mgkgHIlfmJn_gIIFnX-XSR9rr-Vi2dq4zvLX-jgKDcRyCAWl0l5m9rMqpjoL4qZMEz6yXI3Q',
+        avatar: '/img/reporter-852096_640.jpg',
         title: 'Recipe to try',
         subtitle: "<span class='text--primary'>Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos."
       }]
@@ -2569,6 +2446,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -3298,6 +3179,124 @@ __webpack_require__.r(__webpack_exports__);
 
       this.swipeDirection = direction;
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Users/Match.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Users/Match.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      tags: ['アメコミ好き', 'タバコ吸わない', 'SF好き', 'ルールは大事', 'バジンガ']
+    };
   }
 });
 
@@ -22387,7 +22386,7 @@ var render = function() {
             [
               _c(
                 "v-btn",
-                { attrs: { text: "", to: "/mail/メール" } },
+                { attrs: { text: "", to: "/mail/新着メッセージ" } },
                 [
                   _c(
                     "v-badge",
@@ -22730,12 +22729,7 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "mx-auto",
-                  attrs: {
-                    "max-width": "434",
-                    shaped: "",
-                    to: "/users/SheldonCooper",
-                    "text-center": ""
-                  }
+                  attrs: { "max-width": "374", shaped: "", align: "center" }
                 },
                 [
                   _c(
@@ -22744,7 +22738,10 @@ var render = function() {
                     [
                       _c(
                         "v-row",
-                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        {
+                          staticClass: "fill-height",
+                          attrs: { align: "center" }
+                        },
                         [
                           _c(
                             "v-col",
@@ -22765,12 +22762,12 @@ var render = function() {
                                       _c(
                                         "v-list-item-title",
                                         { staticClass: "title" },
-                                        [_vm._v("27歳　カルフォルニア在住")]
+                                        [_vm._v("相性占いでマッチング")]
                                       ),
                                       _vm._v(" "),
                                       _c("v-list-item-subtitle", [
                                         _vm._v(
-                                          "カリフォルニア工科大学 理論物理学者"
+                                          "○○なあなたと相性の良い人を探します。"
                                         )
                                       ])
                                     ],
@@ -22780,147 +22777,17 @@ var render = function() {
                                 1
                               ),
                               _vm._v(" "),
-                              _c("v-btn")
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-container",
-            { attrs: { "py-1": "", "px-0": "" } },
-            [
-              _c(
-                "v-card",
-                {
-                  staticClass: "mx-auto",
-                  attrs: { "max-width": "434", shaped: "" }
-                },
-                [
-                  _c(
-                    "v-img",
-                    {
-                      attrs: {
-                        height: "250px",
-                        src:
-                          "https://amd.c.yimg.jp/amd/20191121-00011897-weather-002-1-view.jpg"
-                      }
-                    },
-                    [
-                      _c(
-                        "v-row",
-                        { staticClass: "fill-height", attrs: { align: "end" } },
-                        [
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "pa-0",
-                              attrs: { "align-self": "start", cols: "5" }
-                            },
-                            [
                               _c(
-                                "v-avatar",
+                                "v-btn",
                                 {
-                                  staticClass: "profile",
-                                  attrs: {
-                                    color: "grey",
-                                    size: "164",
-                                    tile: ""
-                                  }
-                                },
-                                [
-                                  _c("v-img", {
-                                    attrs: {
-                                      src:
-                                        "https://vignette.wikia.nocookie.net/the-big-bang-theory/images/6/6a/Howardwolowitz.jpg/revision/latest/top-crop/width/360/height/450?cb=20180621133808&path-prefix=ja"
+                                  attrs: { color: "primary" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.dialog = true
                                     }
-                                  })
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "pa-0",
-                              attrs: {
-                                "align-self": "start",
-                                cols: "7",
-                                justify: "space-around"
-                              }
-                            },
-                            [
-                              _c(
-                                "v-chip-group",
-                                {
-                                  attrs: {
-                                    column: "",
-                                    "active-class": "primary--text"
                                   }
                                 },
-                                [
-                                  _c("v-chip", [_vm._v("宇宙飛行士")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [
-                                    _vm._v("ダンジョンズ&ドラゴンズ")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("ゲームが好き")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("マザコン")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("ユダヤ人")])
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { staticClass: "py-0" },
-                            [
-                              _c(
-                                "v-list-item",
-                                {
-                                  attrs: {
-                                    color: "rgba(0, 0, 0, .4)",
-                                    dark: ""
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "v-list-item-content",
-                                    [
-                                      _c(
-                                        "v-list-item-title",
-                                        { staticClass: "title" },
-                                        [_vm._v("26歳　カルフォルニア在住")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("v-list-item-subtitle", [
-                                        _vm._v("応用物理学のエンジニア")
-                                      ])
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
+                                [_vm._v("Push!")]
                               )
                             ],
                             1
@@ -22946,7 +22813,7 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "mx-auto",
-                  attrs: { "max-width": "434", shaped: "" }
+                  attrs: { "max-width": "374", shaped: "", align: "center" }
                 },
                 [
                   _c(
@@ -22954,82 +22821,17 @@ var render = function() {
                     {
                       attrs: {
                         height: "250px",
-                        src:
-                          "https://up.gc-img.net/post_img/2017/04/LRd6QlYT42KfNBP_pPXKw_16.jpeg"
+                        src: "/img/artificial-intelligence-3382507_640.jpg"
                       }
                     },
                     [
                       _c(
                         "v-row",
-                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        {
+                          staticClass: "fill-height",
+                          attrs: { align: "center" }
+                        },
                         [
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "pa-0",
-                              attrs: { "align-self": "start", cols: "5" }
-                            },
-                            [
-                              _c(
-                                "v-avatar",
-                                {
-                                  staticClass: "profile",
-                                  attrs: {
-                                    color: "grey",
-                                    size: "164",
-                                    tile: ""
-                                  }
-                                },
-                                [
-                                  _c("v-img", {
-                                    attrs: {
-                                      src:
-                                        "https://www.superdramatv.com/lineup/SN0000000042/img/cast_05.jpg"
-                                    }
-                                  })
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "pa-0",
-                              attrs: {
-                                "align-self": "start",
-                                cols: "7",
-                                justify: "space-around"
-                              }
-                            },
-                            [
-                              _c(
-                                "v-chip-group",
-                                {
-                                  attrs: {
-                                    column: "",
-                                    "active-class": "primary--text"
-                                  }
-                                },
-                                [
-                                  _c("v-chip", [_vm._v("6人兄弟")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("親が医者")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("企画・主催が好き")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("お酒が飲めない")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("インド料理は苦手")])
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
                           _c(
                             "v-col",
                             { staticClass: "py-0" },
@@ -23049,17 +22851,23 @@ var render = function() {
                                       _c(
                                         "v-list-item-title",
                                         { staticClass: "title" },
-                                        [_vm._v("25歳　ニューデリー出身")]
+                                        [_vm._v("AIで相性の良い人を探す")]
                                       ),
                                       _vm._v(" "),
                                       _c("v-list-item-subtitle", [
-                                        _vm._v("宇宙物理学者")
+                                        _vm._v("AIが相性の良い人を探します。")
                                       ])
                                     ],
                                     1
                                   )
                                 ],
                                 1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-btn",
+                                { attrs: { color: "primary", to: "/making" } },
+                                [_vm._v("Push！\n          ")]
                               )
                             ],
                             1
@@ -23078,133 +22886,59 @@ var render = function() {
           ),
           _vm._v(" "),
           _c(
-            "v-container",
-            { attrs: { "py-1": "", "px-0": "" } },
+            "v-dialog",
+            {
+              attrs: { "max-width": "290" },
+              model: {
+                value: _vm.dialog,
+                callback: function($$v) {
+                  _vm.dialog = $$v
+                },
+                expression: "dialog"
+              }
+            },
             [
               _c(
                 "v-card",
-                {
-                  staticClass: "mx-auto",
-                  attrs: { "max-width": "434", shaped: "" }
-                },
                 [
+                  _c("v-card-title", { staticClass: "headline" }, [
+                    _vm._v("ポイントを消費しますがよろしいですか?")
+                  ]),
+                  _vm._v(" "),
+                  _c("v-card-text", [
+                    _vm._v(
+                      "\n          あなたの現在のポイントは543ポイントです。100ポイント消費して最近オンラインだった人の中から相性の良い人と一人マッチングします。\n        "
+                    )
+                  ]),
+                  _vm._v(" "),
                   _c(
-                    "v-img",
-                    {
-                      attrs: {
-                        height: "250px",
-                        src:
-                          "https://www.superdramatv.com/line/bigbang/episode/img/epi_photo_97.jpg"
-                      }
-                    },
+                    "v-card-actions",
                     [
+                      _c("v-spacer"),
+                      _vm._v(" "),
                       _c(
-                        "v-row",
-                        { staticClass: "fill-height", attrs: { align: "end" } },
-                        [
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "pa-0",
-                              attrs: { "align-self": "start", cols: "5" }
-                            },
-                            [
-                              _c(
-                                "v-avatar",
-                                {
-                                  staticClass: "profile",
-                                  attrs: {
-                                    color: "grey",
-                                    size: "164",
-                                    tile: ""
-                                  }
-                                },
-                                [
-                                  _c("v-img", {
-                                    attrs: {
-                                      src:
-                                        "https://i.pinimg.com/originals/0f/14/e4/0f14e4c9177e3c1def125814de1d8d3a.jpg"
-                                    }
-                                  })
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "pa-0",
-                              attrs: {
-                                "align-self": "start",
-                                cols: "7",
-                                justify: "space-around"
-                              }
-                            },
-                            [
-                              _c(
-                                "v-chip-group",
-                                {
-                                  attrs: {
-                                    column: "",
-                                    "active-class": "primary--text"
-                                  }
-                                },
-                                [
-                                  _c("v-chip", [_vm._v("経営者")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("イラストレーター")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("孤独")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("生活困窮")]),
-                                  _vm._v(" "),
-                                  _c("v-chip", [_vm._v("全焼")])
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { staticClass: "py-0" },
-                            [
-                              _c(
-                                "v-list-item",
-                                {
-                                  attrs: {
-                                    color: "rgba(0, 0, 0, .4)",
-                                    dark: ""
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "v-list-item-content",
-                                    [
-                                      _c(
-                                        "v-list-item-title",
-                                        { staticClass: "title" },
-                                        [_vm._v("カルフォルニア在住")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("v-list-item-subtitle", [
-                                        _vm._v("コミックブックストアを経営")
-                                      ])
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
+                        "v-btn",
+                        {
+                          attrs: {
+                            color: "green darken-1",
+                            text: "",
+                            to: "/users/match/Match!!"
+                          }
+                        },
+                        [_vm._v("\n            支払う\n          ")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { color: "green darken-1", text: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.dialog = false
+                            }
+                          }
+                        },
+                        [_vm._v("\n            キャンセル\n          ")]
                       )
                     ],
                     1
@@ -23442,7 +23176,10 @@ var render = function() {
             [
               _c(
                 "v-card",
-                { staticClass: "mx-auto my-1", attrs: { "max-width": "374" } },
+                {
+                  staticClass: "mx-auto my-1",
+                  attrs: { "max-width": "374", color: "lime" }
+                },
                 [
                   _c("h3", [_vm._v("今日のトピックス")]),
                   _vm._v(" "),
@@ -23515,7 +23252,7 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "mx-auto my-1",
-                  attrs: { "max-width": "374", align: "center" }
+                  attrs: { "max-width": "374", color: "cyan", align: "center" }
                 },
                 [
                   _c("h3", [_vm._v("あなたのランク")]),
@@ -23553,7 +23290,11 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "mx-auto my-1",
-                  attrs: { "max-width": "374", align: "center" }
+                  attrs: {
+                    "max-width": "374",
+                    color: "light-green",
+                    align: "center"
+                  }
                 },
                 [
                   _c("h3", [_vm._v("あなたにぴったりの相手を探す")]),
@@ -23575,7 +23316,7 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "mx-auto my-1",
-                  attrs: { "max-width": "374", align: "center" }
+                  attrs: { "max-width": "374", color: "amber", align: "center" }
                 },
                 [
                   _c("h3", [_vm._v("開発者への寄付")]),
@@ -24720,6 +24461,188 @@ var render = function() {
                                   )
                                 ],
                                 1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Users/Match.vue?vue&type=template&id=042f178f&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Users/Match.vue?vue&type=template&id=042f178f& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-container",
+    [
+      _c(
+        "div",
+        { staticClass: "text-center" },
+        [
+          _c(
+            "v-btn",
+            {
+              staticStyle: {
+                width: "240px",
+                left: "25%",
+                border: "2px solid #9ec34b",
+                "font-size": "20px",
+                "text-decoration": "none",
+                "font-weight": "bold",
+                padding: "8px 16px",
+                "font-style": "italic",
+                transition: ".4s",
+                bottom: "96px"
+              },
+              style: { left: "50%", transform: "translateX(-50%)" },
+              attrs: {
+                slot: "activator",
+                dark: "",
+                fab: "",
+                fixed: "",
+                bottom: "",
+                rounded: "",
+                color: "primary",
+                to: "/making",
+                elevation: "16"
+              },
+              slot: "activator"
+            },
+            [_vm._v("\n      メッセージを送る!\n    ")]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-container",
+        { attrs: { "py-1": "", "px-0": "" } },
+        [
+          _c(
+            "v-card",
+            {
+              staticClass: "mx-auto",
+              attrs: { "max-width": "434", shaped: "" }
+            },
+            [
+              _c(
+                "v-img",
+                {
+                  attrs: {
+                    height: "200px",
+                    src:
+                      "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
+                  }
+                },
+                [
+                  _c(
+                    "v-row",
+                    { staticClass: "fill-height", attrs: { align: "end" } },
+                    [
+                      _c(
+                        "v-col",
+                        {
+                          staticClass: "pa-0",
+                          attrs: { "align-self": "start", cols: "5" }
+                        },
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/users/ペニー" } },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
+                                  }
+                                },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://ouchi-time.com/wp-content/uploads/2018/05/ba8babaca28e197b0958bffff219591d.jpg"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        {
+                          staticClass: "pa-0",
+                          attrs: {
+                            "align-self": "center",
+                            cols: "7",
+                            justify: "space-around"
+                          }
+                        },
+                        [
+                          _c(
+                            "v-col",
+                            { staticClass: "text-center" },
+                            [
+                              _c(
+                                "v-btn",
+                                {
+                                  staticStyle: { "font-style": "italic" },
+                                  attrs: {
+                                    dark: "",
+                                    color: "pink",
+                                    rounded: "",
+                                    elevation: "24",
+                                    to: "/users/Thanks/Match!"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                  MATCH!!!\n              "
+                                  )
+                                ]
                               )
                             ],
                             1
@@ -82468,12 +82391,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_Users_id_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./views/Users/_id.vue */ "./resources/js/views/Users/_id.vue");
 /* harmony import */ var _views_Users_List_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./views/Users/List.vue */ "./resources/js/views/Users/List.vue");
 /* harmony import */ var _views_Users_Women_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./views/Users/Women.vue */ "./resources/js/views/Users/Women.vue");
-/* harmony import */ var _views_Users_Thanks_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/Users/Thanks.vue */ "./resources/js/views/Users/Thanks.vue");
-/* harmony import */ var _views_Users_MyProfile_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./views/Users/MyProfile.vue */ "./resources/js/views/Users/MyProfile.vue");
-/* harmony import */ var _views_Mail_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./views/Mail.vue */ "./resources/js/views/Mail.vue");
-/* harmony import */ var _views_BBS_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./views/BBS.vue */ "./resources/js/views/BBS.vue");
-/* harmony import */ var _views_ARecommend_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./views/ARecommend.vue */ "./resources/js/views/ARecommend.vue");
-/* harmony import */ var _views_Users_SheldonCooper_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./views/Users/SheldonCooper.vue */ "./resources/js/views/Users/SheldonCooper.vue");
+/* harmony import */ var _views_Users_Match_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/Users/Match.vue */ "./resources/js/views/Users/Match.vue");
+/* harmony import */ var _views_Users_Thanks_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./views/Users/Thanks.vue */ "./resources/js/views/Users/Thanks.vue");
+/* harmony import */ var _views_Users_MyProfile_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./views/Users/MyProfile.vue */ "./resources/js/views/Users/MyProfile.vue");
+/* harmony import */ var _views_Mail_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./views/Mail.vue */ "./resources/js/views/Mail.vue");
+/* harmony import */ var _views_BBS_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./views/BBS.vue */ "./resources/js/views/BBS.vue");
+/* harmony import */ var _views_ARecommend_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./views/ARecommend.vue */ "./resources/js/views/ARecommend.vue");
+/* harmony import */ var _views_Users_SheldonCooper_vue__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./views/Users/SheldonCooper.vue */ "./resources/js/views/Users/SheldonCooper.vue");
+
 
 
 
@@ -82545,14 +82470,14 @@ var routes = [{
 }, {
   path: '/users/SheldonCooper',
   components: {
-    "default": _views_Users_SheldonCooper_vue__WEBPACK_IMPORTED_MODULE_21__["default"],
+    "default": _views_Users_SheldonCooper_vue__WEBPACK_IMPORTED_MODULE_22__["default"],
     header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
     button: _components_RButton_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
   }
 }, {
   path: '/users/MyProfile/:title',
   components: {
-    "default": _views_Users_MyProfile_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
+    "default": _views_Users_MyProfile_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
     header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
@@ -82562,9 +82487,15 @@ var routes = [{
     header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
+  path: '/users/match/:title',
+  components: {
+    "default": _views_Users_Match_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }
+}, {
   path: '/users/thanks/:title',
   components: {
-    "default": _views_Users_Thanks_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
+    "default": _views_Users_Thanks_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
     header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
@@ -82583,19 +82514,19 @@ var routes = [{
 }, {
   path: '/mail/:title',
   components: {
-    "default": _views_Mail_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
+    "default": _views_Mail_vue__WEBPACK_IMPORTED_MODULE_19__["default"],
     header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/BBS/topic/:title',
   components: {
-    "default": _views_BBS_vue__WEBPACK_IMPORTED_MODULE_19__["default"],
+    "default": _views_BBS_vue__WEBPACK_IMPORTED_MODULE_20__["default"],
     header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }, {
   path: '/recommend/:title',
   components: {
-    "default": _views_ARecommend_vue__WEBPACK_IMPORTED_MODULE_20__["default"],
+    "default": _views_ARecommend_vue__WEBPACK_IMPORTED_MODULE_21__["default"],
     header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 }];
@@ -83380,6 +83311,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_List_vue_vue_type_template_id_25ce7044___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_List_vue_vue_type_template_id_25ce7044___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Users/Match.vue":
+/*!********************************************!*\
+  !*** ./resources/js/views/Users/Match.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Match_vue_vue_type_template_id_042f178f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Match.vue?vue&type=template&id=042f178f& */ "./resources/js/views/Users/Match.vue?vue&type=template&id=042f178f&");
+/* harmony import */ var _Match_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Match.vue?vue&type=script&lang=js& */ "./resources/js/views/Users/Match.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Match_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Match_vue_vue_type_template_id_042f178f___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Match_vue_vue_type_template_id_042f178f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/Users/Match.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/Users/Match.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/views/Users/Match.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Match_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Match.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Users/Match.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Match_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/Users/Match.vue?vue&type=template&id=042f178f&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/views/Users/Match.vue?vue&type=template&id=042f178f& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Match_vue_vue_type_template_id_042f178f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Match.vue?vue&type=template&id=042f178f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Users/Match.vue?vue&type=template&id=042f178f&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Match_vue_vue_type_template_id_042f178f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Match_vue_vue_type_template_id_042f178f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
