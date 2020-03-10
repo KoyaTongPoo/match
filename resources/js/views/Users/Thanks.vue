@@ -24,7 +24,7 @@
       bottom
      rounded
       color="primary"
-      to="/users/list"
+      to="/making"
       elevation="16"
     >
       紹介文を送る!

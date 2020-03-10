@@ -19,6 +19,7 @@ import Thanks from './views/Users/Thanks.vue'
 import MyProfile from './views/Users/MyProfile.vue'
 import Mail from './views/Mail.vue'
 import BBS from './views/BBS.vue'
+import Ranking from './views/Ranking.vue'
 import ARecommend from './views/ARecommend.vue'
 import SheldonCooper from './views/Users/SheldonCooper.vue'
 
@@ -147,6 +148,13 @@ const routes = [
         path: '/recommend/:title',
         components: {
           default : ARecommend,
+          header : Appbar
+         }
+      },
+      {
+        path: '/Ranking/:title',
+        components: {
+          default : Ranking,
           header : Appbar
          }
       },

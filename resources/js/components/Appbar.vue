@@ -126,9 +126,9 @@ export default {
     icon: 'mdi-discord',
     link:'/users/1'},
   {
-    name: 'Report a bug',
+    name: 'ランキング',
     icon: 'mdi-bug',
-    link:'/report-a-bug'
+    link:'/ranking/Ranking'
   },
   {
     name: 'Github issue board',
