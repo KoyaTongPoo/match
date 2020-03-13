@@ -2020,6 +2020,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2378,56 +2379,172 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      swipeDirection: 'None',
-      items: [{
-        header: 'Today'
-      }, {
-        avatar: '/img/reporter-852096_640.jpg',
-        title: '東京五輪「年内延期」の可能性も　新型ウイルス流行で橋本五輪相',
-        subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?",
-        action: '15 min',
-        comment: '321 comment'
-      }, {
-        divider: true,
-        inset: true
-      }, {
-        avatar: '/img/reporter-852096_640.jpg',
-        title: 'Summer BBQ <span class="end grey--text text--lighten-1">15 min</span>',
-        subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend."
-      }, {
-        divider: true,
-        inset: true
-      }, {
-        avatar: '/img/reporter-852096_640.jpg',
-        title: 'Oui oui',
-        subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?"
-      }, {
-        divider: true,
-        inset: true
-      }, {
-        avatar: '/img/reporter-852096_640.jpg',
-        title: 'Birthday gift',
-        subtitle: "<span class='text--primary'>Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?"
-      }, {
-        divider: true,
-        inset: true
-      }, {
-        avatar: '/img/reporter-852096_640.jpg',
-        title: 'Recipe to try',
-        subtitle: "<span class='text--primary'>Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos."
-      }]
+      swipeDirection: 'None'
     };
   },
   methods: {
     swipe: function swipe(direction) {
       if (direction == 'Left') {
         //   console.log(direction)
-        this.$router.push('/users/MyProfile/MyProfile');
+        this.$router.push('/');
       } else if (direction == 'Right') {
-        this.$router.push('/users/list');
+        //   console.log(direction)
+        this.$router.push('/BBS/topic/BBS');
       }
 
       this.swipeDirection = direction;
@@ -22982,7 +23099,7 @@ var render = function() {
                 [
                   _c(
                     "v-badge",
-                    { attrs: { color: "warning", content: "5" } },
+                    { attrs: { color: "warning", content: "5", overlap: "" } },
                     [_c("v-icon", [_vm._v("\n    mdi-email\n    ")])],
                     1
                   )
@@ -23625,80 +23742,422 @@ var render = function() {
         },
         [
           _c(
-            "v-card",
-            { staticClass: "mx-auto my-1", attrs: { "max-width": "374" } },
+            "v-col",
+            { attrs: { cols: "12" } },
             [
               _c(
-                "v-list",
-                { attrs: { "three-line": "" } },
+                "v-sheet",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { elevation: "8", "max-width": "374" }
+                },
                 [
-                  _vm._l(_vm.items, function(item, index) {
-                    return [
-                      item.header
-                        ? _c("v-subheader", {
-                            key: item.header,
-                            domProps: { textContent: _vm._s(item.header) }
-                          })
-                        : item.divider
-                        ? _c("v-divider", {
-                            key: index,
-                            attrs: { inset: item.inset }
-                          })
-                        : _c(
-                            "v-list-item",
-                            {
-                              key: item.title,
-                              attrs: { to: "/making" },
-                              on: { click: function($event) {} }
-                            },
+                  _c(
+                    "v-card",
+                    {
+                      staticClass: "mx-auto mb-1",
+                      attrs: { color: "#26c6da", dark: "", "max-width": "400" }
+                    },
+                    [
+                      _c(
+                        "v-card-title",
+                        [
+                          _c(
+                            "v-avatar",
+                            { staticClass: "elevation-6", attrs: { left: "" } },
                             [
-                              _c(
-                                "v-list-item-avatar",
-                                { attrs: { tile: "" } },
-                                [_c("v-img", { attrs: { src: item.avatar } })],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-list-item-content",
-                                [
-                                  _c("v-list-item-title", {
-                                    domProps: { innerHTML: _vm._s(item.title) }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("v-list-item-subtitle", {
-                                    domProps: {
-                                      innerHTML: _vm._s(item.subtitle)
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-list-item-action",
-                                [
-                                  _c("v-list-item-action-text", {
-                                    domProps: {
-                                      textContent: _vm._s(item.action)
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("v-list-item-action-text", {
-                                    domProps: {
-                                      textContent: _vm._s(item.comment)
-                                    }
-                                  })
-                                ],
-                                1
-                              )
+                              _c("v-img", {
+                                attrs: {
+                                  src:
+                                    "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
+                                }
+                              })
                             ],
                             1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "title font-weight-light" },
+                            [_vm._v("シェルドン")]
                           )
-                    ]
-                  })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-text",
+                        { staticClass: "headline font-weight-bold" },
+                        [
+                          _vm._v(
+                            "\n      或ある春の日暮です。 唐とうの都洛陽らくようの西の門の下に、ぼんやり空を仰いでいる、一人の若者がありました。\n    "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-actions",
+                        [
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "v-row",
+                            { attrs: { align: "center", justify: "end" } },
+                            [
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-heart")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading mr-2" }, [
+                                _vm._v("256")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-share-variant")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading" }, [
+                                _vm._v("45")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-spacer")
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    {
+                      staticClass: "mx-auto mb-1",
+                      attrs: { color: "#26c6da", dark: "", "max-width": "400" }
+                    },
+                    [
+                      _c(
+                        "v-card-title",
+                        [
+                          _c(
+                            "v-avatar",
+                            { staticClass: "elevation-6", attrs: { left: "" } },
+                            [
+                              _c("v-img", {
+                                attrs: {
+                                  src:
+                                    "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "title font-weight-light" },
+                            [_vm._v("シェルドン")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-text",
+                        { staticClass: "headline font-weight-bold" },
+                        [
+                          _vm._v(
+                            "\n      或ある春の日暮です。 唐とうの都洛陽らくようの西の門の下に、ぼんやり空を仰いでいる、一人の若者がありました。\n    "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-actions",
+                        [
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "v-row",
+                            { attrs: { align: "center", justify: "end" } },
+                            [
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-heart")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading mr-2" }, [
+                                _vm._v("256")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-share-variant")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading" }, [
+                                _vm._v("45")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-spacer")
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    {
+                      staticClass: "mx-auto mb-1",
+                      attrs: { color: "#26c6da", dark: "", "max-width": "400" }
+                    },
+                    [
+                      _c(
+                        "v-card-title",
+                        [
+                          _c(
+                            "v-avatar",
+                            { staticClass: "elevation-6", attrs: { left: "" } },
+                            [
+                              _c("v-img", {
+                                attrs: {
+                                  src:
+                                    "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "title font-weight-light" },
+                            [_vm._v("シェルドン")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-text",
+                        { staticClass: "headline font-weight-bold" },
+                        [
+                          _vm._v(
+                            "\n      或ある春の日暮です。 唐とうの都洛陽らくようの西の門の下に、ぼんやり空を仰いでいる、一人の若者がありました。\n    "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-actions",
+                        [
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "v-row",
+                            { attrs: { align: "center", justify: "end" } },
+                            [
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-heart")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading mr-2" }, [
+                                _vm._v("256")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-share-variant")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading" }, [
+                                _vm._v("45")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-spacer")
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    {
+                      staticClass: "mx-auto mb-1",
+                      attrs: { color: "#26c6da", dark: "", "max-width": "400" }
+                    },
+                    [
+                      _c(
+                        "v-card-title",
+                        [
+                          _c(
+                            "v-avatar",
+                            { staticClass: "elevation-6", attrs: { left: "" } },
+                            [
+                              _c("v-img", {
+                                attrs: {
+                                  src:
+                                    "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "title font-weight-light" },
+                            [_vm._v("シェルドン")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-text",
+                        { staticClass: "headline font-weight-bold" },
+                        [
+                          _vm._v(
+                            "\n      或ある春の日暮です。 唐とうの都洛陽らくようの西の門の下に、ぼんやり空を仰いでいる、一人の若者がありました。\n    "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-actions",
+                        [
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "v-row",
+                            { attrs: { align: "center", justify: "end" } },
+                            [
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-heart")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading mr-2" }, [
+                                _vm._v("256")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-share-variant")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading" }, [
+                                _vm._v("45")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-spacer")
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    {
+                      staticClass: "mx-auto mb-1",
+                      attrs: { color: "#26c6da", dark: "", "max-width": "400" }
+                    },
+                    [
+                      _c(
+                        "v-card-title",
+                        [
+                          _c(
+                            "v-avatar",
+                            { staticClass: "elevation-6", attrs: { left: "" } },
+                            [
+                              _c("v-img", {
+                                attrs: {
+                                  src:
+                                    "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "title font-weight-light" },
+                            [_vm._v("シェルドン")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-text",
+                        { staticClass: "headline font-weight-bold" },
+                        [
+                          _vm._v(
+                            "\n      或ある春の日暮です。 唐とうの都洛陽らくようの西の門の下に、ぼんやり空を仰いでいる、一人の若者がありました。\n    "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-actions",
+                        [
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "v-row",
+                            { attrs: { align: "center", justify: "end" } },
+                            [
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-heart")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading mr-2" }, [
+                                _vm._v("256")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-share-variant")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading" }, [
+                                _vm._v("45")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-spacer")
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
                 ],
-                2
+                1
               )
             ],
             1

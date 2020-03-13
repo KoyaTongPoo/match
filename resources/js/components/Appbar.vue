@@ -51,6 +51,7 @@
    <v-badge
           color="warning"
           content="5"
+          overlap=""
         >
     <v-icon>
     mdi-email
