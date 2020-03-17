@@ -2,7 +2,7 @@
 
     <v-btn
       slot="activator"
-      class="elevation-0"
+      class="elevation-10"
       color="pink"
       dark
       fab

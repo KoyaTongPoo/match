@@ -279,7 +279,7 @@
       swipe (direction) {
 		  if (direction == 'Left') {
 			//   console.log(direction)
-			  this.$router.push('/BBS/topic/BBS')
+			  this.$router.push('/BBS/topic/つぶやき')
 		  }
       else if (direction == 'Right') {
 			  this.$router.push('/')

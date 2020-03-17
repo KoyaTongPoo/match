@@ -10,6 +10,7 @@ import UserEdit from './views/UserEdit.vue'
 import UserCreate from './views/UserCreate.vue'
 import Appbar from './components/Appbar.vue'
 import LikeButton from './components/LikeButton.vue'
+import TweetButton from './components/TweetButton.vue'
 import RButton from './components/RButton.vue'
 import UserId from './views/Users/_id.vue'
 import UserList from './views/Users/List.vue'
@@ -17,11 +18,15 @@ import Women from './views/Users/Women.vue'
 import Match from './views/Users/Match.vue'
 import Thanks from './views/Users/Thanks.vue'
 import MyProfile from './views/Users/MyProfile.vue'
+import Edit from './views/Users/Edit.vue'
 import Mail from './views/Mail.vue'
 import BBS from './views/BBS.vue'
+import Tweet from './views/_tweet.vue'
 import Ranking from './views/Ranking.vue'
 import ARecommend from './views/ARecommend.vue'
 import SheldonCooper from './views/Users/SheldonCooper.vue'
+import Cupeet from './views/Cupeet.vue'
+import Qpeet from './views/Qpeet.vue'
 
 Vue.use(VueRouter);
 
@@ -95,6 +100,13 @@ const routes = [
          }
       },
       {
+        path: '/users/Edit/:title',
+        components: {
+          default : Edit,
+          header : Appbar
+         }
+      },
+      {
         path: '/users/women/:title',
         components: {
           default : Women,
@@ -141,7 +153,15 @@ const routes = [
         path: '/BBS/topic/:title',
         components: {
           default : BBS,
-          header : Appbar
+          header : Appbar,
+          button : TweetButton
+         }
+      },
+      {
+        path: '/BBS/:tweet',
+        components: {
+          default : Tweet,
+          header : Appbar,
          }
       },
       {
@@ -155,6 +175,20 @@ const routes = [
         path: '/Ranking/:title',
         components: {
           default : Ranking,
+          header : Appbar
+         }
+      },
+      {
+        path: '/Cupeet/:title',
+        components: {
+          default : Cupeet,
+          header : Appbar
+         }
+      },
+      {
+        path: '/Qpeet/:title',
+        components: {
+          default : Qpeet,
           header : Appbar
          }
       },

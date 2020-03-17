@@ -1,10 +1,12 @@
 <template>
 <v-container>
-  <router-link to="/users/women/MyFriend">＞戻る</router-link>
-  <v-card
-    class="mx-auto my-1"
-    max-width="374"
-  >
+    <v-row
+    v-touch="{
+      left: () => swipe('Left'),
+      right: () => swipe('Right'),
+      up: () => swipe('Up'),
+      down: () => swipe('Down')
+    }">
 
   <v-carousel
   height="300"
@@ -61,7 +63,7 @@
     
 
   
-  </v-card>
+  </v-row>
  
   </v-container>
 
@@ -91,5 +93,17 @@
         ],
       }
     },
+    methods: {
+      swipe (direction) {
+		  if (direction == 'Left') {
+			  this.$router.go(1)
+		  }
+      else if (direction == 'Right') {
+			  this.$router.go(-1)
+          }      
+        this.swipeDirection = direction
+      },
+    },
+  
   }
 </script>
