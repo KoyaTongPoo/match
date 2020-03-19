@@ -241,7 +241,7 @@
           }
           else if (direction == 'Right') {
 			//   console.log(direction)
-			  this.$router.push('/users/list')
+			  this.$router.push('/recommender/キューピット一覧')
           }
         this.swipeDirection = direction
       },

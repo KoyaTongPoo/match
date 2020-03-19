@@ -10,6 +10,9 @@
         md="8"
       >
         <v-card>
+          <v-card-title>
+                  記入必須のプロフィール
+                </v-card-title>
           <template v-slot:heading>
             <div class="display-2 font-weight-light">
               Edit Profile

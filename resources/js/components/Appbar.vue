@@ -39,6 +39,14 @@
           <v-list-item to="/users/edit/プロフィール編集">
             <v-list-item-title>プロフィール編集</v-list-item-title>
           </v-list-item>
+
+          <v-list-item to="/users/list">
+            <v-list-item-title>紹介希望者の一覧</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item to="/mail/新着メッセージ">
+            <v-list-item-title>新着メッセージ</v-list-item-title>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
 
@@ -56,7 +64,7 @@
 
       <v-toolbar-items>
 
-<v-btn text to="/mail/新着メッセージ">
+<v-btn text to="/Notification/お知らせ">
   
    <v-badge
           color="warning"
@@ -64,7 +72,7 @@
           overlap=""
         >
     <v-icon>
-    mdi-email
+    mdi-bell
     </v-icon>
   </v-badge>
   
@@ -102,8 +110,8 @@
       <v-icon>mdi-home</v-icon>
     </v-btn>
 
-    <v-btn to="/users/list">
-      <span>紹介</span>
+    <v-btn to="/recommender/キューピット一覧">
+      <span>キューピット</span>
       <v-icon>mdi-human-handsup</v-icon>
     </v-btn>
 
@@ -129,6 +137,11 @@ export default {
     return{
         drawer: null,
         supports:[
+  {
+    name: '↓作成途中の置き場↓',
+    icon: 'mdi-skull',
+    
+  },
   {
     name: 'ユーザー一覧(作成途中)',
     icon: 'mdi-vuetify',

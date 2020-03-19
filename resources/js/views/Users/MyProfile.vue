@@ -239,6 +239,10 @@
 </v-list-item>
 </v-list> 
 
+
+<v-card-subtitle>
+いいねをつけたつぶやき
+</v-card-subtitle>
   
   </v-card>
     </v-row>

@@ -27,6 +27,9 @@ import ARecommend from './views/ARecommend.vue'
 import SheldonCooper from './views/Users/SheldonCooper.vue'
 import Cupeet from './views/Cupeet.vue'
 import Qpeet from './views/Qpeet.vue'
+import Guide from './views/Guide.vue'
+import Recommender from './views/Recommender.vue'
+import Notification from './views/Notification.vue'
 
 Vue.use(VueRouter);
 
@@ -192,6 +195,28 @@ const routes = [
           header : Appbar
          }
       },
+      {
+        path: '/Guide/:title',
+        components: {
+          default : Guide,
+          header : Appbar
+         }
+      },
+      {
+        path: '/recommender/:title',
+        components: {
+          default : Recommender,
+          header : Appbar
+         }
+      },
+      {
+        path: '/notification/:title',
+        components: {
+          default : Notification,
+          header : Appbar
+         }
+      },
+ 
  
 ];
 

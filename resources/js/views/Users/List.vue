@@ -275,18 +275,18 @@
         'バジンガ',
       ],
     }),
-    methods: {
+methods: {
       swipe (direction) {
 		  if (direction == 'Left') {
-			//   console.log(direction)
-			  this.$router.push('/BBS/topic/つぶやき')
+			  this.$router.go(1)
 		  }
       else if (direction == 'Right') {
-			  this.$router.push('/')
+			  this.$router.go(-1)
           }      
         this.swipeDirection = direction
       },
     },
+  
   }
   
     
