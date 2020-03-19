@@ -10,6 +10,7 @@
       right
       style="bottom: 96px;"
       bottom
+      to="/making"
     >
       <v-icon>mdi-thumb-up</v-icon>
     </v-btn>

@@ -49,7 +49,7 @@
                   md="4"
                 >
                   <v-text-field
-                    label="メールアドレス"
+                    label="メールアドレス(メアドは非公開)"
                     class="purple-input"
                     value="example@example.com"
                   />
@@ -170,6 +170,287 @@
         </v-card>
       </v-col>
 
+
+
+
+
+           <v-col
+        cols="12"
+        md="8"
+      >
+        <v-card>
+          <v-form>
+            <v-container class="py-0">
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                <v-card-title>
+                  異性には非公開のプロフィール
+                </v-card-title>
+                  <v-text-field
+                    label="好みの芸能人"
+                    value="ケイリー・クオコ"
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    class="purple-input"
+                    label="結婚したいと思う芸能人"
+                    value="アライナ・マイヤー"
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    label="嫌いな芸能人"
+                    class="purple-input"
+                    value="ケリ・ガーナー"
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="6"
+                >
+                  <v-text-field
+                    label="苦手や弱点１"
+                    class="purple-input"
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="6"
+                >
+                  <v-text-field
+                    label="苦手や弱点２"
+                    class="purple-input"
+                  />
+                </v-col>
+
+                <v-col cols="12">
+                  <v-text-field
+                    label="苦手や弱点３"
+                    class="purple-input"
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    label="苦手や弱点４"
+                    class="purple-input"
+                    value=""
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    label="苦手や弱点５"
+                    class="purple-input"
+                    value=""
+                  />
+                </v-col>
+
+                <!-- <v-col cols="12" sm="6">
+                    <v-select
+                    v-model="e7"
+                    :items="states"
+                    label="趣味"
+                    multiple
+                    chips
+                    counter="5"
+                    hint="最低でも３つは選びましょう"
+                    persistent-hint
+                    ></v-select>
+                </v-col> -->
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    label="３年後の夢・目標"
+                    class="purple-input"
+                    value=""
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    label="５年後の夢・目標"
+                    class="purple-input"
+                    value=""
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    label="１０年後の夢・目標"
+                    class="purple-input"
+                    value=""
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    label="人生の目標"
+                    class="purple-input"
+                  />
+                </v-col>
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="items"
+                    label="結婚に対する意思"
+                  ></v-select>
+                </v-col>
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="tabacos"
+                    label="タバコ"
+                  ></v-select>
+                </v-col>
+                
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    label="年収"
+                    class="purple-input"
+                    value=""
+                  />
+                </v-col>
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="liquors"
+                    label="お酒"
+                  ></v-select>
+                </v-col>
+
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="hoges"
+                    label="血液型"
+                  ></v-select>
+                </v-col>
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="hoges"
+                    label="結婚歴"
+                  ></v-select>
+                </v-col>
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="hoges"
+                    label="子供の有無"
+                  ></v-select>
+                </v-col>
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="hoges"
+                    label="体型"
+                  ></v-select>
+                </v-col>
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="hoges"
+                    label="身長"
+                  ></v-select>
+                </v-col>
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="hoges"
+                    label="同居人"
+                  ></v-select>
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    label="大切にしていること、考え"
+                    class="purple-input"
+                    value=""
+                  />
+                </v-col>
+
+                <v-col class="d-flex" cols="12" sm="6">
+                  <v-select
+                    :items="hoges"
+                    label="異性の紹介を希望しているか"
+                  ></v-select>
+                </v-col>
+
+
+
+
+                <v-col cols="12">
+                  <v-textarea
+                    class="purple-input"
+                    label="自由記述欄"
+                    rows="7"
+                    row-height="25"
+                    counter="150"
+                    value=""
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  class="text-right"
+                >
+                  <v-btn
+                    color="success"
+                    class="mr-0"
+                  >
+                    Update Profile
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-form>
+        </v-card>
+      </v-col>
+
+
+
+
+
+
       <v-col
         cols="12"
         md="4"
@@ -227,6 +508,10 @@
           '読書', '水族館', '美術館','自作PC',
 
         ],
+        items: ['すぐにでも', '２〜３年のうちに', '良い人がいれば', '今のところ結婚は考えていない', 'わからない'],
+        tabacos: ['吸わない', '吸う', '吸う(電子タバコのみ)', '時々吸う', '人前では吸わない', 'やめる予定'],
+        liquors: ['飲む', '飲まない', '時々飲む'],
+        hoges: ['Foo', 'Bar', 'Fizz', 'Buzz'],
       }
     },
     methods: {

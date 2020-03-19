@@ -2106,6 +2106,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /***/ }),
 
@@ -4117,11 +4118,296 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       e7: ['ゲーム', '漫画好き', 'インドア派'],
-      states: ['カメラ', 'ランニング', 'ゲーム', 'ねこ好き', 'ドラマ観賞', '水泳', 'ファッション好き', 'アニメ', 'カフェ巡り', 'カラオケ', 'アーリーアダプター', '旅行', '映画', 'POP Music', 'お笑い', '食べ歩き', '居酒屋巡り', 'DIY', 'ピクニック', '自転車', 'ディズニー', 'Instagram', '散歩', 'インドア派', '筋トレ', 'スポーツ観戦', '語学', '昼寝', 'ヨガ', 'アウトドア派', 'クラシック音楽', '漫画好き', 'ジャニーズ', '読書', '水族館', '美術館', '自作PC']
+      states: ['カメラ', 'ランニング', 'ゲーム', 'ねこ好き', 'ドラマ観賞', '水泳', 'ファッション好き', 'アニメ', 'カフェ巡り', 'カラオケ', 'アーリーアダプター', '旅行', '映画', 'POP Music', 'お笑い', '食べ歩き', '居酒屋巡り', 'DIY', 'ピクニック', '自転車', 'ディズニー', 'Instagram', '散歩', 'インドア派', '筋トレ', 'スポーツ観戦', '語学', '昼寝', 'ヨガ', 'アウトドア派', 'クラシック音楽', '漫画好き', 'ジャニーズ', '読書', '水族館', '美術館', '自作PC'],
+      items: ['すぐにでも', '２〜３年のうちに', '良い人がいれば', '今のところ結婚は考えていない', 'わからない'],
+      tabacos: ['吸わない', '吸う', '吸う(電子タバコのみ)', '時々吸う', '人前では吸わない', 'やめる予定'],
+      liquors: ['飲む', '飲まない', '時々飲む'],
+      hoges: ['Foo', 'Bar', 'Fizz', 'Buzz']
     };
   },
   methods: {
@@ -4655,6 +4941,166 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4668,9 +5114,7 @@ __webpack_require__.r(__webpack_exports__);
         src: 'https://blogimg.goo.ne.jp/user_image/33/b8/d4c259279fc199836feef09fe0ef4e6b.jpg'
       }, {
         src: 'https://www.monstersandcritics.com/wp-content/uploads/2019/02/ef91379a-6e98-4ae2-8182-649336439665-tbbt_michael-yarishwarner-bros-entertainment-inc.jpg'
-      }],
-      tabs: ['自己紹介', '質問歴', '回答歴', 'いいねした人'],
-      texts: ['物理学の研究者で、カリフォルニア工科大学において実験物理学者としてレーザー技術などを研究。24歳でプリンストン大学から博士号を取得。IQは173、他の科学や文学・歴史にも強い。シェルドンとルームシェアをしているが、わがままな彼に日々手を焼かされている。', '質問歴', '回答歴', 'いいねした人']
+      }]
     };
   },
   methods: {
@@ -24212,7 +24656,8 @@ var render = function() {
         fab: "",
         fixed: "",
         right: "",
-        bottom: ""
+        bottom: "",
+        to: "/making"
       },
       slot: "activator"
     },
@@ -27500,7 +27945,7 @@ var render = function() {
                                   _c("v-text-field", {
                                     staticClass: "purple-input",
                                     attrs: {
-                                      label: "メールアドレス",
+                                      label: "メールアドレス\b(メアドは非公開)",
                                       value: "example@example.com"
                                     }
                                   })
@@ -27592,6 +28037,425 @@ var render = function() {
                                       counter: "150",
                                       value:
                                         "物理学の研究者で、カリフォルニア工科大学において実験物理学者としてレーザー技術などを研究。24歳でプリンストン大学から博士号を取得。IQは173、他の科学や文学・歴史にも強い。 シェルドンとルームシェアをしているが、わがままな彼に日々手を焼かされている。"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "text-right",
+                                  attrs: { cols: "12" }
+                                },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticClass: "mr-0",
+                                      attrs: { color: "success" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                    Update Profile\n                  "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-col",
+            { attrs: { cols: "12", md: "8" } },
+            [
+              _c(
+                "v-card",
+                [
+                  _c(
+                    "v-form",
+                    [
+                      _c(
+                        "v-container",
+                        { staticClass: "py-0" },
+                        [
+                          _c(
+                            "v-row",
+                            [
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-card-title", [
+                                    _vm._v(
+                                      "\n                  異性には非公開のプロフィール\n                "
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      label: "好みの芸能人",
+                                      value: "ケイリー・クオコ"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: {
+                                      label: "結婚したいと思う芸能人",
+                                      value: "アライナ・マイヤー"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: {
+                                      label: "嫌いな芸能人",
+                                      value: "ケリ・ガーナー"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "6" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: { label: "苦手や弱点１" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "6" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: { label: "苦手や弱点２" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: { label: "苦手や弱点３" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: { label: "苦手や弱点４", value: "" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: { label: "苦手や弱点５", value: "" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: {
+                                      label: "３年後の夢・目標",
+                                      value: ""
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: {
+                                      label: "５年後の夢・目標",
+                                      value: ""
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: {
+                                      label: "１０年後の夢・目標",
+                                      value: ""
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: { label: "人生の目標" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "結婚に対する意思"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.tabacos,
+                                      label: "タバコ"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: { label: "年収", value: "" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: { items: _vm.liquors, label: "お酒" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: { items: _vm.hoges, label: "血液型" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: { items: _vm.hoges, label: "結婚歴" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.hoges,
+                                      label: "子供の有無"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: { items: _vm.hoges, label: "体型" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: { items: _vm.hoges, label: "身長" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: { items: _vm.hoges, label: "同居人" }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12", md: "4" } },
+                                [
+                                  _c("v-text-field", {
+                                    staticClass: "purple-input",
+                                    attrs: {
+                                      label: "大切にしていること、考え",
+                                      value: ""
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  staticClass: "d-flex",
+                                  attrs: { cols: "12", sm: "6" }
+                                },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.hoges,
+                                      label: "異性の紹介を希望しているか"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12" } },
+                                [
+                                  _c("v-textarea", {
+                                    staticClass: "purple-input",
+                                    attrs: {
+                                      label: "自由記述欄",
+                                      rows: "7",
+                                      "row-height": "25",
+                                      counter: "150",
+                                      value: ""
                                     }
                                   })
                                 ],
@@ -28615,56 +29479,360 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
+              _c("v-card-subtitle", [_vm._v("\n自己紹介\n")]),
+              _vm._v(" "),
+              _c("v-card-text", [
+                _vm._v(
+                  "\n  物理学の研究者で、カリフォルニア工科大学において実験物理学者としてレーザー技術などを研究。24歳でプリンストン大学から博士号を取得。IQは173、他の科学や文学・歴史にも強い。シェルドンとルームシェアをしているが、わがままな彼に日々手を焼かされている。\n"
+                )
+              ]),
+              _vm._v(" "),
+              _c("v-card-subtitle", [_vm._v("\n質問歴\n")]),
+              _vm._v(" "),
               _c(
-                "v-tabs",
-                {
-                  attrs: {
-                    grow: "",
-                    "center-active": "",
-                    "mobile-break-point": "300px"
-                  },
-                  model: {
-                    value: _vm.tab,
-                    callback: function($$v) {
-                      _vm.tab = $$v
-                    },
-                    expression: "tab"
-                  }
-                },
-                _vm._l(_vm.tabs, function(item) {
-                  return _c("v-tab", { key: item }, [
-                    _vm._v("\n        " + _vm._s(item) + "\n      ")
-                  ])
-                }),
+                "v-card",
+                { staticClass: "px-1", attrs: { color: "#26c6da", dark: "" } },
+                [
+                  _c("v-card-text", { staticClass: "font-weight-bold pa-1" }, [
+                    _vm._v(
+                      "\n      世の中のみんなが身の回りのものを全部きっちり整理しないと気が済まないわけじゃないてって思ったことない？\n    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    { staticClass: "pa-0" },
+                    [
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        { attrs: { align: "center", justify: "end" } },
+                        [
+                          _c("v-icon", { staticClass: "mr-1" }, [
+                            _vm._v("mdi-heart")
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "subheading mr-2" }, [
+                            _vm._v("256")
+                          ]),
+                          _vm._v(" "),
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            { attrs: { to: "/BBS/1", text: "" } },
+                            [
+                              _c("v-icon", { staticClass: "mr-1" }, [
+                                _vm._v("mdi-comment-outline")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "subheading" }, [
+                                _vm._v("45")
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-spacer")
+                    ],
+                    1
+                  )
+                ],
                 1
               ),
               _vm._v(" "),
+              _c("v-card-subtitle", [_vm._v("\n回答歴\n")]),
+              _vm._v(" "),
               _c(
-                "v-tabs-items",
+                "v-card",
                 {
-                  model: {
-                    value: _vm.tab,
-                    callback: function($$v) {
-                      _vm.tab = $$v
-                    },
-                    expression: "tab"
-                  }
+                  staticClass: "mx-auto",
+                  attrs: { color: "grey", dark: "", "max-width": "400" }
                 },
-                _vm._l(_vm.texts, function(item) {
-                  return _c(
-                    "v-tab-item",
-                    { key: item },
+                [
+                  _c(
+                    "v-list-item",
                     [
                       _c(
-                        "v-card",
-                        { attrs: { color: "basil", flat: "" } },
-                        [_c("v-card-text", [_vm._v(_vm._s(item))])],
+                        "v-col",
+                        {
+                          staticClass: "pl-0",
+                          attrs: { "align-self": "start", cols: "3" }
+                        },
+                        [
+                          _c(
+                            "v-avatar",
+                            { staticClass: "elevation-6" },
+                            [
+                              _c("v-img", {
+                                attrs: {
+                                  src:
+                                    "https://www.superdramatv.com/line/bigbang/cast/img/c_amy_m.jpg"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-list-item-subtitle",
+                            { staticClass: "font-weight-light" },
+                            [_vm._v("シェルドン")]
+                          )
+                        ],
                         1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item-content",
+                        {
+                          staticClass: "font-weight-bold",
+                          staticStyle: { color: "rgba(255,255,255,0.7)" }
+                        },
+                        [
+                          _vm._v(
+                            "\n      バーや居酒屋のような社会的交流の場で相手を見つける人もいるそうよ。バーへ行って試してみた？\n      "
+                          )
+                        ]
                       )
                     ],
                     1
                   )
-                }),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                { staticClass: "px-1", attrs: { color: "#26c6da", dark: "" } },
+                [
+                  _c("v-card-text", { staticClass: "font-weight-bold pa-1" }, [
+                    _vm._v(
+                      "\n      いや、バーで女性をひっかける気はない。\n    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    { staticClass: "pa-0" },
+                    [
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        { attrs: { align: "center", justify: "end" } },
+                        [
+                          _c("v-icon", { staticClass: "mr-1" }, [
+                            _vm._v("mdi-heart")
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "subheading mr-2" }, [
+                            _vm._v("256")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-spacer")
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto mb-1",
+                  attrs: { color: "grey", dark: "", "max-width": "400" }
+                },
+                [
+                  _c(
+                    "v-list-item",
+                    [
+                      _c(
+                        "v-col",
+                        {
+                          staticClass: "pl-0",
+                          attrs: { "align-self": "start", cols: "3" }
+                        },
+                        [
+                          _c(
+                            "v-avatar",
+                            { staticClass: "elevation-6" },
+                            [
+                              _c("v-img", {
+                                attrs: {
+                                  src:
+                                    "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-list-item-subtitle",
+                            { staticClass: "font-weight-light" },
+                            [_vm._v("シェルドン")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item-content",
+                        {
+                          staticClass: "font-weight-bold",
+                          staticStyle: { color: "rgba(255,255,255,0.7)" }
+                        },
+                        [
+                          _vm._v(
+                            "\n      それは賢明だ。いいかいエイミー、バーでの成功は男性の古典的な性質にかかっている。背が高く、タフで、魅力にあふれ、酒に強くてダーツがうまいっていうね。その一つでもあればいいが、レナードには一つとしてその特質がない。そうだよな？\n      "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                { staticClass: "px-1", attrs: { color: "#26c6da", dark: "" } },
+                [
+                  _c("v-card-text", { staticClass: "font-weight-bold pa-1" }, [
+                    _vm._v("\n      そうだ\n    ")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    { staticClass: "pa-0" },
+                    [
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        { attrs: { align: "center", justify: "end" } },
+                        [
+                          _c("v-icon", { staticClass: "mr-1" }, [
+                            _vm._v("mdi-heart")
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "subheading mr-2" }, [
+                            _vm._v("256")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-spacer")
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-card-subtitle", [_vm._v("\nフォローしている人\n")]),
+              _vm._v(" "),
+              _c(
+                "v-list",
+                [
+                  _c(
+                    "v-list-item",
+                    [
+                      _c(
+                        "v-list-item-avatar",
+                        [
+                          _c("v-img", {
+                            attrs: {
+                              src:
+                                "https://vignette.wikia.nocookie.net/the-big-bang-theory/images/6/6a/Howardwolowitz.jpg/revision/latest/top-crop/width/360/height/450?cb=20180621133808&path-prefix=ja"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-list-item-content", [
+                        _vm._v(
+                          "\n  大学で、応用物理学のエンジニアをしているユダヤ人。博士号を取得していないことを理由に、シェルドンらから度々からかいを受けている。\n"
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list",
+                [
+                  _c(
+                    "v-list-item",
+                    [
+                      _c(
+                        "v-list-item-avatar",
+                        [
+                          _c("v-img", {
+                            attrs: {
+                              src:
+                                "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-list-item-content", [
+                        _vm._v(
+                          "\n  カリフォルニア工科大学の物理学博士。理論物理学者で、専門は当初はひも理論、後に暗黒物質に転向。IQは187。レナードのルームメイト。\n"
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list",
+                [
+                  _c(
+                    "v-list-item",
+                    [
+                      _c(
+                        "v-list-item-avatar",
+                        [
+                          _c("v-img", {
+                            attrs: {
+                              src:
+                                "https://www.superdramatv.com/lineup/SN0000000042/img/cast_05.jpg"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-list-item-content", [
+                        _vm._v(
+                          "\n  インドのニューデリー出身。専門は素粒子論的宇宙論。イングランドのケンブリッジ大学で宇宙物理学に触れ、学問を志した。\n"
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                ],
                 1
               )
             ],
