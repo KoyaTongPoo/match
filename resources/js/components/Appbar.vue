@@ -47,6 +47,9 @@
           <v-list-item to="/mail/新着メッセージ">
             <v-list-item-title>新着メッセージ</v-list-item-title>
           </v-list-item>
+          <v-list-item>
+            <v-list-item-title @click="logout">ログアウト</v-list-item-title>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
 
@@ -94,6 +97,9 @@
   </v-list-item-content>
 </v-list-item>
 </v-menu>
+<v-btn icon>
+            <v-icon @click="logout">mdi-logout</v-icon>
+        </v-btn>
 </v-toolbar-items>
     </v-app-bar>
            
@@ -162,9 +168,9 @@ export default {
     link:'/users/edit/プロフィール編集'
   },
   {
-    name: '(作成途中)',
+    name: 'Test(作成途中)',
     icon: 'mdi-stack-overflow',
-    link:'/making'
+    link:'/test/1'
   },
 ],
     }
@@ -179,6 +185,45 @@ export default {
         }
       },
     },
+    methods: {
+        logout: function() {
+        axios
+            .post("logout")
+            .then(res => {
+            location.href = "/";
+            })
+            .catch(err => console.log(err));
+        },
+        // push: function() {
+        //   axios
+        //     .get("api/user/header/push", {})
+        //     .then(res => {
+        //       // console.log(res.data.notice);
+        //       this.count = res.data.notice;
+        //       if (res.data.notice == 0) {
+        //         this.isPushed = false;
+        //       } else {
+        //         this.isPushed = true;
+        //       }
+        //     })
+        //     .catch(err => console.log(err));
+        // },
+        // repush: function() {
+        //   setInterval(() => {
+        //     axios
+        //       .get("api/user/header/push/interval")
+        //       .then(res => {
+        //         this.count = res.data.notice;
+        //         if (res.data.notice == 0) {
+        //           this.isPushed = false;
+        //         } else {
+        //           this.isPushed = true;
+        //         }
+        //       })
+        //       .catch(error => console.log(error));
+        //   }, 60000);
+        // }
+    }
 }
 </script>
 <style scoped>

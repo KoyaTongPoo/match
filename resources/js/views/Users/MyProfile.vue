@@ -10,7 +10,7 @@
   <v-btn
   text
   color="primary"
-  to="/users/edit/プロフィール編集">＞プロフィールを編集する</v-btn>
+  to="/users/edit/プロフィール編集/1">＞プロフィールを編集する</v-btn>
   <v-card
     class="mx-auto my-1"
     max-width="374"

@@ -30,6 +30,9 @@ import Qpeet from './views/Qpeet.vue'
 import Guide from './views/Guide.vue'
 import Recommender from './views/Recommender.vue'
 import Notification from './views/Notification.vue'
+import Success from './views/Success.vue'
+import Test from './views/Users/Test.vue'
+import Tetris from './views/Tetris.vue'
 
 Vue.use(VueRouter);
 
@@ -45,10 +48,25 @@ const routes = [
          header : Appbar
         }
     },
+    { name:'test',
+      path: "/test/:id",
+      components: {
+       default : Test,
+       header : Appbar
+      }
+  },
+
     {
       path: '/making',
       components: {
         default : Making,
+        header : Appbar
+       }
+    },
+    { name: 'success',
+      path: '/success',
+      components: {
+        default : Success,
         header : Appbar
        }
     },
@@ -59,28 +77,28 @@ const routes = [
           header : Appbar
          }
       },
-      {
+      { name: 'user',
         path: '/user',
         components: {
           default : User,
           header : Appbar
          }
       },
-      {
+      { name: 'user_create',
         path: '/user/create',
         components: {
           default : UserCreate,
           header : Appbar
          }
       },
-      {
+      { name: 'user_detail',
         path: '/user/:id',
         components: {
           default : UserDetail,
           header : Appbar
          }
       },
-      {
+      { name: 'user_edit',
         path: '/user/:id/edit',
         components: {
           default : UserEdit,
@@ -103,7 +121,7 @@ const routes = [
          }
       },
       {
-        path: '/users/Edit/:title',
+        path: '/users/Edit/:title/:id',
         components: {
           default : Edit,
           header : Appbar
@@ -152,7 +170,7 @@ const routes = [
           header : Appbar
          }
       },
-      {
+      { name: 'BBS',
         path: '/BBS/topic/:title',
         components: {
           default : BBS,

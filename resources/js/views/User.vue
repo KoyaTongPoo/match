@@ -24,7 +24,9 @@
 			userDelete(index, id){
 				axios.delete('/api/user/' + id)
 				     .then(response => {
-				     	this.users.slice(id, 1)
+						 this.users.slice(id, 1)
+						 this.$router.push('success')
+						 
 				     })
 				     .catch(error => console.log(error));
 			},

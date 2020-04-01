@@ -12,7 +12,7 @@
                 
 
                 </v-content>
-                </v-app> 
+</v-app> 
 </template>
 
 <style scoped>

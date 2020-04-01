@@ -193,9 +193,11 @@
                   異性には非公開のプロフィール
                 </v-card-title>
                   <v-text-field
+                    v-model="profile_same_gender.star_like"
                     label="好みの芸能人"
-                    value="ケイリー・クオコ"
-                  />
+                  
+                    
+                ></v-text-field>
                 </v-col>
 
                 <v-col
@@ -203,9 +205,10 @@
                   md="4"
                 >
                   <v-text-field
+                    v-model="profile_same_gender.star_love"
                     class="purple-input"
                     label="結婚したいと思う芸能人"
-                    value="アライナ・マイヤー"
+                  
                   />
                 </v-col>
 
@@ -214,27 +217,30 @@
                   md="4"
                 >
                   <v-text-field
+                    v-model="profile_same_gender.star_dislike"
                     label="嫌いな芸能人"
                     class="purple-input"
-                    value="ケリ・ガーナー"
+                  
                   />
                 </v-col>
 
-                <v-col
+                <!-- <v-col
                   cols="12"
                   md="6"
                 >
                   <v-text-field
+                    v-model="profile_same_gender.star_dislike"
                     label="苦手や弱点１"
                     class="purple-input"
                   />
-                </v-col>
+                </v-col> -->
 
                 <v-col
                   cols="12"
                   md="6"
                 >
                   <v-text-field
+                  v-model="profile_same_gender.dislike_2"
                     label="苦手や弱点２"
                     class="purple-input"
                   />
@@ -242,6 +248,7 @@
 
                 <v-col cols="12">
                   <v-text-field
+                    v-model="profile_same_gender.dislike_3"
                     label="苦手や弱点３"
                     class="purple-input"
                   />
@@ -252,6 +259,7 @@
                   md="4"
                 >
                   <v-text-field
+                    v-model="profile_same_gender.dislike_4"
                     label="苦手や弱点４"
                     class="purple-input"
                     value=""
@@ -263,6 +271,7 @@
                   md="4"
                 >
                   <v-text-field
+                    v-model="profile_same_gender.dislike_5"
                     label="苦手や弱点５"
                     class="purple-input"
                     value=""
@@ -287,6 +296,7 @@
                   md="4"
                 >
                   <v-text-field
+                    v-model="profile_same_gender.dream_3y"
                     label="３年後の夢・目標"
                     class="purple-input"
                     value=""
@@ -298,17 +308,7 @@
                   md="4"
                 >
                   <v-text-field
-                    label="５年後の夢・目標"
-                    class="purple-input"
-                    value=""
-                  />
-                </v-col>
-
-                <v-col
-                  cols="12"
-                  md="4"
-                >
-                  <v-text-field
+                    v-model="profile_same_gender.dream_10y"
                     label="１０年後の夢・目標"
                     class="purple-input"
                     value=""
@@ -320,6 +320,19 @@
                   md="4"
                 >
                   <v-text-field
+                    v-model="profile_same_gender.dream_20y"
+                    label="２０年後の夢・目標"
+                    class="purple-input"
+                    value=""
+                  />
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="4"
+                >
+                  <v-text-field
+                    v-model="profile_same_gender.dream"
                     label="人生の目標"
                     class="purple-input"
                   />
@@ -327,15 +340,24 @@
 
                 <v-col class="d-flex" cols="12" sm="6">
                   <v-select
+                    v-model="profile_same_gender.status"
                     :items="items"
                     label="結婚に対する意思"
+                    item-text="categoryName"
+                    item-value="id"
+                    
+                 
                   ></v-select>
                 </v-col>
 
                 <v-col class="d-flex" cols="12" sm="6">
                   <v-select
+                    v-model="profile_same_gender.tobacco"
                     :items="tabacos"
                     label="タバコ"
+                    item-text="categoryName"
+                    item-value="id"
+                    
                   ></v-select>
                 </v-col>
                 
@@ -344,22 +366,28 @@
                   md="4"
                 >
                   <v-text-field
-                    label="年収"
+                    v-model="profile_same_gender.salary"
+                    label="年収(万円)"
                     class="purple-input"
-                    value=""
+               
                   />
                 </v-col>
 
                 <v-col class="d-flex" cols="12" sm="6">
                   <v-select
+                    v-model="profile_same_gender.liquor"
                     :items="liquors"
+                    item-text="state"
+                    item-value="id"
                     label="お酒"
+                    return-object
                   ></v-select>
                 </v-col>
 
 
                 <v-col class="d-flex" cols="12" sm="6">
                   <v-select
+                    v-model="profile_same_gender.blood"
                     :items="hoges"
                     label="血液型"
                   ></v-select>
@@ -374,6 +402,7 @@
 
                 <v-col class="d-flex" cols="12" sm="6">
                   <v-select
+                    v-model="profile_same_gender.children"
                     :items="hoges"
                     label="子供の有無"
                   ></v-select>
@@ -381,6 +410,7 @@
 
                 <v-col class="d-flex" cols="12" sm="6">
                   <v-select
+                    v-model="profile_same_gender.body"
                     :items="hoges"
                     label="体型"
                   ></v-select>
@@ -388,6 +418,7 @@
 
                 <v-col class="d-flex" cols="12" sm="6">
                   <v-select
+                    v-model="profile_same_gender.height"
                     :items="hoges"
                     label="身長"
                   ></v-select>
@@ -395,6 +426,7 @@
 
                 <v-col class="d-flex" cols="12" sm="6">
                   <v-select
+                    v-model="profile_same_gender.Living_together"
                     :items="hoges"
                     label="同居人"
                   ></v-select>
@@ -405,6 +437,7 @@
                   md="4"
                 >
                   <v-text-field
+                    v-model="profile_same_gender.value"
                     label="大切にしていること、考え"
                     class="purple-input"
                     value=""
@@ -413,6 +446,7 @@
 
                 <v-col class="d-flex" cols="12" sm="6">
                   <v-select
+                    v-model="profile_same_gender.recommend_flg"
                     :items="hoges"
                     label="異性の紹介を希望しているか"
                   ></v-select>
@@ -423,6 +457,7 @@
 
                 <v-col cols="12">
                   <v-textarea
+                    v-model="profile_same_gender.profile"
                     class="purple-input"
                     label="自由記述欄"
                     rows="7"
@@ -439,6 +474,7 @@
                   <v-btn
                     color="success"
                     class="mr-0"
+                    @click="updateUser"
                   >
                     Update Profile
                   </v-btn>
@@ -511,10 +547,15 @@
           '読書', '水族館', '美術館','自作PC',
 
         ],
-        items: ['すぐにでも', '２〜３年のうちに', '良い人がいれば', '今のところ結婚は考えていない', 'わからない'],
-        tabacos: ['吸わない', '吸う', '吸う(電子タバコのみ)', '時々吸う', '人前では吸わない', 'やめる予定'],
-        liquors: ['飲む', '飲まない', '時々飲む'],
+        items: [{ categoryName: 'すぐにでも', id: 1 },{ categoryName: '２〜３年のうちに', id: 2 }, { categoryName: '良い人がいれば', id: 3 },{ categoryName: '今のところ結婚は考えていない', id: 4 }, { categoryName: '良い人がいれば', id: 5 }],
+        tabacos: [{ categoryName: '吸わない', id: 1 },{ categoryName: '吸う', id: 2 }, { categoryName: '吸う(電子タバコのみ)', id: 3 },{ categoryName: '時々吸う', id: 4 }, { categoryName: '人前では吸わない', id: 5 }, { categoryName: 'やめる予定', id: 5 }],
+        liquors: [{ state: '飲む', id: '1' },{ state: '飲まない', id: '2' }, { state: '時々飲む', id: '3' }],
         hoges: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+
+        id: this.$route.params.id,
+        profile_same_gender:{
+
+				}
       }
     },
     methods: {
@@ -527,9 +568,29 @@
           }      
         this.swipeDirection = direction
       },
+      updateUser(){
+				axios.patch('/api/profile_same_gender/' + this.id,{
+					profile_same_gender: this.profile_same_gender
+				})
+				.then(response => {
+					this.profile_same_gender = response.data.profile_same_gender;
+					this.$router.push({ name: 'BBS'})
+				})
+				.catch(error => console.log(error));
+      },
     },
+		created(){
+      axios.get('/api/profile_same_gender/' + this.id)
+			.then(
+        response => {this.profile_same_gender = response.data.profile_same_gender;
+        console.log("axios");
+        }
+        )
+      .catch(erorr => {console.log(error)});
+		}
   
     
   
   }
+
 </script>
