@@ -9,6 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 import vuetify from"./vuetify";
 import router from"./router";
+import axios from "axios";
 import Example from"./components/ExampleComponent";
 import Top from"./components/Top";
 

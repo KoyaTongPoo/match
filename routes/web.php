@@ -6,12 +6,17 @@ Route::get("/", function () {
     return view("welcome");
 });
 
-//　ログインのに表示されるホーム画面のルート
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/main', function () {
-        return view('main');
-    });
+
+//laravelのログイン使ってないパターン
+Route::get("/main", function () {
+    return view("main");
 });
+// //　ログインのに表示されるホーム画面のルート
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/main', function () {
+//         return view('main');
+//     });
+// });
 
 Route::get('/users',function(){
 	return App\User::all();

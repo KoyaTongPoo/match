@@ -25,9 +25,10 @@
       <v-spacer></v-spacer>
       <v-btn text
       color="primary"
-      href="/login"
+      
+      @click="overlay = !overlay"
       >LOGIN</v-btn>
- <!-- @click="overlay = !overlay" -->
+ <!-- href="/login" -->
     </v-app-bar>
  
  
@@ -305,17 +306,13 @@
           </v-responsive>
 
           <v-theme-provider light>
-            <v-row>
+            <v-form
+          ref="form"
+          v-model="valid"
+          lazy-validation>
               <v-col cols="12">
                 <v-text-field
-                  flat
-                  label="ユーザーネーム*"
-                  solo
-                ></v-text-field>
-              </v-col>
-
-              <v-col cols="12">
-                <v-text-field
+                v-model="email"
                   flat
                   label="Email*"
                   solo
@@ -323,6 +320,15 @@
               </v-col>
 
               <v-col cols="12">
+                <v-text-field
+                v-model="password"
+                  flat
+                  label="パスワード*"
+                  solo
+                ></v-text-field>
+              </v-col>
+
+              <!-- <v-col cols="12">
                 <v-card color="white">
                 <v-radio-group v-model="radioGroup">
                   <v-radio
@@ -335,9 +341,9 @@
                   ></v-radio>
                 </v-radio-group>
                 </v-card>
-              </v-col>
+              </v-col> -->
 
-              <v-col cols="12">
+              <!-- <v-col cols="12">
                 <v-card>
                 <v-menu
     ref="menu"
@@ -366,7 +372,7 @@
     ></v-date-picker>
   </v-menu>
   </v-card>
-              </v-col>
+              </v-col> -->
 
               <v-col
                 class="mx-auto"
@@ -375,19 +381,34 @@
                 <v-btn
                   color="accent"
                   x-large
+                  @click="register"
                 >
-                  登録
+                  登録                  
                 </v-btn>
               </v-col>
-            </v-row>
+            </v-form>
           </v-theme-provider>
         </v-container>
 
         <div class="py-12"></div>
       </v-sheet>
 
+      <!-- <div>
+        <label for='email'>email</label>
+        <input
+        id="email"
+        type="email"
+        v-model="name">
+        <label for='password'>password</label>
+        <input
+        id="password"
+        type="password"
+        v-model="password">
+<button @click="register">登録</button>
+      </div> -->
+
       <!-- オーバーレイ -->
-    <!-- <v-overlay :value="overlay">
+    <v-overlay :value="overlay">
             <v-card class="mx-auto elevation-12"
             width="100%" 
             min-width="350px"
@@ -410,31 +431,32 @@
               <v-card-text>
                 <v-form>
                   <v-text-field
-                    label="Login"
-                    name="login"
+                  v-model="email"
+                    label="Email"
                     prepend-icon="mdi-account"
                     type="text"
-                    value="example@example.com"
+       
                   />
 
                   <v-text-field
+                  v-model="password"
                     id="password"
                     label="Password"
-                    name="password"
                     prepend-icon="mdi-lock"
                     type="password"
-                    value="testtest"
+    
                   />
                 </v-form>
               </v-card-text>
               <v-card-actions>
  
                 <v-spacer />
-                <v-btn color="primary">Login</v-btn>
+                <v-btn color="primary"
+                @click="login">Login</v-btn>
               </v-card-actions>
             </v-card>
 
-    </v-overlay> -->
+    </v-overlay>
 
     <!--  -->
     </v-content>
@@ -452,6 +474,7 @@
 </template>
 
 <script>
+ import axios from '../axios-auth';
   export default {
     data () {
       return {
@@ -504,6 +527,10 @@
         radioGroup: 0,
          date: null,
       menu: false,
+
+      valid: true,
+      email:'',
+      password:'',
       }
     },
     watch: {
@@ -516,6 +543,27 @@
       source: String,
     },
    methods: {
+     login(){
+       axios.post('/accounts:signInWithPassword?key=AIzaSyCte0O6BS5sVHQ-n24sDxD1RATTYIInO1I',
+       {
+         email: this.email,
+         password: this.password,
+         returnSecureToken: true,
+       }).then(response => {
+         console.log(response);
+         window.location.href = '/main';
+       }).catch(error => console.log(error));
+     },
+     register(){
+       axios.post('/accounts:signUp?key=AIzaSyCte0O6BS5sVHQ-n24sDxD1RATTYIInO1I',
+       {
+         email: this.email,
+         password: this.password,
+         returnSecureToken: true,
+       }).then(response => {
+         console.log(response);
+       })
+     },
      save (date) {
         this.$refs.menu.save(date)
       },

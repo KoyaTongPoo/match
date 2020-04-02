@@ -39,9 +39,9 @@
           <v-card-subtitle>アプリの使い方はこの画層をクリック！</v-card-subtitle>
                    </div>
          <v-img
-      src="/img/job_information.png"
+      src="/img/information.png"
       contain
-      width="150px"
+      max-width="150px"
     >
         </v-img>
    </div>

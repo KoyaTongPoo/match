@@ -423,6 +423,7 @@ class ComposerStaticInit234f13d6bb3df3c7c3ce2a7e7c1a6ef9
         'App\\Http\\Controllers\\BoardsController' => __DIR__ . '/../..' . '/app/Http/Controllers/BoardsController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\CreditScoresController' => __DIR__ . '/../..' . '/app/Http/Controllers/CreditScoresController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\LogsController' => __DIR__ . '/../..' . '/app/Http/Controllers/LogsController.php',
         'App\\Http\\Controllers\\MGendersController' => __DIR__ . '/../..' . '/app/Http/Controllers/MGendersController.php',
         'App\\Http\\Controllers\\MHobbiesController' => __DIR__ . '/../..' . '/app/Http/Controllers/MHobbiesController.php',

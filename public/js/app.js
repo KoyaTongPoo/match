@@ -2214,6 +2214,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _axios_auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../axios-auth */ "./resources/js/axios-auth.js");
 //
 //
 //
@@ -2667,6 +2668,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2709,7 +2733,10 @@ __webpack_require__.r(__webpack_exports__);
       // ],
       radioGroup: 0,
       date: null,
-      menu: false
+      menu: false,
+      valid: true,
+      email: '',
+      password: ''
     };
   },
   watch: {
@@ -2725,11 +2752,32 @@ __webpack_require__.r(__webpack_exports__);
     source: String
   },
   methods: {
+    login: function login() {
+      _axios_auth__WEBPACK_IMPORTED_MODULE_0__["default"].post('/accounts:signInWithPassword?key=AIzaSyCte0O6BS5sVHQ-n24sDxD1RATTYIInO1I', {
+        email: this.email,
+        password: this.password,
+        returnSecureToken: true
+      }).then(function (response) {
+        console.log(response);
+        window.location.href = '/main';
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    },
+    register: function register() {
+      _axios_auth__WEBPACK_IMPORTED_MODULE_0__["default"].post('/accounts:signUp?key=AIzaSyCte0O6BS5sVHQ-n24sDxD1RATTYIInO1I', {
+        email: this.email,
+        password: this.password,
+        returnSecureToken: true
+      }).then(function (response) {
+        console.log(response);
+      });
+    },
     save: function save(date) {
       this.$refs.menu.save(date);
     },
     logout: function logout() {
-      axios.post("logout").then(function (res) {
+      _axios_auth__WEBPACK_IMPORTED_MODULE_0__["default"].post("logout").then(function (res) {
         location.href = "/";
       })["catch"](function (err) {
         return console.log(err);
@@ -26220,7 +26268,14 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-btn",
-            { attrs: { text: "", color: "primary", href: "/login" } },
+            {
+              attrs: { text: "", color: "primary" },
+              on: {
+                click: function($event) {
+                  _vm.overlay = !_vm.overlay
+                }
+              }
+            },
             [_vm._v("LOGIN")]
           )
         ],
@@ -26550,17 +26605,31 @@ var render = function() {
                     { attrs: { light: "" } },
                     [
                       _c(
-                        "v-row",
+                        "v-form",
+                        {
+                          ref: "form",
+                          attrs: { "lazy-validation": "" },
+                          model: {
+                            value: _vm.valid,
+                            callback: function($$v) {
+                              _vm.valid = $$v
+                            },
+                            expression: "valid"
+                          }
+                        },
                         [
                           _c(
                             "v-col",
                             { attrs: { cols: "12" } },
                             [
                               _c("v-text-field", {
-                                attrs: {
-                                  flat: "",
-                                  label: "ユーザーネーム*",
-                                  solo: ""
+                                attrs: { flat: "", label: "Email*", solo: "" },
+                                model: {
+                                  value: _vm.email,
+                                  callback: function($$v) {
+                                    _vm.email = $$v
+                                  },
+                                  expression: "email"
                                 }
                               })
                             ],
@@ -26572,133 +26641,19 @@ var render = function() {
                             { attrs: { cols: "12" } },
                             [
                               _c("v-text-field", {
-                                attrs: { flat: "", label: "Email*", solo: "" }
+                                attrs: {
+                                  flat: "",
+                                  label: "パスワード*",
+                                  solo: ""
+                                },
+                                model: {
+                                  value: _vm.password,
+                                  callback: function($$v) {
+                                    _vm.password = $$v
+                                  },
+                                  expression: "password"
+                                }
                               })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { attrs: { cols: "12" } },
-                            [
-                              _c(
-                                "v-card",
-                                { attrs: { color: "white" } },
-                                [
-                                  _c(
-                                    "v-radio-group",
-                                    {
-                                      model: {
-                                        value: _vm.radioGroup,
-                                        callback: function($$v) {
-                                          _vm.radioGroup = $$v
-                                        },
-                                        expression: "radioGroup"
-                                      }
-                                    },
-                                    [
-                                      _c("v-radio", {
-                                        key: "0",
-                                        attrs: { label: "男性" }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("v-radio", {
-                                        key: "1",
-                                        attrs: { label: "女性" }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { attrs: { cols: "12" } },
-                            [
-                              _c(
-                                "v-card",
-                                [
-                                  _c(
-                                    "v-menu",
-                                    {
-                                      ref: "menu",
-                                      attrs: {
-                                        "close-on-content-click": false,
-                                        transition: "scale-transition",
-                                        "offset-y": "",
-                                        "min-width": "290px"
-                                      },
-                                      scopedSlots: _vm._u([
-                                        {
-                                          key: "activator",
-                                          fn: function(ref) {
-                                            var on = ref.on
-                                            return [
-                                              _c(
-                                                "v-text-field",
-                                                _vm._g(
-                                                  {
-                                                    attrs: {
-                                                      label: "生年月日",
-                                                      "prepend-icon":
-                                                        "mdi-calendar",
-                                                      readonly: ""
-                                                    },
-                                                    model: {
-                                                      value: _vm.date,
-                                                      callback: function($$v) {
-                                                        _vm.date = $$v
-                                                      },
-                                                      expression: "date"
-                                                    }
-                                                  },
-                                                  on
-                                                )
-                                              )
-                                            ]
-                                          }
-                                        }
-                                      ]),
-                                      model: {
-                                        value: _vm.menu,
-                                        callback: function($$v) {
-                                          _vm.menu = $$v
-                                        },
-                                        expression: "menu"
-                                      }
-                                    },
-                                    [
-                                      _vm._v(" "),
-                                      _c("v-date-picker", {
-                                        ref: "picker",
-                                        attrs: {
-                                          locale: "ja",
-                                          max: new Date()
-                                            .toISOString()
-                                            .substr(0, 10),
-                                          min: "1950-01-01"
-                                        },
-                                        on: { change: _vm.save },
-                                        model: {
-                                          value: _vm.date,
-                                          callback: function($$v) {
-                                            _vm.date = $$v
-                                          },
-                                          expression: "date"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
                             ],
                             1
                           ),
@@ -26709,10 +26664,13 @@ var render = function() {
                             [
                               _c(
                                 "v-btn",
-                                { attrs: { color: "accent", "x-large": "" } },
+                                {
+                                  attrs: { color: "accent", "x-large": "" },
+                                  on: { click: _vm.register }
+                                },
                                 [
                                   _vm._v(
-                                    "\n                  登録\n                "
+                                    "\n                  登録                  \n                "
                                   )
                                 ]
                               )
@@ -26730,6 +26688,108 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("div", { staticClass: "py-12" })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-overlay",
+            { attrs: { value: _vm.overlay } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto elevation-12",
+                  attrs: { width: "100%", "min-width": "350px" }
+                },
+                [
+                  _c(
+                    "v-toolbar",
+                    { attrs: { color: "primary", dark: "", flat: "" } },
+                    [
+                      _c("v-toolbar-title", [_vm._v("Login form")]),
+                      _vm._v(" "),
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { icon: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.overlay = false
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("mdi-close")])],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    [
+                      _c(
+                        "v-form",
+                        [
+                          _c("v-text-field", {
+                            attrs: {
+                              label: "Email",
+                              "prepend-icon": "mdi-account",
+                              type: "text"
+                            },
+                            model: {
+                              value: _vm.email,
+                              callback: function($$v) {
+                                _vm.email = $$v
+                              },
+                              expression: "email"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-text-field", {
+                            attrs: {
+                              id: "password",
+                              label: "Password",
+                              "prepend-icon": "mdi-lock",
+                              type: "password"
+                            },
+                            model: {
+                              value: _vm.password,
+                              callback: function($$v) {
+                                _vm.password = $$v
+                              },
+                              expression: "password"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    [
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { color: "primary" },
+                          on: { click: _vm.login }
+                        },
+                        [_vm._v("Login")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             ],
             1
           )
@@ -28480,9 +28540,9 @@ var render = function() {
                                   _vm._v(" "),
                                   _c("v-img", {
                                     attrs: {
-                                      src: "/img/job_information.png",
+                                      src: "/img/information.png",
                                       contain: "",
-                                      width: "150px"
+                                      "max-width": "150px"
                                     }
                                   })
                                 ],
@@ -90940,8 +91000,10 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vuetify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vuetify */ "./resources/js/vuetify.js");
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
-/* harmony import */ var _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ExampleComponent */ "./resources/js/components/ExampleComponent.vue");
-/* harmony import */ var _components_Top__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Top */ "./resources/js/components/Top.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/ExampleComponent */ "./resources/js/components/ExampleComponent.vue");
+/* harmony import */ var _components_Top__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Top */ "./resources/js/components/Top.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -90950,6 +91012,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
 
 
 
@@ -90976,10 +91039,29 @@ var app = new Vue({
   router: _router__WEBPACK_IMPORTED_MODULE_1__["default"],
   vuetify: _vuetify__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
-    "example-component": _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_2__["default"],
-    "top-component": _components_Top__WEBPACK_IMPORTED_MODULE_3__["default"]
+    "example-component": _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_3__["default"],
+    "top-component": _components_Top__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 });
+
+/***/ }),
+
+/***/ "./resources/js/axios-auth.js":
+/*!************************************!*\
+  !*** ./resources/js/axios-auth.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+var instance = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
+  baseURL: 'https://identitytoolkit.googleapis.com/v1/'
+});
+/* harmony default export */ __webpack_exports__["default"] = (instance);
 
 /***/ }),
 
@@ -93721,8 +93803,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/MAMP/htdocs/laravel/match4/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/laravel/match4/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/takashi/Desktop/match/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/takashi/Desktop/match/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
