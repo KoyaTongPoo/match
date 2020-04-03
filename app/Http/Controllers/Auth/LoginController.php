@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/main';
+    protected $redirectTo = 'main';
     //　変更前のコード
     // protected $redirectTo = RouteServiceProvider::HOME;
 

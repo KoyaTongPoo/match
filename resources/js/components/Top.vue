@@ -551,7 +551,7 @@
          returnSecureToken: true,
        }).then(response => {
          console.log(response);
-         window.location.href = '/main';
+         window.location.href = 'main';
        }).catch(error => console.log(error));
      },
      register(){
@@ -573,7 +573,7 @@
             .then(res => {
             location.href = "/";
             })
-            .catch(err => console.log(err));
+            .catch(err => console.log(err.response.data));
         },
         // push: function() {
         //   axios

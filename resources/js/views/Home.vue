@@ -39,7 +39,7 @@
           <v-card-subtitle>アプリの使い方はこの画層をクリック！</v-card-subtitle>
                    </div>
          <v-img
-      src="/img/information.png"
+      src="img/information.png"
       contain
       max-width="150px"
     >
