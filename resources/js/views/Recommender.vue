@@ -1,4 +1,5 @@
 <template>
+
 <v-container>
   <v-row
     v-touch="{
@@ -6,43 +7,17 @@
       right: () => swipe('Right'),
       up: () => swipe('Up'),
       down: () => swipe('Down')
-    }">
-  <v-card
-    max-width="450"
-    class="mx-auto"
-  >
+    }"
+    align="center"
+    justify="center">
+
+    <v-card max-width="374px">
+        <h2>異性を紹介してくれるキューピットの人気ランキングを表示予定</h2>
+    <v-img src="/img/kouji_rammer.png"
+    max-width="374px"
+    ></v-img>
     
-    <v-list three-line>
-      <template v-for="(item, index) in items">
-        <v-subheader
-          v-if="item.header"
-          :key="item.header"
-          v-text="item.header"
-        ></v-subheader>
-
-        <v-divider
-          v-else-if="item.divider"
-          :key="index"
-          :inset="item.inset"
-        ></v-divider>
-
-        <v-list-item
-          v-else
-          :key="item.title"
-          @click=""
-        >
-          <v-list-item-avatar>
-            <v-img :src="item.avatar"></v-img>
-          </v-list-item-avatar>
-
-          <v-list-item-content>
-            <v-list-item-title v-html="item.title"></v-list-item-title>
-            <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </template>
-    </v-list>
-  </v-card>
+    </v-card>
   </v-row>
 </v-container>
 </template>

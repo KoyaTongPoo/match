@@ -7,6 +7,7 @@
       up: () => swipe('Up'),
       down: () => swipe('Down')
     }">
+    <h2>異性の紹介を希望している同性のユーザー一覧、各ユーザーに他の人がタグ付できるようにするのと、検索機能を実装予定</h2>
     <v-container py-1 px-0>
   <v-card
     class="mx-auto"

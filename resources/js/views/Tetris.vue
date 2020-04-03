@@ -7,43 +7,110 @@
       up: () => swipe('Up'),
       down: () => swipe('Down')
     }">
-    <div id=D></div>
 
+<v-sheet id=D @keydown="onKeydown">
+
+</v-sheet>
+<v-btn @click="Y">
+  test
+</v-btn>
   </v-row>
 </v-container>
 </template>
 
 
 <script>
-document.onkeydown = function (e){
-	if(!e) e = window.event; // レガシー
-
-	// 出力テスト
-	console.log(e);
-};
-Z=X=[B=A=12];function Y(){for(C
-=[q=c=i=4];f=i--*K;c-=!Z[h+(K+6?p+K:C[i]=p*A-(p/9|0)*145)])p=B[i];for(c?0:K+6?h
-+=K:t?B=C:0;k=i=K=q--;f+=Z[A+p])X[p=h+B[q]]=t+1;if(e=!e)if(h+=A,f|B)for(Z=X,X=[
-l=228],B=[[-7,-20,6,h=17,-9,3,3][t=++t%7]-4,0,1,t-6?-A:2];l--;)for(l%A?l-=l%A*!
-Z[l]:(P+=++k,c=l+=A);--c>A;)Z[c]=Z[c-A];for(S="<b>";i<240;S+=(c=X[i]|(X[i]=Z[i]
-|=++i%A<2|i>228))?"<b style=color:#"+142*c+">■":"＿")i%A?0:S+="<br>";
-D.innerHTML=S+P;Z[5]||setTimeout(Y,99-P)}Y(h=e=K=t=P=0)</script>
-<script>
   export default {
     data: () => ({
       swipeDirection: 'None',
+      // ブロックの作成 
+// 中心からの差分で配置する。棒を除くすべてのブロックはＬ字にブロックがあり、 
+
+B:[[-11],[-24],[2],[13],[-13],[-1],[2,-1]], // それ以外の１個だけを別にする 
+D: document, 
+// 位置は、縦方向１マスは 12 単位となる 座標(x,y) なら h=x+y*12 
+h:'17', // ブロックの中心位置初期化 
+Z:[], // バッファ [0-239]:固定したブロック用 [240-479]:表示用バッファ 
     }),
 
     methods: {
-      swipe (direction) {
-		  if (direction == 'Left') {
-			  this.$router.push('/recommender/キューピット一覧')
-      }
-      else if (direction == 'Right') {
-			  this.$router.push('/users/MyProfile/MyProfile')
-          }
-        this.swipeDirection = direction
-      },
+      onKeydown: function() {
+        K=event.keyCode
+        Y()
+        console.log(Y)
+for(K=t=P=this.i=0;i<240;){
+
+　　D.write(i%12?"":"\n","<b></b>"); // HTML表示領域の描画
+
+　　Z[240+i]=Z[this.i]=++i%12<2||i>228?S="□":"　"; // 床と壁の設定、番兵にもなる
+}
+        for(K=t=P=this.i=0;i<240;){
+
+　　D.write(i%12?"":"\n","<b></b>"); // HTML表示領域の描画
+
+　　Z[240+i]=Z[this.i]=++i%12<2||i>228?S="□":"　"; // 床と壁の設定、番兵にもなる
+}
+
+
+    },
+       Y(){ 
+
+　　this.Z[11]=this.P; // 得点を表示バッファに書き込み 
+　　this.E=this.B[this.t]; // 現在落下中のブロック 
+　　this.f=0; // 移動・回転決定用フラグ 
+　　if(this.K) // キーが押されているか 
+　　　　if(this.K!=32){ // 横移動 
+
+　　　　　　this.d=this.K-37?1:-1 // d:x方向の差分 
+　　　　　　for(this.i=0;this.i<4;this.i++) // 横移動判定 
+
+　　　　　　　　this.f+=this.Z[this.h+this.E[this.i]+this.d]==this.S; // 移動先が空白かどうか 
+　　　　　　this.f?0:this.h+=this.d; // すべて空白なので移動決定 
+
+　　　　}else{ // 回転 
+　　　　　　this.C=[]; // 回転先の座標保持用 
+　　　　　　for(this.i=0;this.i<4;this.i++){ // 回転判定 
+　　　　　　　　this.p=this.E[this.i]; // ブロックの各位置 
+　　　　　　　　this.v=Math.round(this.p/12); // 回転先の x 座標 
+　　　　　　　　this.w=this.p-this.v*12; // 回転先の y 座標 
+　　　　　　　　this.C[this.i]=this.w*12-this.v; // 回転先の座標計算 
+
+　　　　　　　　if(this.Z[this.h+this.C[this.i]]==this.S)this.f=1; // 回転先が空白かどうか 
+　　　　　　} 
+
+　　　　　　this.t*!this.f?this.E=this.B[this.t]=this.C:0; // すべて空白なので回転決定 
+　　　　} 
+　　this.K=0; // キー入力キャンセル 
+
+　　for(this.f=this.i=0;this.i<4;this.i++){ // 落下判定 
+　　　　this.f+=this.Z[12+(this.p=this.h+this.E[this.i])]==this.S; // 落下先が空白かどうか 
+　　　　this.Z[240+this.p]=this.S // ブロック表示のために表示バッファへコピー 
+　　} 
+　　if(this.f){ // 落下できない 
+　　　　for(this.i=0;this.i<4;this.i++)this.Z[this.h+this.E[this.i]]=this.S; // ブロック停止 
+　　　　this.t=++this.t%7; // 次のブロック決定（現在順送り） 
+　　　　this.h=17 // 位置初期化 
+　　}else　this.h+=12; // 一段落下 
+
+　　for(this.k=1,this.i=19;this.i--;){ // ラインがそろったか判定 
+
+　　　　for(this.j=11;--this.j&&this.Z[i*12+j]==this.S;); // そろったラインを検索 
+　　　　if(!this.j){ // そろった 
+　　　　　　this.P+=this.k++; // 得点 1ライン 1点, ..., テトリス 10点 になる 
+
+　　　　　　for(this.j=++this.i*12;this.j>2*12;)this.Z[this.j]=this.Z[this.j---12] // 全体を一段下げる 
+　　}} 
+
+　　for(this.i=240;this.i--;){ 
+　　　　this.D.all(6+this.i).innerHTML=this.Z[240+this.i]; // 表示用バッファを表示 
+
+　　　　this.Z[240+this.i]=this.Z[this.i] // 表示バッファのクリア 
+　　} 
+　　this.Z[5]!=this.S?setTimeout(this.Y,99):0; // 入り口にブロックがあったら終了 
+}, 
+
+
     },
   }
+  
 </script>

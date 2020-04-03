@@ -2043,10 +2043,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2069,7 +2065,11 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         name: 'Edit(作成途中)',
         icon: 'mdi-github-face',
-        link: '/users/edit/プロフィール編集'
+        link: '/users/edit/プロフィール編集/1'
+      }, {
+        name: 'Tet(作成途中)',
+        icon: 'mdi-stack-overflow',
+        link: '/tetris'
       }, {
         name: 'Test(作成途中)',
         icon: 'mdi-stack-overflow',
@@ -2983,9 +2983,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     swipe: function swipe(direction) {
-      if (direction == 'Left') {// this.$router.push('/BBS/topic/BBS')
+      if (direction == 'Left') {
+        this.$router.go(1);
       } else if (direction == 'Right') {
-        this.$router.push('/');
+        this.$router.go(-1);
       }
 
       this.swipeDirection = direction;
@@ -3004,6 +3005,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -3623,12 +3625,19 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     swipe: function swipe(direction) {
       if (direction == 'Left') {
-        this.$router.go(1);
-      } else if (direction == 'Right') {
-        this.$router.go(-1);
-      }
+        if (this.e1 == 5) {
+          this.e1 = 1;
+        } else {
+          this.e1 += 1;
+        } // this.$router.go(1)
 
-      this.swipeDirection = direction;
+      } else if (direction == 'Right') {
+        if (this.e1 == 1) {
+          this.$router.go(-1);
+        } else {
+          this.e1 -= 1;
+        }
+      }
     }
   }
 });
@@ -3644,6 +3653,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -3973,6 +3983,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4023,6 +4034,55 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      swipeDirection: 'None'
+    };
+  },
+  methods: {
+    swipe: function swipe(direction) {
+      if (direction == 'Left') {
+        this.$router.go(1);
+      } else if (direction == 'Right') {
+        this.$router.go(-1);
+      }
+
+      this.swipeDirection = direction;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/NotFound.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/NotFound.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -4769,31 +4829,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4931,30 +4966,125 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      swipeDirection: 'None'
+      swipeDirection: 'None',
+      // ブロックの作成 
+      // 中心からの差分で配置する。棒を除くすべてのブロックはＬ字にブロックがあり、 
+      B: [[-11], [-24], [2], [13], [-13], [-1], [2, -1]],
+      // それ以外の１個だけを別にする 
+      D: document,
+      // 位置は、縦方向１マスは 12 単位となる 座標(x,y) なら h=x+y*12 
+      h: '17',
+      // ブロックの中心位置初期化 
+      Z: [] // バッファ [0-239]:固定したブロック用 [240-479]:表示用バッファ 
+
     };
   },
   methods: {
-    swipe: function swipe(direction) {
-      if (direction == 'Left') {
-        this.$router.push('/recommender/キューピット一覧');
-      } else if (direction == 'Right') {
-        this.$router.push('/users/MyProfile/MyProfile');
+    onKeydown: function onKeydown() {
+      K = event.keyCode;
+      Y();
+      console.log(Y);
+
+      for (K = t = P = this.i = 0; i < 240;) {
+        D.write(i % 12 ? "" : "\n", "<b></b>"); // HTML表示領域の描画
+
+        Z[240 + i] = Z[this.i] = ++i % 12 < 2 || i > 228 ? S = "□" : "　"; // 床と壁の設定、番兵にもなる
       }
 
-      this.swipeDirection = direction;
+      for (K = t = P = this.i = 0; i < 240;) {
+        D.write(i % 12 ? "" : "\n", "<b></b>"); // HTML表示領域の描画
+
+        Z[240 + i] = Z[this.i] = ++i % 12 < 2 || i > 228 ? S = "□" : "　"; // 床と壁の設定、番兵にもなる
+      }
+    },
+    Y: function Y() {
+      this.Z[11] = this.P; // 得点を表示バッファに書き込み 
+
+      this.E = this.B[this.t]; // 現在落下中のブロック 
+
+      this.f = 0; // 移動・回転決定用フラグ 
+
+      if (this.K) // キーが押されているか 
+        if (this.K != 32) {
+          // 横移動 
+          this.d = this.K - 37 ? 1 : -1; // d:x方向の差分 
+
+          for (this.i = 0; this.i < 4; this.i++) {
+            // 横移動判定 
+            this.f += this.Z[this.h + this.E[this.i] + this.d] == this.S;
+          } // 移動先が空白かどうか 
+
+
+          this.f ? 0 : this.h += this.d; // すべて空白なので移動決定 
+        } else {
+          // 回転 
+          this.C = []; // 回転先の座標保持用 
+
+          for (this.i = 0; this.i < 4; this.i++) {
+            // 回転判定 
+            this.p = this.E[this.i]; // ブロックの各位置 
+
+            this.v = Math.round(this.p / 12); // 回転先の x 座標 
+
+            this.w = this.p - this.v * 12; // 回転先の y 座標 
+
+            this.C[this.i] = this.w * 12 - this.v; // 回転先の座標計算 
+
+            if (this.Z[this.h + this.C[this.i]] == this.S) this.f = 1; // 回転先が空白かどうか 
+          }
+
+          this.t * !this.f ? this.E = this.B[this.t] = this.C : 0; // すべて空白なので回転決定 
+        }
+      this.K = 0; // キー入力キャンセル 
+
+      for (this.f = this.i = 0; this.i < 4; this.i++) {
+        // 落下判定 
+        this.f += this.Z[12 + (this.p = this.h + this.E[this.i])] == this.S; // 落下先が空白かどうか 
+
+        this.Z[240 + this.p] = this.S; // ブロック表示のために表示バッファへコピー 
+      }
+
+      if (this.f) {
+        // 落下できない 
+        for (this.i = 0; this.i < 4; this.i++) {
+          this.Z[this.h + this.E[this.i]] = this.S;
+        } // ブロック停止 
+
+
+        this.t = ++this.t % 7; // 次のブロック決定（現在順送り） 
+
+        this.h = 17; // 位置初期化 
+      } else this.h += 12; // 一段落下 
+
+
+      for (this.k = 1, this.i = 19; this.i--;) {
+        // ラインがそろったか判定 
+        for (this.j = 11; --this.j && this.Z[i * 12 + j] == this.S;) {
+          ;
+        } // そろったラインを検索 
+
+
+        if (!this.j) {
+          // そろった 
+          this.P += this.k++; // 得点 1ライン 1点, ..., テトリス 10点 になる 
+
+          for (this.j = ++this.i * 12; this.j > 2 * 12;) {
+            this.Z[this.j] = this.Z[this.j-- - 12];
+          } // 全体を一段下げる 
+
+        }
+      }
+
+      for (this.i = 240; this.i--;) {
+        this.D.all(6 + this.i).innerHTML = this.Z[240 + this.i]; // 表示用バッファを表示 
+
+        this.Z[240 + this.i] = this.Z[this.i]; // 表示バッファのクリア 
+      }
+
+      this.Z[5] != this.S ? setTimeout(this.Y, 99) : 0; // 入り口にブロックがあったら終了 
     }
   }
 });
@@ -5206,6 +5336,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6106,6 +6243,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6236,11 +6374,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       tags: ['アメコミ好き', 'タバコ吸わない', 'SF好き', 'ルールは大事', 'バジンガ']
     };
+  },
+  methods: {
+    swipe: function swipe(direction) {
+      if (direction == 'Left') {
+        this.$router.go(1);
+      } else if (direction == 'Right') {
+        this.$router.go(-1);
+      }
+
+      this.swipeDirection = direction;
+    }
   }
 });
 
@@ -6641,6 +6797,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6654,6 +6817,19 @@ __webpack_require__.r(__webpack_exports__);
         src: 'https://images-na.ssl-images-amazon.com/images/I/713%2BUNN755L._SY450_.jpg'
       }]
     };
+  },
+  methods: {
+    swipe: function swipe(direction) {
+      if (direction == 'Left') {
+        //   console.log(direction)
+        this.$router.push('/');
+      } else if (direction == 'Right') {
+        //   console.log(direction)
+        this.$router.push('/BBS/topic/つぶやき');
+      }
+
+      this.swipeDirection = direction;
+    }
   }
 });
 
@@ -6869,11 +7045,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       tags: ['アメコミ好き', 'タバコ吸わない', 'SF好き', 'ルールは大事', 'バジンガ']
     };
+  },
+  methods: {
+    swipe: function swipe(direction) {
+      if (direction == 'Left') {
+        //   console.log(direction)
+        this.$router.push('/');
+      } else if (direction == 'Right') {
+        //   console.log(direction)
+        this.$router.push('/BBS/topic/つぶやき');
+      }
+
+      this.swipeDirection = direction;
+    }
   }
 });
 
@@ -7064,11 +7260,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       tags: ['アメコミ好き', 'タバコ吸わない', 'SF好き', 'ルールは大事', 'バジンガ']
     };
+  },
+  methods: {
+    swipe: function swipe(direction) {
+      if (direction == 'Left') {
+        //   console.log(direction)
+        this.$router.push('/');
+      } else if (direction == 'Right') {
+        //   console.log(direction)
+        this.$router.push('/BBS/topic/つぶやき');
+      }
+
+      this.swipeDirection = direction;
+    }
   }
 });
 
@@ -25793,7 +26009,7 @@ var render = function() {
                     "v-list-item-content",
                     [
                       _c("v-list-item-title", { staticClass: "title" }, [
-                        _vm._v("\n          アプリタイトル\n        ")
+                        _vm._v("\n          Cupitter\n        ")
                       ])
                     ],
                     1
@@ -25825,13 +26041,6 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "v-list-item",
-                        { attrs: { to: "/users/list" } },
-                        [_c("v-list-item-title", [_vm._v("紹介希望者")])],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-list-item",
                         { attrs: { to: "/BBS/topic/つぶやき" } },
                         [_c("v-list-item-title", [_vm._v("つぶやき")])],
                         1
@@ -25846,7 +26055,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "v-list-item",
-                        { attrs: { to: "/users/edit/プロフィール編集" } },
+                        { attrs: { to: "/users/edit/プロフィール編集/1" } },
                         [_c("v-list-item-title", [_vm._v("プロフィール編集")])],
                         1
                       ),
@@ -25854,7 +26063,11 @@ var render = function() {
                       _c(
                         "v-list-item",
                         { attrs: { to: "/users/list" } },
-                        [_c("v-list-item-title", [_vm._v("紹介希望者の一覧")])],
+                        [
+                          _c("v-list-item-title", [
+                            _vm._v("紹介を希望している方々")
+                          ])
+                        ],
                         1
                       ),
                       _vm._v(" "),
@@ -27235,6 +27448,10 @@ var render = function() {
             "v-col",
             { attrs: { cols: "12" } },
             [
+              _c("h2", [
+                _vm._v("利用者の質問・相談をtwitterのようなスタイルで表示する")
+              ]),
+              _vm._v(" "),
               _c(
                 "v-sheet",
                 {
@@ -28130,7 +28347,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("v-divider"),
                           _vm._v(" "),
-                          _c("v-stepper-step", { attrs: { step: "4" } }, [
+                          _c("v-stepper-step", { attrs: { step: "5" } }, [
                             _vm._v("Name of step 5")
                           ])
                         ],
@@ -28403,7 +28620,7 @@ var render = function() {
                                     }
                                   }
                                 },
-                                [_vm._v("\n          次へ\n        ")]
+                                [_vm._v("\n          最初に戻る\n        ")]
                               )
                             ],
                             1
@@ -28564,7 +28781,12 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "mx-auto my-1",
-                  attrs: { "max-width": "374", color: "cyan", align: "center" }
+                  attrs: {
+                    "max-width": "374",
+                    color: "cyan",
+                    align: "center",
+                    to: "/making"
+                  }
                 },
                 [
                   _c("h3", [_vm._v("あなたのランク")]),
@@ -28836,7 +29058,7 @@ var render = function() {
                                               _vm._v(" "),
                                               _c("v-list-item-subtitle", [
                                                 _vm._v(
-                                                  "ルールル、ルルル、ルールル♪"
+                                                  "人間はもうちょっと優しくしなければいけないし、できないのなら結婚しなければいい。大変なことかもしれないけれど、結婚したならちゃんとすべきと言いたい。"
                                                 )
                                               ])
                                             ],
@@ -28954,6 +29176,8 @@ var render = function() {
   return _c(
     "v-container",
     [
+      _c("h1", [_vm._v("制作途中")]),
+      _vm._v(" "),
       _c(
         "v-card",
         [
@@ -29165,7 +29389,48 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("404 Not Found")])
+  return _c(
+    "v-container",
+    [
+      _c(
+        "v-row",
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ],
+          staticStyle: { height: "700px" },
+          attrs: { align: "center", justify: "center" }
+        },
+        [
+          _c("span", [
+            _c("h1", [_vm._v("404 Not Found")]),
+            _vm._v(" "),
+            _c("h3", [_vm._v("スワイプで前のページに遷移")])
+          ])
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -30330,65 +30595,23 @@ var render = function() {
               expression:
                 "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
             }
-          ]
+          ],
+          attrs: { align: "center", justify: "center" }
         },
         [
           _c(
             "v-card",
-            { staticClass: "mx-auto", attrs: { "max-width": "450" } },
+            { attrs: { "max-width": "374px" } },
             [
-              _c(
-                "v-list",
-                { attrs: { "three-line": "" } },
-                [
-                  _vm._l(_vm.items, function(item, index) {
-                    return [
-                      item.header
-                        ? _c("v-subheader", {
-                            key: item.header,
-                            domProps: { textContent: _vm._s(item.header) }
-                          })
-                        : item.divider
-                        ? _c("v-divider", {
-                            key: index,
-                            attrs: { inset: item.inset }
-                          })
-                        : _c(
-                            "v-list-item",
-                            {
-                              key: item.title,
-                              on: { click: function($event) {} }
-                            },
-                            [
-                              _c(
-                                "v-list-item-avatar",
-                                [_c("v-img", { attrs: { src: item.avatar } })],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-list-item-content",
-                                [
-                                  _c("v-list-item-title", {
-                                    domProps: { innerHTML: _vm._s(item.title) }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("v-list-item-subtitle", {
-                                    domProps: {
-                                      innerHTML: _vm._s(item.subtitle)
-                                    }
-                                  })
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                    ]
-                  })
-                ],
-                2
-              )
+              _c("h2", [
+                _vm._v(
+                  "異性を紹介してくれるキューピットの人気ランキングを表示予定"
+                )
+              ]),
+              _vm._v(" "),
+              _c("v-img", {
+                attrs: { src: "/img/kouji_rammer.png", "max-width": "374px" }
+              })
             ],
             1
           )
@@ -30491,7 +30714,12 @@ var render = function() {
             }
           ]
         },
-        [_c("div", { attrs: { id: "D" } })]
+        [
+          _c("v-sheet", { attrs: { id: "D" }, on: { keydown: _vm.onKeydown } }),
+          _vm._v(" "),
+          _c("v-btn", { on: { click: _vm.Y } }, [_vm._v("\n  test\n")])
+        ],
+        1
       )
     ],
     1
@@ -30843,7 +31071,31 @@ var render = function() {
     [
       _c(
         "v-row",
-        { attrs: { justify: "center" } },
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ],
+          attrs: { justify: "center" }
+        },
         [
           _c(
             "v-col",
@@ -31877,6 +32129,12 @@ var render = function() {
           ]
         },
         [
+          _c("h2", [
+            _vm._v(
+              "異性の紹介を希望している同性のユーザー一覧、各ユーザーに他の人がタグ付できるようにするのと、検索機能を実装予定"
+            )
+          ]),
+          _vm._v(" "),
           _c(
             "v-container",
             { attrs: { "py-1": "", "px-0": "" } },
@@ -32471,139 +32729,170 @@ var render = function() {
     "v-container",
     [
       _c(
-        "div",
-        { staticClass: "text-center" },
+        "v-row",
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ],
+          staticStyle: { height: "700px" }
+        },
         [
           _c(
-            "v-btn",
-            {
-              staticStyle: {
-                width: "240px",
-                left: "25%",
-                border: "2px solid #9ec34b",
-                "font-size": "20px",
-                "text-decoration": "none",
-                "font-weight": "bold",
-                padding: "8px 16px",
-                "font-style": "italic",
-                transition: ".4s",
-                bottom: "96px"
-              },
-              style: { left: "50%", transform: "translateX(-50%)" },
-              attrs: {
-                slot: "activator",
-                dark: "",
-                fab: "",
-                fixed: "",
-                bottom: "",
-                rounded: "",
-                color: "primary",
-                to: "/making",
-                elevation: "16"
-              },
-              slot: "activator"
-            },
-            [_vm._v("\n      メッセージを送る!\n    ")]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
-        [
-          _c(
-            "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: { "max-width": "434", shaped: "" }
-            },
+            "div",
+            { staticClass: "text-center" },
             [
               _c(
-                "v-img",
+                "v-btn",
                 {
+                  staticStyle: {
+                    width: "240px",
+                    left: "25%",
+                    border: "2px solid #9ec34b",
+                    "font-size": "20px",
+                    "text-decoration": "none",
+                    "font-weight": "bold",
+                    padding: "8px 16px",
+                    "font-style": "italic",
+                    transition: ".4s",
+                    bottom: "96px"
+                  },
+                  style: { left: "50%", transform: "translateX(-50%)" },
                   attrs: {
-                    height: "200px",
-                    src:
-                      "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
-                  }
+                    slot: "activator",
+                    dark: "",
+                    fab: "",
+                    fixed: "",
+                    bottom: "",
+                    rounded: "",
+                    color: "primary",
+                    to: "/making",
+                    elevation: "16"
+                  },
+                  slot: "activator"
+                },
+                [_vm._v("\n      メッセージを送る!\n    ")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
                 },
                 [
                   _c(
-                    "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "200px",
+                        src:
+                          "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
+                      }
+                    },
                     [
                       _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
                         [
                           _c(
-                            "router-link",
-                            { attrs: { to: "/users/ペニー" } },
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
                             [
                               _c(
-                                "v-avatar",
-                                {
-                                  staticClass: "profile",
-                                  attrs: {
-                                    color: "grey",
-                                    size: "164",
-                                    tile: ""
-                                  }
-                                },
+                                "router-link",
+                                { attrs: { to: "/users/ペニー" } },
                                 [
-                                  _c("v-img", {
-                                    attrs: {
-                                      src:
-                                        "https://ouchi-time.com/wp-content/uploads/2018/05/ba8babaca28e197b0958bffff219591d.jpg"
-                                    }
-                                  })
+                                  _c(
+                                    "v-avatar",
+                                    {
+                                      staticClass: "profile",
+                                      attrs: {
+                                        color: "grey",
+                                        size: "164",
+                                        tile: ""
+                                      }
+                                    },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src:
+                                            "https://ouchi-time.com/wp-content/uploads/2018/05/ba8babaca28e197b0958bffff219591d.jpg"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
                             ],
                             1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "center",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
-                        [
+                          ),
+                          _vm._v(" "),
                           _c(
                             "v-col",
-                            { staticClass: "text-center" },
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "center",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
                             [
                               _c(
-                                "v-btn",
-                                {
-                                  staticStyle: { "font-style": "italic" },
-                                  attrs: {
-                                    dark: "",
-                                    color: "pink",
-                                    rounded: "",
-                                    elevation: "24",
-                                    to: "/users/Thanks/Match!"
-                                  }
-                                },
+                                "v-col",
+                                { staticClass: "text-center" },
                                 [
-                                  _vm._v(
-                                    "\n                  MATCH!!!\n              "
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticStyle: { "font-style": "italic" },
+                                      attrs: {
+                                        dark: "",
+                                        color: "pink",
+                                        rounded: "",
+                                        elevation: "24",
+                                        to: "/making"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                  MATCH!!!\n              "
+                                      )
+                                    ]
                                   )
-                                ]
+                                ],
+                                1
                               )
                             ],
                             1
@@ -32743,352 +33032,9 @@ var render = function() {
               _vm._v(" "),
               _c("v-card-subtitle", [_vm._v("\n質問歴\n")]),
               _vm._v(" "),
-              _c(
-                "v-card",
-                { staticClass: "px-1", attrs: { color: "#26c6da", dark: "" } },
-                [
-                  _c("v-card-text", { staticClass: "font-weight-bold pa-1" }, [
-                    _vm._v(
-                      "\n      世の中のみんなが身の回りのものを全部きっちり整理しないと気が済まないわけじゃないてって思ったことない？\n    "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "v-card-actions",
-                    { staticClass: "pa-0" },
-                    [
-                      _c("v-spacer"),
-                      _vm._v(" "),
-                      _c(
-                        "v-row",
-                        { attrs: { align: "center", justify: "end" } },
-                        [
-                          _c("v-icon", { staticClass: "mr-1" }, [
-                            _vm._v("mdi-heart")
-                          ]),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "subheading mr-2" }, [
-                            _vm._v("256")
-                          ]),
-                          _vm._v(" "),
-                          _c("v-spacer"),
-                          _vm._v(" "),
-                          _c(
-                            "v-btn",
-                            { attrs: { to: "/BBS/1", text: "" } },
-                            [
-                              _c("v-icon", { staticClass: "mr-1" }, [
-                                _vm._v("mdi-comment-outline")
-                              ]),
-                              _vm._v(" "),
-                              _c("span", { staticClass: "subheading" }, [
-                                _vm._v("45")
-                              ])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-spacer")
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
               _c("v-card-subtitle", [_vm._v("\n回答歴\n")]),
               _vm._v(" "),
-              _c(
-                "v-card",
-                {
-                  staticClass: "mx-auto",
-                  attrs: { color: "grey", dark: "", "max-width": "400" }
-                },
-                [
-                  _c(
-                    "v-list-item",
-                    [
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pl-0",
-                          attrs: { "align-self": "start", cols: "3" }
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            { staticClass: "elevation-6" },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://www.superdramatv.com/line/bigbang/cast/img/c_amy_m.jpg"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item-subtitle",
-                            { staticClass: "font-weight-light" },
-                            [_vm._v("シェルドン")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-list-item-content",
-                        {
-                          staticClass: "font-weight-bold",
-                          staticStyle: { color: "rgba(255,255,255,0.7)" }
-                        },
-                        [
-                          _vm._v(
-                            "\n      バーや居酒屋のような社会的交流の場で相手を見つける人もいるそうよ。バーへ行って試してみた？\n      "
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-card",
-                { staticClass: "px-1", attrs: { color: "#26c6da", dark: "" } },
-                [
-                  _c("v-card-text", { staticClass: "font-weight-bold pa-1" }, [
-                    _vm._v(
-                      "\n      いや、バーで女性をひっかける気はない。\n    "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "v-card-actions",
-                    { staticClass: "pa-0" },
-                    [
-                      _c("v-spacer"),
-                      _vm._v(" "),
-                      _c(
-                        "v-row",
-                        { attrs: { align: "center", justify: "end" } },
-                        [
-                          _c("v-icon", { staticClass: "mr-1" }, [
-                            _vm._v("mdi-heart")
-                          ]),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "subheading mr-2" }, [
-                            _vm._v("256")
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-spacer")
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-card",
-                {
-                  staticClass: "mx-auto mb-1",
-                  attrs: { color: "grey", dark: "", "max-width": "400" }
-                },
-                [
-                  _c(
-                    "v-list-item",
-                    [
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pl-0",
-                          attrs: { "align-self": "start", cols: "3" }
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            { staticClass: "elevation-6" },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item-subtitle",
-                            { staticClass: "font-weight-light" },
-                            [_vm._v("シェルドン")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-list-item-content",
-                        {
-                          staticClass: "font-weight-bold",
-                          staticStyle: { color: "rgba(255,255,255,0.7)" }
-                        },
-                        [
-                          _vm._v(
-                            "\n      それは賢明だ。いいかいエイミー、バーでの成功は男性の古典的な性質にかかっている。背が高く、タフで、魅力にあふれ、酒に強くてダーツがうまいっていうね。その一つでもあればいいが、レナードには一つとしてその特質がない。そうだよな？\n      "
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-card",
-                { staticClass: "px-1", attrs: { color: "#26c6da", dark: "" } },
-                [
-                  _c("v-card-text", { staticClass: "font-weight-bold pa-1" }, [
-                    _vm._v("\n      そうだ\n    ")
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "v-card-actions",
-                    { staticClass: "pa-0" },
-                    [
-                      _c("v-spacer"),
-                      _vm._v(" "),
-                      _c(
-                        "v-row",
-                        { attrs: { align: "center", justify: "end" } },
-                        [
-                          _c("v-icon", { staticClass: "mr-1" }, [
-                            _vm._v("mdi-heart")
-                          ]),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "subheading mr-2" }, [
-                            _vm._v("256")
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-spacer")
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
               _c("v-card-subtitle", [_vm._v("\nフォローしている人\n")]),
-              _vm._v(" "),
-              _c(
-                "v-list",
-                [
-                  _c(
-                    "v-list-item",
-                    [
-                      _c(
-                        "v-list-item-avatar",
-                        [
-                          _c("v-img", {
-                            attrs: {
-                              src:
-                                "https://vignette.wikia.nocookie.net/the-big-bang-theory/images/6/6a/Howardwolowitz.jpg/revision/latest/top-crop/width/360/height/450?cb=20180621133808&path-prefix=ja"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-list-item-content", [
-                        _vm._v(
-                          "\n  大学で、応用物理学のエンジニアをしているユダヤ人。博士号を取得していないことを理由に、シェルドンらから度々からかいを受けている。\n"
-                        )
-                      ])
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-list",
-                [
-                  _c(
-                    "v-list-item",
-                    [
-                      _c(
-                        "v-list-item-avatar",
-                        [
-                          _c("v-img", {
-                            attrs: {
-                              src:
-                                "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-list-item-content", [
-                        _vm._v(
-                          "\n  カリフォルニア工科大学の物理学博士。理論物理学者で、専門は当初はひも理論、後に暗黒物質に転向。IQは187。レナードのルームメイト。\n"
-                        )
-                      ])
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-list",
-                [
-                  _c(
-                    "v-list-item",
-                    [
-                      _c(
-                        "v-list-item-avatar",
-                        [
-                          _c("v-img", {
-                            attrs: {
-                              src:
-                                "https://www.superdramatv.com/lineup/SN0000000042/img/cast_05.jpg"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-list-item-content", [
-                        _vm._v(
-                          "\n  インドのニューデリー出身。専門は素粒子論的宇宙論。イングランドのケンブリッジ大学で宇宙物理学に触れ、学問を志した。\n"
-                        )
-                      ])
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
               _vm._v(" "),
               _c("v-card-subtitle", [_vm._v("\nいいねをつけたつぶやき\n")])
             ],
@@ -33127,68 +33073,98 @@ var render = function() {
     "v-container",
     [
       _c(
-        "v-card",
-        { staticClass: "mx-auto my-12", attrs: { "max-width": "374" } },
+        "v-row",
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ]
+        },
         [
           _c(
-            "v-carousel",
-            { attrs: { height: "300", "show-arrows": false } },
-            _vm._l(_vm.items, function(item, i) {
-              return _c("v-carousel-item", {
-                key: i,
-                attrs: {
-                  src: item.src,
-                  "reverse-transition": "fade-transition",
-                  transition: "fade-transition"
-                }
-              })
-            }),
-            1
-          ),
-          _vm._v(" "),
-          _c("v-card-title", [_vm._v("シェルドン・クーパー　27歳")]),
-          _vm._v(" "),
-          _c(
-            "v-card-text",
+            "v-card",
+            { staticClass: "mx-auto my-12", attrs: { "max-width": "374" } },
             [
               _c(
-                "v-row",
-                { staticClass: "mx-0", attrs: { align: "center" } },
-                [
-                  _c("v-rating", {
+                "v-carousel",
+                { attrs: { height: "300", "show-arrows": false } },
+                _vm._l(_vm.items, function(item, i) {
+                  return _c("v-carousel-item", {
+                    key: i,
                     attrs: {
-                      value: 4.5,
-                      color: "pink",
-                      dense: "",
-                      "half-increments": "",
-                      readonly: "",
-                      size: "14",
-                      "full-icon": "mdi-heart",
-                      "half-icon": "mdi-heart-half-full"
+                      src: item.src,
+                      "reverse-transition": "fade-transition",
+                      transition: "fade-transition"
                     }
-                  }),
+                  })
+                }),
+                1
+              ),
+              _vm._v(" "),
+              _c("v-card-title", [_vm._v("シェルドン・クーパー　27歳")]),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                [
+                  _c(
+                    "v-row",
+                    { staticClass: "mx-0", attrs: { align: "center" } },
+                    [
+                      _c("v-rating", {
+                        attrs: {
+                          value: 4.5,
+                          color: "pink",
+                          dense: "",
+                          "half-increments": "",
+                          readonly: "",
+                          size: "14",
+                          "full-icon": "mdi-heart",
+                          "half-icon": "mdi-heart-half-full"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "grey--text ml-4" }, [
+                        _vm._v("4.5 (413)")
+                      ])
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "grey--text ml-4" }, [
-                    _vm._v("4.5 (413)")
+                  _c("div", { staticClass: "my-4 subtitle-1" }, [
+                    _vm._v("\n        自己紹介\n      ")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _vm._v(
+                      "カリフォルニア工科大学の物理学博士。理論物理学者で、専門は当初はひも理論、後に暗黒物質に転向。IQは187。レナードのルームメイト。\nテキサス東部で小学校に5年生までを過ごし、11歳で大学に飛び入学した。その後はドイツに留学し、ツイスター理論を研究していた16歳の時に博士号を取得。並み外れた頭脳の持ち主であり、幼少時は神童とされていた。直観像記憶が出来、記憶力も桁外れである。素数が赤く見えるなど、共感覚の持ち主でもある。\n何事にも冷静かつ皮肉屋な性格で、常に論理的な思考に基づいて行動する。自分の頭脳に有り余る自信を持っており、学力の低い人間や世俗的な人間を見下す（レナードやハワードらもその例外ではない）傾向にある上、他人の感情にとことん疎いため、何かと人間関係をこじらせがちである。極めて優秀ではあるが子供っぽい一面も持ち、しばしば大人げない態度をとる。笑顔が苦手で、極端な潔癖性。お金に頓着がなく、友人への借金にも寛容。\nハワードに始めて出会った際、見た目がピューイーハーマンとC-3POに似ているからと「C3ピューイーハーマン」とからかわれた事をきっかけにお互いをけなし合う関係になった。\nレナードと同様にオタク。「スター・ウォーズ・シリーズ」や「スタートレック」など、特にSF作品を好む。「バビロン5」は嫌いである。\n劇中劇である教育科学番組の司会者プロトン教授ことアーサー・ジェフリーズ（ボブ・ニューハート）を尊敬しており、自身が科学の道へ進むきっかけとなった人物でもある。\n旗章学にも大変精通しており、自身で制作したネット番組「旗で遊ぼう」の司会を勤めている。\n契約書を制作する事が好きで、レナードとは「ルームメイト協定」を、エイミーとは「恋人協定」を結び、独自の倫理観で協定を遵守することに命をかけている。\n自宅ソファの自分の位置（「僕の場所」）は「その席は冬はラジエーターにほど近く暖かく、なおかつ夏は発汗するほど近すぎない、夏は窓を開けるとちょうど風の通り道だ。テレビに対して正面じゃなく会話を邪魔しない。斜めに見て首を痛める角度でもない。まだまだある」\n「グーチョキパー　トカゲ　スポックじゃんけん」は一般的なじゃんけんはパターンが限られているため、気の合う者同士でやると約8割は引き分けになることから考案された。\n「ハサミは紙を切る、紙は石を包む、石はトカゲを潰す、トカゲがスポックに毒を吐く、スポックはハサミを破壊、ハサミはトカゲをちょん切り、トカゲは紙を食べ、紙はスポックに抗議、スポックは石を蒸発させる、石はハサミを壊す」じゃんけんの掛け声は「トカゲスポックじゃんけんぽん！」である。\n好きなアミノ酸はリシンである。\n兄と美人な双子の妹がいる。\nバジンガ (Bazinga、Buzzinga) は、「ジョークだよ」「引っかかったな」といった意味であり、シーズン2の最終話からシーズン8の15話までに使われた。シェルドンの発言に笑い声を入れるタイミングが難しいことが多いため、脚本家が合図として考案した。\n彼が育ったテキサスの素朴な田舎町は、科学者を目指す天才児にとってはあまり恵まれた環境とは言えなかったようで、日頃は故郷の町を疎ましがる発言をしている。が、いざとなると「僕はテキサスの男だ」「僕には体の隅から隅までテキサスの血が流れているんだ」などと、その勇猛ぶりをアピールしたがる節もある。\n母のメアリーは非常に熱心なクリスチャン。神の存在を信じる人々を非科学的だと考えるシェルドンとは基本的に相容れない立場にあり、幼少期は何かにつけて宗教観を押しつけてくる母親に苦労していたという。その一方で彼は明らかにマザコンで、母親と会った際は何から何まで甘え、風邪で寝込んだ時などは子守唄までねだっている。\nおじいちゃんおばあちゃんっ子でもあり、今でも彼らを「じいじ」「ばあば」と呼ぶ。祖父は5歳の時に亡くなったが、シェルドンが科学者になることを唯一応援してくれた家族であった。祖母もシェルドンを大変可愛がっており、彼を「ムーン・パイ」と呼んでいる。服の袖からティッシュを出すことからシェルドンは祖母を「スパイダーおばあちゃん」と表現している。\n生活環境の変化を酷く嫌い、科学の概念であるホメオスタシスが自身の生活においても維持されることを強く望んでいる。シーズン7最終話では、大学から研究対象の変更を迫られたことや、お気に入りの場所であったスチュアートのコミックブックストアが火事で焼失したことから、パサデナを離れ、45日間の鉄道の旅に出た。\nシーズン8の1話にて、パサデナに戻る。その際、旅は米国を横断する長大な路程であったが、道中では駅から離れることがなかったと語った。\nシーズン8の最終話にて恋人のエイミーにプロポーズしようとするも、その前にエイミーに距離を置きたいと言われてしまい結局言えずに終わる。\nその後シーズン9の1話で正式に破局するもお互いへの思いを再確認し復縁する。\n復縁後最初のエイミーの誕生日に、大切に思っている事を伝えたいと、ついにエイミーとの性交渉を決意、童貞を捧げた。\nシーズン10ではエイミーのアパートが水道管の破裂により水浸しになった事から実験と言いくるめられペニーの部屋で同棲を開始する。\nシーズン10最終話ではかつて大学院生だったラモーナのアプローチを受けたことでついにエイミーへプロポーズをした。\n本国アメリカでは、作中での振る舞いからシェルドンはアスペルガーを抱えた研究者なのかという指摘がある。それに対して制作側は、シェルドンは「シェルドニー」（Sheldony、シェルドン的なと言った意味）として描写しているのみであり、アスペルガーとラベリングしてほしくないと発言している。\nホーキング博士を尊敬しており、彼を「唯一自分と同等の知性を持った人間」と豪語している。\n転職後はレナードの2倍の月給があるなど安定した収入を得ているものの仕事内容自体はあまり好きではないと度々話すシーンがあり再転職を考えているが、カードローンの返済の為と割り切って働いている。"
+                    )
                   ])
                 ],
                 1
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "my-4 subtitle-1" }, [
-                _vm._v("\n        自己紹介\n      ")
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _vm._v(
-                  "カリフォルニア工科大学の物理学博士。理論物理学者で、専門は当初はひも理論、後に暗黒物質に転向。IQは187。レナードのルームメイト。\nテキサス東部で小学校に5年生までを過ごし、11歳で大学に飛び入学した。その後はドイツに留学し、ツイスター理論を研究していた16歳の時に博士号を取得。並み外れた頭脳の持ち主であり、幼少時は神童とされていた。直観像記憶が出来、記憶力も桁外れである。素数が赤く見えるなど、共感覚の持ち主でもある。\n何事にも冷静かつ皮肉屋な性格で、常に論理的な思考に基づいて行動する。自分の頭脳に有り余る自信を持っており、学力の低い人間や世俗的な人間を見下す（レナードやハワードらもその例外ではない）傾向にある上、他人の感情にとことん疎いため、何かと人間関係をこじらせがちである。極めて優秀ではあるが子供っぽい一面も持ち、しばしば大人げない態度をとる。笑顔が苦手で、極端な潔癖性。お金に頓着がなく、友人への借金にも寛容。\nハワードに始めて出会った際、見た目がピューイーハーマンとC-3POに似ているからと「C3ピューイーハーマン」とからかわれた事をきっかけにお互いをけなし合う関係になった。\nレナードと同様にオタク。「スター・ウォーズ・シリーズ」や「スタートレック」など、特にSF作品を好む。「バビロン5」は嫌いである。\n劇中劇である教育科学番組の司会者プロトン教授ことアーサー・ジェフリーズ（ボブ・ニューハート）を尊敬しており、自身が科学の道へ進むきっかけとなった人物でもある。\n旗章学にも大変精通しており、自身で制作したネット番組「旗で遊ぼう」の司会を勤めている。\n契約書を制作する事が好きで、レナードとは「ルームメイト協定」を、エイミーとは「恋人協定」を結び、独自の倫理観で協定を遵守することに命をかけている。\n自宅ソファの自分の位置（「僕の場所」）は「その席は冬はラジエーターにほど近く暖かく、なおかつ夏は発汗するほど近すぎない、夏は窓を開けるとちょうど風の通り道だ。テレビに対して正面じゃなく会話を邪魔しない。斜めに見て首を痛める角度でもない。まだまだある」\n「グーチョキパー　トカゲ　スポックじゃんけん」は一般的なじゃんけんはパターンが限られているため、気の合う者同士でやると約8割は引き分けになることから考案された。\n「ハサミは紙を切る、紙は石を包む、石はトカゲを潰す、トカゲがスポックに毒を吐く、スポックはハサミを破壊、ハサミはトカゲをちょん切り、トカゲは紙を食べ、紙はスポックに抗議、スポックは石を蒸発させる、石はハサミを壊す」じゃんけんの掛け声は「トカゲスポックじゃんけんぽん！」である。\n好きなアミノ酸はリシンである。\n兄と美人な双子の妹がいる。\nバジンガ (Bazinga、Buzzinga) は、「ジョークだよ」「引っかかったな」といった意味であり、シーズン2の最終話からシーズン8の15話までに使われた。シェルドンの発言に笑い声を入れるタイミングが難しいことが多いため、脚本家が合図として考案した。\n彼が育ったテキサスの素朴な田舎町は、科学者を目指す天才児にとってはあまり恵まれた環境とは言えなかったようで、日頃は故郷の町を疎ましがる発言をしている。が、いざとなると「僕はテキサスの男だ」「僕には体の隅から隅までテキサスの血が流れているんだ」などと、その勇猛ぶりをアピールしたがる節もある。\n母のメアリーは非常に熱心なクリスチャン。神の存在を信じる人々を非科学的だと考えるシェルドンとは基本的に相容れない立場にあり、幼少期は何かにつけて宗教観を押しつけてくる母親に苦労していたという。その一方で彼は明らかにマザコンで、母親と会った際は何から何まで甘え、風邪で寝込んだ時などは子守唄までねだっている。\nおじいちゃんおばあちゃんっ子でもあり、今でも彼らを「じいじ」「ばあば」と呼ぶ。祖父は5歳の時に亡くなったが、シェルドンが科学者になることを唯一応援してくれた家族であった。祖母もシェルドンを大変可愛がっており、彼を「ムーン・パイ」と呼んでいる。服の袖からティッシュを出すことからシェルドンは祖母を「スパイダーおばあちゃん」と表現している。\n生活環境の変化を酷く嫌い、科学の概念であるホメオスタシスが自身の生活においても維持されることを強く望んでいる。シーズン7最終話では、大学から研究対象の変更を迫られたことや、お気に入りの場所であったスチュアートのコミックブックストアが火事で焼失したことから、パサデナを離れ、45日間の鉄道の旅に出た。\nシーズン8の1話にて、パサデナに戻る。その際、旅は米国を横断する長大な路程であったが、道中では駅から離れることがなかったと語った。\nシーズン8の最終話にて恋人のエイミーにプロポーズしようとするも、その前にエイミーに距離を置きたいと言われてしまい結局言えずに終わる。\nその後シーズン9の1話で正式に破局するもお互いへの思いを再確認し復縁する。\n復縁後最初のエイミーの誕生日に、大切に思っている事を伝えたいと、ついにエイミーとの性交渉を決意、童貞を捧げた。\nシーズン10ではエイミーのアパートが水道管の破裂により水浸しになった事から実験と言いくるめられペニーの部屋で同棲を開始する。\nシーズン10最終話ではかつて大学院生だったラモーナのアプローチを受けたことでついにエイミーへプロポーズをした。\n本国アメリカでは、作中での振る舞いからシェルドンはアスペルガーを抱えた研究者なのかという指摘がある。それに対して制作側は、シェルドンは「シェルドニー」（Sheldony、シェルドン的なと言った意味）として描写しているのみであり、アスペルガーとラベリングしてほしくないと発言している。\nホーキング博士を尊敬しており、彼を「唯一自分と同等の知性を持った人間」と豪語している。\n転職後はレナードの2倍の月給があるなど安定した収入を得ているものの仕事内容自体はあまり好きではないと度々話すシーンがあり再転職を考えているが、カードローンの返済の為と割り切って働いている。"
-                )
-              ])
+              _c("v-divider", { staticClass: "mx-4" })
             ],
             1
-          ),
-          _vm._v(" "),
-          _c("v-divider", { staticClass: "mx-4" })
+          )
         ],
         1
       )
@@ -33262,135 +33238,173 @@ var render = function() {
     "v-container",
     [
       _c(
-        "div",
-        { staticClass: "text-center" },
+        "v-row",
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ]
+        },
         [
           _c(
-            "v-btn",
-            {
-              staticStyle: {
-                width: "240px",
-                left: "25%",
-                border: "2px solid #9ec34b",
-                "font-size": "20px",
-                "text-decoration": "none",
-                "font-weight": "bold",
-                padding: "8px 16px",
-                "font-style": "italic",
-                transition: ".4s",
-                bottom: "96px"
-              },
-              style: { left: "50%", transform: "translateX(-50%)" },
-              attrs: {
-                slot: "activator",
-                dark: "",
-                fab: "",
-                fixed: "",
-                bottom: "",
-                rounded: "",
-                color: "primary",
-                to: "/making",
-                elevation: "16"
-              },
-              slot: "activator"
-            },
-            [_vm._v("\n      紹介文を送る!\n    ")]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
-        [
-          _c(
-            "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: { "max-width": "434", shaped: "" }
-            },
+            "div",
+            { staticClass: "text-center" },
             [
               _c(
-                "v-img",
+                "v-btn",
                 {
+                  staticStyle: {
+                    width: "240px",
+                    left: "25%",
+                    border: "2px solid #9ec34b",
+                    "font-size": "20px",
+                    "text-decoration": "none",
+                    "font-weight": "bold",
+                    padding: "8px 16px",
+                    "font-style": "italic",
+                    transition: ".4s",
+                    bottom: "96px"
+                  },
+                  style: { left: "50%", transform: "translateX(-50%)" },
                   attrs: {
-                    height: "200px",
-                    src:
-                      "https://livedoor.sp.blogimg.jp/toei23/imgs/9/9/992392ef.jpg"
-                  }
+                    slot: "activator",
+                    dark: "",
+                    fab: "",
+                    fixed: "",
+                    bottom: "",
+                    rounded: "",
+                    color: "primary",
+                    to: "/making",
+                    elevation: "16"
+                  },
+                  slot: "activator"
+                },
+                [_vm._v("\n      紹介文を送る!\n    ")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
                 },
                 [
                   _c(
-                    "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "200px",
+                        src:
+                          "https://livedoor.sp.blogimg.jp/toei23/imgs/9/9/992392ef.jpg"
+                      }
+                    },
                     [
                       _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            {
-                              staticClass: "profile",
-                              attrs: { color: "grey", size: "164", tile: "" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op="
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "center",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
                         [
                           _c(
                             "v-col",
-                            { staticClass: "text-center" },
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
                             [
-                              _c("v-textarea", {
-                                attrs: {
-                                  solo: "",
-                                  rounded: "",
-                                  outlined: "",
-                                  clearable: "",
-                                  counter: "25",
-                                  color: "teal"
-                                },
-                                scopedSlots: _vm._u([
-                                  {
-                                    key: "label",
-                                    fn: function() {
-                                      return [
-                                        _c("div", [
-                                          _vm._v("\n                  紹介文"),
-                                          _c("small", [_vm._v("(25文字以内))")])
-                                        ])
-                                      ]
-                                    },
-                                    proxy: true
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
                                   }
-                                ])
-                              })
+                                },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20160626%2F12%2F1277332%2F22%2F491x405xb42267cc25f890bfebe5dbd8.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op="
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "center",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-col",
+                                { staticClass: "text-center" },
+                                [
+                                  _c("v-textarea", {
+                                    attrs: {
+                                      solo: "",
+                                      rounded: "",
+                                      outlined: "",
+                                      clearable: "",
+                                      counter: "25",
+                                      color: "teal"
+                                    },
+                                    scopedSlots: _vm._u([
+                                      {
+                                        key: "label",
+                                        fn: function() {
+                                          return [
+                                            _c("div", [
+                                              _vm._v(
+                                                "\n                  紹介文"
+                                              ),
+                                              _c("small", [
+                                                _vm._v("(25文字以内))")
+                                              ])
+                                            ])
+                                          ]
+                                        },
+                                        proxy: true
+                                      }
+                                    ])
+                                  })
+                                ],
+                                1
+                              )
                             ],
                             1
                           )
@@ -33405,102 +33419,110 @@ var render = function() {
               )
             ],
             1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
-        [
+          ),
+          _vm._v(" "),
           _c(
-            "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: { "max-width": "434", shaped: "" }
-            },
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
             [
               _c(
-                "v-img",
+                "v-card",
                 {
-                  attrs: {
-                    height: "200px",
-                    src:
-                      "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
-                  }
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
                 },
                 [
                   _c(
-                    "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "200px",
+                        src:
+                          "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
+                      }
+                    },
                     [
                       _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            {
-                              staticClass: "profile",
-                              attrs: { color: "grey", size: "164", tile: "" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://ouchi-time.com/wp-content/uploads/2018/05/ba8babaca28e197b0958bffff219591d.jpg"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "center",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
                         [
                           _c(
                             "v-col",
-                            { staticClass: "text-center" },
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
                             [
-                              _c("v-textarea", {
-                                attrs: {
-                                  solo: "",
-                                  rounded: "",
-                                  outlined: "",
-                                  clearable: "",
-                                  counter: "25",
-                                  color: "teal"
-                                },
-                                scopedSlots: _vm._u([
-                                  {
-                                    key: "label",
-                                    fn: function() {
-                                      return [
-                                        _c("div", [
-                                          _vm._v("\n                  紹介文"),
-                                          _c("small", [_vm._v("(25文字以内))")])
-                                        ])
-                                      ]
-                                    },
-                                    proxy: true
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "profile",
+                                  attrs: {
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
                                   }
-                                ])
-                              })
+                                },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://ouchi-time.com/wp-content/uploads/2018/05/ba8babaca28e197b0958bffff219591d.jpg"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "center",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-col",
+                                { staticClass: "text-center" },
+                                [
+                                  _c("v-textarea", {
+                                    attrs: {
+                                      solo: "",
+                                      rounded: "",
+                                      outlined: "",
+                                      clearable: "",
+                                      counter: "25",
+                                      color: "teal"
+                                    },
+                                    scopedSlots: _vm._u([
+                                      {
+                                        key: "label",
+                                        fn: function() {
+                                          return [
+                                            _c("div", [
+                                              _vm._v(
+                                                "\n                  紹介文"
+                                              ),
+                                              _c("small", [
+                                                _vm._v("(25文字以内))")
+                                              ])
+                                            ])
+                                          ]
+                                        },
+                                        proxy: true
+                                      }
+                                    ])
+                                  })
+                                ],
+                                1
+                              )
                             ],
                             1
                           )
@@ -33549,40 +33571,177 @@ var render = function() {
     "v-container",
     [
       _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
+        "v-row",
+        {
+          directives: [
+            {
+              name: "touch",
+              rawName: "v-touch",
+              value: {
+                left: function() {
+                  return _vm.swipe("Left")
+                },
+                right: function() {
+                  return _vm.swipe("Right")
+                },
+                up: function() {
+                  return _vm.swipe("Up")
+                },
+                down: function() {
+                  return _vm.swipe("Down")
+                }
+              },
+              expression:
+                "{\n      left: () => swipe('Left'),\n      right: () => swipe('Right'),\n      up: () => swipe('Up'),\n      down: () => swipe('Down')\n    }"
+            }
+          ]
+        },
         [
           _c(
-            "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: { "max-width": "434", shaped: "" }
-            },
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
             [
               _c(
-                "v-img",
+                "v-card",
                 {
-                  attrs: {
-                    height: "200px",
-                    src:
-                      "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
-                  }
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
                 },
                 [
                   _c(
-                    "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "200px",
+                        src:
+                          "https://rr.img.naver.jp/mig?src=http%3A%2F%2Fcinemanavi.net%2Fwp-content%2Fuploads%2F2013%2F12%2F%25E3%2583%259A%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%2593%25E3%2583%25B3%25E3%2582%25B0.jpg&twidth=1000&theight=0&qlt=80&res_format=jpg&op=r"
+                      }
+                    },
                     [
                       _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
                         [
                           _c(
-                            "router-link",
-                            { attrs: { to: "/users/ペニー" } },
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
+                            [
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/users/ペニー" } },
+                                [
+                                  _c(
+                                    "v-avatar",
+                                    {
+                                      staticClass: "profile",
+                                      attrs: {
+                                        color: "grey",
+                                        size: "164",
+                                        tile: ""
+                                      }
+                                    },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src:
+                                            "https://ouchi-time.com/wp-content/uploads/2018/05/ba8babaca28e197b0958bffff219591d.jpg"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "center",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-col",
+                                { staticClass: "text-center" },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        dark: "",
+                                        color: "pink",
+                                        rounded: "",
+                                        elevation: "24",
+                                        to: "/users/Thanks/Match!"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                  この人を紹介\n              "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
+            [
+              _c(
+                "v-card",
+                {
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
+                },
+                [
+                  _c(
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "200px",
+                        src:
+                          "https://www.superdramatv.com/line/bigbang/episode/img/epi_photo_87.jpg"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
+                        [
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
                             [
                               _c(
                                 "v-avatar",
@@ -33598,9 +33757,48 @@ var render = function() {
                                   _c("v-img", {
                                     attrs: {
                                       src:
-                                        "https://ouchi-time.com/wp-content/uploads/2018/05/ba8babaca28e197b0958bffff219591d.jpg"
+                                        "https://www.superdramatv.com/lineup/SN0000000152/img/cast_06.jpg"
                                     }
                                   })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "center",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-col",
+                                { staticClass: "text-center" },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        dark: "",
+                                        color: "pink",
+                                        rounded: "",
+                                        elevation: "24",
+                                        to: "/users/SheldonCooper"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                  この人を紹介\n              "
+                                      )
+                                    ]
+                                  )
                                 ],
                                 1
                               )
@@ -33609,45 +33807,6 @@ var render = function() {
                           )
                         ],
                         1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "center",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
-                        [
-                          _c(
-                            "v-col",
-                            { staticClass: "text-center" },
-                            [
-                              _c(
-                                "v-btn",
-                                {
-                                  attrs: {
-                                    dark: "",
-                                    color: "pink",
-                                    rounded: "",
-                                    elevation: "24",
-                                    to: "/users/Thanks/Match!"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                  この人を紹介\n              "
-                                  )
-                                ]
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
                       )
                     ],
                     1
@@ -33657,197 +33816,98 @@ var render = function() {
               )
             ],
             1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
-        [
+          ),
+          _vm._v(" "),
           _c(
-            "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: { "max-width": "434", shaped: "" }
-            },
+            "v-container",
+            { attrs: { "py-1": "", "px-0": "" } },
             [
               _c(
-                "v-img",
+                "v-card",
                 {
-                  attrs: {
-                    height: "200px",
-                    src:
-                      "https://www.superdramatv.com/line/bigbang/episode/img/epi_photo_87.jpg"
-                  }
+                  staticClass: "mx-auto",
+                  attrs: { "max-width": "434", shaped: "" }
                 },
                 [
                   _c(
-                    "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
+                    "v-img",
+                    {
+                      attrs: {
+                        height: "200px",
+                        src:
+                          "https://imgc.eximg.jp/i=https%253A%252F%252Fs.eximg.jp%252Fexnews%252Ffeed%252FDramanavi%252FDramanavi_040315_fec6_1.jpg,zoom=600,quality=70,type=jpg"
+                      }
+                    },
                     [
                       _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            {
-                              staticClass: "profile",
-                              attrs: { color: "grey", size: "164", tile: "" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://www.superdramatv.com/lineup/SN0000000152/img/cast_06.jpg"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "center",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
+                        "v-row",
+                        { staticClass: "fill-height", attrs: { align: "end" } },
                         [
                           _c(
                             "v-col",
-                            { staticClass: "text-center" },
+                            {
+                              staticClass: "pa-0",
+                              attrs: { "align-self": "start", cols: "5" }
+                            },
                             [
                               _c(
-                                "v-btn",
+                                "v-avatar",
                                 {
+                                  staticClass: "profile",
                                   attrs: {
-                                    dark: "",
-                                    color: "pink",
-                                    rounded: "",
-                                    elevation: "24",
-                                    to: "/users/SheldonCooper"
+                                    color: "grey",
+                                    size: "164",
+                                    tile: ""
                                   }
                                 },
                                 [
-                                  _vm._v(
-                                    "\n                  この人を紹介\n              "
-                                  )
-                                ]
+                                  _c("v-img", {
+                                    attrs: {
+                                      src:
+                                        "https://nigiwasu.com/wp-content/uploads/2019/07/MayimBailik-Metro.jpg"
+                                    }
+                                  })
+                                ],
+                                1
                               )
                             ],
                             1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { "py-1": "", "px-0": "" } },
-        [
-          _c(
-            "v-card",
-            {
-              staticClass: "mx-auto",
-              attrs: { "max-width": "434", shaped: "" }
-            },
-            [
-              _c(
-                "v-img",
-                {
-                  attrs: {
-                    height: "200px",
-                    src:
-                      "https://imgc.eximg.jp/i=https%253A%252F%252Fs.eximg.jp%252Fexnews%252Ffeed%252FDramanavi%252FDramanavi_040315_fec6_1.jpg,zoom=600,quality=70,type=jpg"
-                  }
-                },
-                [
-                  _c(
-                    "v-row",
-                    { staticClass: "fill-height", attrs: { align: "end" } },
-                    [
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: { "align-self": "start", cols: "5" }
-                        },
-                        [
-                          _c(
-                            "v-avatar",
-                            {
-                              staticClass: "profile",
-                              attrs: { color: "grey", size: "164", tile: "" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src:
-                                    "https://nigiwasu.com/wp-content/uploads/2019/07/MayimBailik-Metro.jpg"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        {
-                          staticClass: "pa-0",
-                          attrs: {
-                            "align-self": "center",
-                            cols: "7",
-                            justify: "space-around"
-                          }
-                        },
-                        [
+                          ),
+                          _vm._v(" "),
                           _c(
                             "v-col",
-                            { staticClass: "text-center" },
+                            {
+                              staticClass: "pa-0",
+                              attrs: {
+                                "align-self": "center",
+                                cols: "7",
+                                justify: "space-around"
+                              }
+                            },
                             [
                               _c(
-                                "v-btn",
-                                {
-                                  attrs: {
-                                    dark: "",
-                                    color: "pink",
-                                    rounded: "",
-                                    elevation: "24",
-                                    to: "/users/SheldonCooper"
-                                  }
-                                },
+                                "v-col",
+                                { staticClass: "text-center" },
                                 [
-                                  _vm._v(
-                                    "\n                  この人を紹介\n              "
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        dark: "",
+                                        color: "pink",
+                                        rounded: "",
+                                        elevation: "24",
+                                        to: "/users/SheldonCooper"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                  この人を紹介\n              "
+                                      )
+                                    ]
                                   )
-                                ]
+                                ],
+                                1
                               )
                             ],
                             1
@@ -91618,6 +91678,12 @@ var routes = [{
   path: '*',
   component: _views_NotFound_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
+  path: "/tetris",
+  components: {
+    "default": _views_Tetris_vue__WEBPACK_IMPORTED_MODULE_34__["default"],
+    header: _components_Appbar_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }
+}, {
   path: "/",
   components: {
     "default": _views_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
@@ -92342,15 +92408,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NotFound_vue_vue_type_template_id_5dcdfd0e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NotFound.vue?vue&type=template&id=5dcdfd0e& */ "./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NotFound.vue?vue&type=script&lang=js& */ "./resources/js/views/NotFound.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _NotFound_vue_vue_type_template_id_5dcdfd0e___WEBPACK_IMPORTED_MODULE_0__["render"],
   _NotFound_vue_vue_type_template_id_5dcdfd0e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -92364,6 +92432,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/views/NotFound.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/NotFound.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./resources/js/views/NotFound.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./NotFound.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/NotFound.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

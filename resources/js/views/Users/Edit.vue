@@ -4,7 +4,14 @@
     fluid
     tag="section"
   >
-    <v-row justify="center">
+    <v-row
+    justify="center"
+    v-touch="{
+      left: () => swipe('Left'),
+      right: () => swipe('Right'),
+      up: () => swipe('Up'),
+      down: () => swipe('Down')
+    }">
       <v-col
         cols="12"
         md="8"

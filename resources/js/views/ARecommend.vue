@@ -126,10 +126,10 @@
     methods: {
       swipe (direction) {
 		  if (direction == 'Left') {
-			  // this.$router.push('/BBS/topic/BBS')
+			 this.$router.go(1)
 		  }
       else if (direction == 'Right') {
-			  this.$router.push('/')
+			  this.$router.go(-1)
           }      
         this.swipeDirection = direction
       },

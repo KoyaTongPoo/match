@@ -30,7 +30,7 @@
 
       <v-divider></v-divider>
 
-      <v-stepper-step step="4">Name of step 5</v-stepper-step>
+      <v-stepper-step step="5">Name of step 5</v-stepper-step>
     </v-stepper-header>
 
     <v-stepper-items>
@@ -160,7 +160,7 @@
           color="primary"
           @click="e1 = 1"
         >
-          次へ
+          最初に戻る
         </v-btn>
 
         <!-- <v-btn text>Cancel</v-btn> -->
@@ -184,12 +184,20 @@ export default {
     methods: {
       swipe (direction) {
 		  if (direction == 'Left') {
-			  this.$router.go(1)
+        if(this.e1 == 5){
+         this.e1 = 1
+        }
+        else{this.e1 += 1}
+        
+			  // this.$router.go(1)
 		  }
       else if (direction == 'Right') {
-			  this.$router.go(-1)
+        if(this.e1 == 1){
+         this.$router.go(-1)
+        }
+        else{this.e1 -= 1}
+			  
           }      
-        this.swipeDirection = direction
       },
     },
   }

@@ -5,7 +5,7 @@
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title class="title">
-          アプリタイトル
+          Cupitter
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
@@ -24,10 +24,6 @@
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
 
-          <v-list-item to="/users/list">
-            <v-list-item-title>紹介希望者</v-list-item-title>
-          </v-list-item>
-
           <v-list-item to="/BBS/topic/つぶやき">
             <v-list-item-title>つぶやき</v-list-item-title>
           </v-list-item>
@@ -36,12 +32,12 @@
             <v-list-item-title>MyProfile</v-list-item-title>
           </v-list-item>
 
-          <v-list-item to="/users/edit/プロフィール編集">
+          <v-list-item to="/users/edit/プロフィール編集/1">
             <v-list-item-title>プロフィール編集</v-list-item-title>
           </v-list-item>
 
           <v-list-item to="/users/list">
-            <v-list-item-title>紹介希望者の一覧</v-list-item-title>
+            <v-list-item-title>紹介を希望している方々</v-list-item-title>
           </v-list-item>
 
           <v-list-item to="/mail/新着メッセージ">
@@ -165,7 +161,12 @@ export default {
   {
     name: 'Edit(作成途中)',
     icon: 'mdi-github-face',
-    link:'/users/edit/プロフィール編集'
+    link:'/users/edit/プロフィール編集/1'
+  },
+    {
+    name: 'Tet(作成途中)',
+    icon: 'mdi-stack-overflow',
+    link:'/tetris'
   },
   {
     name: 'Test(作成途中)',

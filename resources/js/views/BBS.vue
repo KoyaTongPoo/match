@@ -9,6 +9,7 @@
     }">
     <v-col
   cols="12">
+  <h2>利用者の質問・相談をtwitterのようなスタイルで表示する</h2>
    <v-sheet
     class="mx-auto"
     elevation="8"

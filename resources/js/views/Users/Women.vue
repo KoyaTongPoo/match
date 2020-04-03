@@ -1,5 +1,12 @@
 <template>
 <v-container>
+  <v-row
+    v-touch="{
+      left: () => swipe('Left'),
+      right: () => swipe('Right'),
+      up: () => swipe('Up'),
+      down: () => swipe('Down')
+    }">
     <v-container py-1 px-0>
   <v-card
     class="mx-auto"
@@ -170,7 +177,7 @@
  </v-container>
 
  
-
+  </v-row>
 </v-container>
 </template>
 
@@ -185,5 +192,18 @@
         'バジンガ',
       ],
     }),
+    methods: {
+      swipe (direction) {
+		  if (direction == 'Left') {
+			//   console.log(direction)
+			  this.$router.push('/')
+          }
+          else if (direction == 'Right') {
+			//   console.log(direction)
+			  this.$router.push('/BBS/topic/つぶやき')
+          }
+        this.swipeDirection = direction
+      },
+    },
   }
 </script>

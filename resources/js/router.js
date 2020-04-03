@@ -42,6 +42,13 @@ const routes = [
         component: NotFound
       },  
     {
+        path: "/tetris",
+        components: {
+         default : Tetris,
+         header : Appbar
+        }
+    },  
+    {
         path: "/",
         components: {
          default : Home,

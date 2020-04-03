@@ -60,7 +60,7 @@
 <v-card-subtitle>
 質問歴
 </v-card-subtitle>
-<v-card
+<!-- <v-card
     class="px-1"
     color="#26c6da"
     dark
@@ -88,12 +88,12 @@
         </v-row>
 <v-spacer></v-spacer>
     </v-card-actions>
-  </v-card>
+  </v-card> -->
 
   <v-card-subtitle>
 回答歴
 </v-card-subtitle>
-<v-card
+<!-- <v-card
     class="mx-auto"
     color="grey"
     dark
@@ -190,13 +190,13 @@
         </v-row>
 <v-spacer></v-spacer>
     </v-card-actions>
-  </v-card>
+  </v-card> -->
 
 
 <v-card-subtitle>
 フォローしている人
 </v-card-subtitle>
-<v-list>
+<!-- <v-list>
 <v-list-item>
 <v-list-item-avatar>
   <v-img src="https://vignette.wikia.nocookie.net/the-big-bang-theory/images/6/6a/Howardwolowitz.jpg/revision/latest/top-crop/width/360/height/450?cb=20180621133808&path-prefix=ja"></v-img>
@@ -237,7 +237,7 @@
 
 
 </v-list-item>
-</v-list> 
+</v-list>  -->
 
 
 <v-card-subtitle>

@@ -55,7 +55,8 @@
   <v-card class="mx-auto my-1"
     max-width="374"
     color="cyan"
-    align="center">
+    align="center"
+    to="/making">
     <h3>あなたのランク</h3>
     <h4>シルバー</h4>
     <v-divider></v-divider>
@@ -195,7 +196,7 @@
 
         <v-list-item-content>
           <v-list-item-title>徹子</v-list-item-title>
-          <v-list-item-subtitle>ルールル、ルルル、ルールル♪</v-list-item-subtitle>
+          <v-list-item-subtitle>人間はもうちょっと優しくしなければいけないし、できないのなら結婚しなければいい。大変なことかもしれないけれど、結婚したならちゃんとすべきと言いたい。</v-list-item-subtitle>
         </v-list-item-content>
         
         <v-btn color="primary"

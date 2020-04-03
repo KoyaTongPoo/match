@@ -1,6 +1,13 @@
 <template>
 <v-container>
-
+ <v-row
+    v-touch="{
+      left: () => swipe('Left'),
+      right: () => swipe('Right'),
+      up: () => swipe('Up'),
+      down: () => swipe('Down')
+    }"
+    style="height: 700px">
 
 
 <div class="text-center">
@@ -77,7 +84,7 @@
             color="pink"
             rounded
             elevation="24"
-            to="/users/Thanks/Match!"
+            to="/making"
             style="font-style: italic;"
             >
                   MATCH!!!
@@ -92,7 +99,7 @@
   </v-card>
  </v-container>
    
- 
+ </v-row>
 
 </v-container>
 </template>
@@ -108,5 +115,16 @@
         'バジンガ',
       ],
     }),
+    methods: {
+      swipe (direction) {
+		  if (direction == 'Left') {
+			  this.$router.go(1)
+		  }
+      else if (direction == 'Right') {
+			  this.$router.go(-1)
+          }      
+        this.swipeDirection = direction
+      },
+    },
   }
 </script>
